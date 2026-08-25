@@ -10,9 +10,10 @@
   --color-rekaz-grey: #636363;
   --color-rekaz-muted: #757575;
   --color-rekaz-gold: #f2c161;
-  --color-rekaz-border: #e0e0e0;
-  --color-rekaz-bg: #fbfaff;
-  --color-rekaz-card: #fafafa;
+  --color-rekaz-border: #e8e8ef;
+  --color-rekaz-bg: #f9f9fc;
+  --color-rekaz-card: #ffffff;
+  --color-rekaz-surface: #f4f4f8;
 
   --font-satoshi: 'Satoshi', sans-serif;
   --font-instrument: 'Instrument Sans', sans-serif;
@@ -22,9 +23,9 @@
   --font-arabic-title: 'Thmanyah Serif Display', serif;
   --font-arabic-text: 'Thmanyah Serif Text', serif;
 
-  --radius-card: 28px;
-  --radius-card-sm: 20px;
-  --radius-card-md: 26px;
+  --radius-card: 24px;
+  --radius-card-sm: 16px;
+  --radius-card-md: 20px;
   --radius-pill: 9999px;
   --radius-btn: 14px;
 
@@ -38,155 +39,43 @@
   }
 }
 
-/* Satoshi — local fonts */
-@font-face {
-  font-family: 'Satoshi';
-  src: url('./assets/fonts/satoshi/Satoshi-Light.otf') format('opentype');
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
-}
+/* Satoshi local fonts */
+@font-face { font-family: 'Satoshi'; src: url('./assets/fonts/satoshi/Satoshi-Light.otf') format('opentype'); font-weight: 300; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Satoshi'; src: url('./assets/fonts/satoshi/Satoshi-LightItalic.otf') format('opentype'); font-weight: 300; font-style: italic; font-display: swap; }
+@font-face { font-family: 'Satoshi'; src: url('./assets/fonts/satoshi/Satoshi-Regular.otf') format('opentype'); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Satoshi'; src: url('./assets/fonts/satoshi/Satoshi-Italic.otf') format('opentype'); font-weight: 400; font-style: italic; font-display: swap; }
+@font-face { font-family: 'Satoshi'; src: url('./assets/fonts/satoshi/Satoshi-Medium.otf') format('opentype'); font-weight: 500; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Satoshi'; src: url('./assets/fonts/satoshi/Satoshi-MediumItalic.otf') format('opentype'); font-weight: 500; font-style: italic; font-display: swap; }
+@font-face { font-family: 'Satoshi'; src: url('./assets/fonts/satoshi/Satoshi-Bold.otf') format('opentype'); font-weight: 700; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Satoshi'; src: url('./assets/fonts/satoshi/Satoshi-BoldItalic.otf') format('opentype'); font-weight: 700; font-style: italic; font-display: swap; }
+@font-face { font-family: 'Satoshi'; src: url('./assets/fonts/satoshi/Satoshi-Black.otf') format('opentype'); font-weight: 900; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Satoshi'; src: url('./assets/fonts/satoshi/Satoshi-BlackItalic.otf') format('opentype'); font-weight: 900; font-style: italic; font-display: swap; }
 
-@font-face {
-  font-family: 'Satoshi';
-  src: url('./assets/fonts/satoshi/Satoshi-LightItalic.otf') format('opentype');
-  font-weight: 300;
-  font-style: italic;
-  font-display: swap;
-}
+/* Arabic fonts */
+@font-face { font-family: 'Thmanyah Serif Display'; src: url('./assets/fonts/thmanyahserifdisplay-Black.otf') format('opentype'); font-weight: 900; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Thmanyah Serif Text'; src: url('./assets/fonts/thmanyahseriftext-Regular.otf') format('opentype'); font-weight: 400; font-style: normal; font-display: swap; }
 
-@font-face {
-  font-family: 'Satoshi';
-  src: url('./assets/fonts/satoshi/Satoshi-Regular.otf') format('opentype');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Satoshi';
-  src: url('./assets/fonts/satoshi/Satoshi-Italic.otf') format('opentype');
-  font-weight: 400;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Satoshi';
-  src: url('./assets/fonts/satoshi/Satoshi-Medium.otf') format('opentype');
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Satoshi';
-  src: url('./assets/fonts/satoshi/Satoshi-MediumItalic.otf') format('opentype');
-  font-weight: 500;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Satoshi';
-  src: url('./assets/fonts/satoshi/Satoshi-Bold.otf') format('opentype');
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Satoshi';
-  src: url('./assets/fonts/satoshi/Satoshi-BoldItalic.otf') format('opentype');
-  font-weight: 700;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Satoshi';
-  src: url('./assets/fonts/satoshi/Satoshi-Black.otf') format('opentype');
-  font-weight: 900;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Satoshi';
-  src: url('./assets/fonts/satoshi/Satoshi-BlackItalic.otf') format('opentype');
-  font-weight: 900;
-  font-style: italic;
-  font-display: swap;
-}
-
-
-/* Base styles */
-html {
-  scroll-behavior: smooth;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  overflow-x: hidden;
-}
-
-body {
-  font-family: var(--font-satoshi);
-  background-color: var(--color-rekaz-bg);
-  color: var(--color-rekaz-dark);
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-}
+/* Base */
+html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; overflow-x: hidden; }
+body { font-family: var(--font-satoshi); background-color: var(--color-rekaz-bg); color: var(--color-rekaz-dark); margin: 0; padding: 0; overflow-x: hidden; }
 
 /* RTL Fonts */
-html[dir="rtl"] h1,
-html[dir="rtl"] h2,
-html[dir="rtl"] h3,
-html[dir="rtl"] h4,
-html[dir="rtl"] h5,
-html[dir="rtl"] h6,
-html[dir="rtl"] .title,
-html[dir="rtl"] .btn {
-  font-family: var(--font-arabic-title);
-}
+html[dir="rtl"] h1, html[dir="rtl"] h2, html[dir="rtl"] h3, html[dir="rtl"] h4, html[dir="rtl"] h5, html[dir="rtl"] h6, html[dir="rtl"] .title, html[dir="rtl"] .btn { font-family: var(--font-arabic-title); }
+html[dir="rtl"] body, html[dir="rtl"] p, html[dir="rtl"] span, html[dir="rtl"] a, html[dir="rtl"] div { font-family: var(--font-arabic-text); }
 
-html[dir="rtl"] body,
-html[dir="rtl"] p,
-html[dir="rtl"] span,
-html[dir="rtl"] a,
-html[dir="rtl"] div {
-  font-family: var(--font-arabic-text);
-}
+/* Gradient text */
+.gradient-text { background: linear-gradient(to right, #00a5ff, #0412fa); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
 
-
-/* Gradient text utility */
-.gradient-text {
-  background: linear-gradient(to right, #00a5ff, #0412fa);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-@keyframes gradient-move {
-  0%   { background-position: 0% center; }
-  100% { background-position: 200% center; }
-}
+@keyframes gradient-move { 0% { background-position: 0% center; } 100% { background-position: 200% center; } }
 
 .animated-gradient-text {
-  background: linear-gradient(
-    90deg,
-    #00a5ff 0%,
-    #0412fa 25%,
-    #99a1ff 50%,
-    #0412fa 75%,
-    #00a5ff 100%
-  );
+  background: linear-gradient(90deg, #00a5ff 0%, #0412fa 25%, #99a1ff 50%, #0412fa 75%, #00a5ff 100%);
   background-size: 300% auto;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   animation: gradient-move 6s ease-in-out infinite alternate;
 }
-
 
 .moving-gradient-text {
   background: linear-gradient(270deg, #010217 0%, #0412fa 30%, #00a5ff 50%, #0412fa 70%, #010217 100%);
@@ -197,54 +86,28 @@ html[dir="rtl"] div {
   animation: moving-gradient 6s ease infinite;
 }
 
-@keyframes moving-gradient {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
+@keyframes moving-gradient { 0% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } 100% { background-position: 0% 50%; } }
 
-/* Rekaz Signature CTA Gradient */
-.bg-rekaz-gradient {
-  background: linear-gradient(180deg, rgb(0, 165, 255) 0%, rgb(4, 18, 250) 100%);
-}
-
-.bg-rekaz-gradient-r {
-  background: linear-gradient(90deg, rgb(0, 165, 255) 0%, rgb(4, 18, 250) 100%);
-}
+/* Brand gradients */
+.bg-rekaz-gradient { background: linear-gradient(180deg, rgb(0, 165, 255) 0%, rgb(4, 18, 250) 100%); }
+.bg-rekaz-gradient-r { background: linear-gradient(90deg, rgb(0, 165, 255) 0%, rgb(4, 18, 250) 100%); }
 
 .btn-gradient-blue {
-  background: linear-gradient(180deg, rgb(0, 165, 255) 0%, rgb(4, 18, 250) 100%);
+  background: linear-gradient(160deg, rgb(0, 165, 255) 0%, rgb(4, 18, 250) 100%);
   color: #ffffff;
-  box-shadow: 0 4px 16px rgba(0, 165, 255, 0.32);
+  box-shadow: 0 4px 20px rgba(0, 165, 255, 0.30), inset 0 1px 0 rgba(255,255,255,0.15);
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
+.btn-gradient-blue:hover { filter: brightness(1.08); transform: translateY(-2px) scale(1.01); box-shadow: 0 10px 28px rgba(4, 18, 250, 0.38); }
 
-.btn-gradient-blue:hover {
-  filter: brightness(1.06);
-  transform: translateY(-1.5px);
-  box-shadow: 0 8px 24px rgba(4, 18, 250, 0.42);
-}
+/* Glass card */
+.glass-card { background: rgba(255,255,255,0.78); backdrop-filter: blur(18px) saturate(1.4); -webkit-backdrop-filter: blur(18px) saturate(1.4); border: 1px solid rgba(255,255,255,0.55); }
 
-/* Arabic fonts */
-@font-face {
-  font-family: 'Thmanyah Serif Display';
-  src: url('./assets/fonts/thmanyahserifdisplay-Black.otf') format('opentype');
-  font-weight: 900; /* Black */
-  font-style: normal;
-  font-display: swap;
-}
+/* Hairline gradient divider */
+.section-divider { width: 100%; height: 1px; background: linear-gradient(to right, transparent, rgba(0,165,255,0.18), rgba(4,18,250,0.18), transparent); }
 
-@font-face {
-  font-family: 'Thmanyah Serif Text';
-  src: url('./assets/fonts/thmanyahseriftext-Regular.otf') format('opentype');
-  font-weight: 400; /* Regular */
-  font-style: normal;
-  font-display: swap;
-}
+/* Grid background */
+.bg-grid { background-image: linear-gradient(to right, rgba(0,165,255,0.05) 1px, transparent 1px), linear-gradient(to bottom, rgba(0,165,255,0.05) 1px, transparent 1px); background-size: 44px 44px; }
 
+/* Dot pattern background */
+.bg-dots { background-image: radial-gradient(circle, rgba(4,18,250,0.06) 1px, transparent 1px); background-size: 22px 22px; }

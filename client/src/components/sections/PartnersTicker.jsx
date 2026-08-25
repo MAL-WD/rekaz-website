@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 
@@ -12,42 +12,41 @@ const PartnersTicker = () => {
     { src: '6QEz8kJbwqWFzbNDcgcMwaBk7Jk.svg', w: 176, h: 40 }
   ];
   
-  // Duplicate enough times for seamless looping
   const repeatedLogos = [...logos, ...logos, ...logos, ...logos];
 
   return (
-    <section className="w-full flex justify-center items-center py-[54px] bg-white overflow-hidden relative">
-      <div className="w-full max-w-[1200px] flex flex-col items-center gap-[40px] px-[25px]">
+    <section className="w-full flex justify-center items-center py-10 bg-white overflow-hidden relative border-y border-rekaz-border/40">
+      <div className="w-full max-w-[1200px] flex flex-col items-center gap-7 px-6">
         
         {/* Title */}
-        <p className="font-satoshi font-medium text-[18px] md:text-[20px] text-[#292929] text-center max-w-[800px]">
+        <p className="font-satoshi font-semibold text-[15px] tracking-tight text-rekaz-grey text-center max-w-[800px]">
           {t('partners.text', 'Supporting students for BEM and BAC with learning, guidance, and ambition.')}
         </p>
         
         {/* Ticker Container */}
-        <div className="w-full max-w-[1000px] h-[50px] relative overflow-hidden" 
+        <div className="w-full max-w-[900px] h-[44px] relative overflow-hidden" 
           style={{
-            WebkitMaskImage: 'linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 12.5%, rgb(0, 0, 0) 87.5%, rgba(0, 0, 0, 0) 100%)',
-            maskImage: 'linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 12.5%, rgb(0, 0, 0) 87.5%, rgba(0, 0, 0, 0) 100%)'
+            WebkitMaskImage: 'linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 15%, rgb(0, 0, 0) 85%, rgba(0, 0, 0, 0) 100%)',
+            maskImage: 'linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 15%, rgb(0, 0, 0) 85%, rgba(0, 0, 0, 0) 100%)'
           }}
         >
           <motion.div
-            className="flex items-center gap-[52px] absolute left-0"
+            className="flex items-center gap-[60px] absolute left-0"
             animate={{
-              x: [0, -1000] // Adjust this depending on the total width to loop seamlessly
+              x: [0, -600]
             }}
             transition={{
               repeat: Infinity,
               ease: "linear",
-              duration: 20
+              duration: 25
             }}
             style={{ width: 'max-content' }}
           >
             {repeatedLogos.map((logo, index) => (
               <div 
                 key={index} 
-                className="flex-shrink-0 flex items-center justify-center grayscale hover:grayscale-0 transition-all duration-300 opacity-60 hover:opacity-100"
-                style={{ width: logo.w, height: logo.h }}
+                className="flex-shrink-0 flex items-center justify-center grayscale hover:grayscale-0 transition-all duration-300 opacity-40 hover:opacity-100"
+                style={{ width: logo.w * 0.85, height: logo.h * 0.85 }}
               >
                 <img 
                   src={`https://framerusercontent.com/images/${logo.src}`}
