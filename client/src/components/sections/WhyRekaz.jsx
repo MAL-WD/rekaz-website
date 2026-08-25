@@ -1,18 +1,73 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Container from '../ui/Container';
 import SectionTag from '../ui/SectionTag';
 import Card from '../ui/Card';
 import GradientText from '../ui/GradientText';
 import Button from '../ui/Button';
 
+gsap.registerPlugin(ScrollTrigger);
+
 const WhyRekaz = () => {
   const { t } = useTranslation();
+  const headerRef = useRef(null);
+  const card1Ref = useRef(null);
+  const card2Ref = useRef(null);
+  const card3Ref = useRef(null);
+  const card4Ref = useRef(null);
+
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      const springEase = 'power3.out';
+      const duration = 0.8;
+
+      // Header animation
+      gsap.fromTo(
+        headerRef.current,
+        { opacity: 0, y: 24 },
+        {
+          opacity: 1, y: 0, duration: 0.9, ease: springEase,
+          scrollTrigger: {
+            trigger: headerRef.current,
+            start: 'top 88%',
+            toggleActions: 'play none none none',
+          },
+        }
+      );
+
+      // Cards animation (scale 0.9 -> 1, opacity 0 -> 1)
+      const cards = [
+        { el: card1Ref.current, delay: 0 },
+        { el: card2Ref.current, delay: 0.1 },
+        { el: card3Ref.current, delay: 0 },
+        { el: card4Ref.current, delay: 0.1 },
+      ];
+
+      cards.forEach(({ el, delay }) => {
+        gsap.fromTo(
+          el,
+          { opacity: 0, scale: 0.9 },
+          {
+            opacity: 1, scale: 1, duration, ease: springEase, delay,
+            scrollTrigger: {
+              trigger: el,
+              start: 'top 90%',
+              toggleActions: 'play none none none',
+            },
+          }
+        );
+      });
+    });
+
+    return () => ctx.revert();
+  }, []);
 
   return (
     <section className='py-24 bg-rekaz-bg'>
       <Container>
-        <div className='flex flex-col items-center text-center mb-16'>
+        <div ref={headerRef} style={{ opacity: 0 }} className='flex flex-col items-center text-center mb-16'>
           <SectionTag text={t('whyRekaz.tag', 'Why Rekaz')} />
           <h2 className='text-4xl md:text-5xl font-satoshi font-bold text-rekaz-black mt-6 mb-4'>
             {t('whyRekaz.title', 'Discover What Makes Rekaz Different ')}
@@ -24,7 +79,7 @@ const WhyRekaz = () => {
 
         <div className='grid md:grid-cols-2 gap-6'>
           {/* Pack-BAC Card */}
-          <Card className='p-8 md:p-12 flex flex-col items-start text-start'>
+          <Card ref={card1Ref} style={{ opacity: 0 }} className='p-8 md:p-12 flex flex-col items-start text-start'>
             <div className='text-xs font-bold uppercase tracking-wider text-rekaz-muted mb-4'>{t('whyRekaz.specialPacks', 'Special Packs')}</div>
             <h3 className='text-2xl font-satoshi font-bold mb-4'>{t('whyRekaz.packBacTitle', 'Pack-BAC: more learning, better value')}</h3>
             <p className='text-rekaz-grey mb-8 font-dm leading-relaxed'>
@@ -40,7 +95,7 @@ const WhyRekaz = () => {
           </Card>
 
           {/* Valid Certificates */}
-          <Card className='p-8 md:p-12 flex flex-col items-start text-start'>
+          <Card ref={card2Ref} style={{ opacity: 0 }} className='p-8 md:p-12 flex flex-col items-start text-start'>
             <div className='flex items-center gap-2 mb-4'>
               <h3 className='text-2xl font-satoshi font-bold'>{t('whyRekaz.validCertificates', 'Valid Certificates')}</h3>
               <span className='bg-green-100 text-green-600 rounded-full p-1 text-xs'>✓</span>
@@ -68,7 +123,7 @@ const WhyRekaz = () => {
           </Card>
 
           {/* Consultation */}
-          <Card className='p-8 md:p-12 flex flex-col items-start text-start'>
+          <Card ref={card3Ref} style={{ opacity: 0 }} className='p-8 md:p-12 flex flex-col items-start text-start'>
             <div className='text-xs font-bold uppercase tracking-wider text-rekaz-muted mb-4'>{t('whyRekaz.consultationTag', 'Consultation')}</div>
             <h3 className='text-2xl font-satoshi font-bold mb-4'>{t('whyRekaz.guidanceTitle', 'Guidance for every next step')}</h3>
             <p className='text-rekaz-grey mb-8 font-dm leading-relaxed'>
@@ -81,7 +136,7 @@ const WhyRekaz = () => {
           </Card>
 
           {/* E-Learning */}
-          <Card className='p-8 md:p-12 flex flex-col items-start text-start'>
+          <Card ref={card4Ref} style={{ opacity: 0 }} className='p-8 md:p-12 flex flex-col items-start text-start'>
             <h3 className='text-2xl font-satoshi font-bold mb-4'>{t('whyRekaz.eLearning', 'E-Learning Platform')}</h3>
             <p className='text-rekaz-grey mb-8 font-dm leading-relaxed'>
               {t('whyRekaz.eLearningDesc', 'Learn anything, anywhere and anytime through Rekaz’s modern e-learning platform.')}

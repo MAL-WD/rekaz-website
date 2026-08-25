@@ -39,7 +39,7 @@ export const TextColorLetters = (props) => {
         lineHeight = 1.2, // Use unitless for better responsiveness
         letterSpacing = -2,
         paragraphAlign = "center",
-        transitionStartIndex = 40,
+        transitionStartIndex = 0,
         fontFamily = "Inter",
         fontWeight = 700,
         isRTL = false,
@@ -50,7 +50,7 @@ export const TextColorLetters = (props) => {
     const ref = useRef(null);
     const { scrollYProgress } = useScroll({
         target: ref,
-        offset: ["start 0.85", "start 0.25"], // Slightly adjusted for better feel
+        offset: ["start 0.9", "end 0.2"], // Full element travel so all words animate
     });
 
     // Helper to dynamically load font if needed

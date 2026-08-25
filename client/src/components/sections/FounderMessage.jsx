@@ -24,25 +24,13 @@ const FounderMessage = () => {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.7, ease: 'easeOut' }}
-        className="relative z-[1] flex flex-row items-center justify-start bg-white overflow-hidden w-full"
-        style={{
-          maxWidth: '960px',
-          height: 'auto',
-          minHeight: '261px',
-          borderRadius: '160px',
-          border: '1px solid #e0e0e0',
-          gap: '24px',
-          padding: '12px',
-        }}
+        className="relative z-[1] flex flex-col md:flex-row items-center justify-start bg-white border border-[#e0e0e0] overflow-hidden w-full max-w-[960px] p-6 md:py-0 md:px-3 gap-6 md:gap-6 rounded-[32px] md:rounded-[160px] min-h-auto md:min-h-[261px]"
       >
         {/* Avatar */}
         <div
-          className="flex-shrink-0 relative overflow-hidden"
+          className="flex-shrink-0 relative overflow-hidden w-[180px] h-[180px] md:w-[237px] md:h-[237px] rounded-full"
           style={{
-            width: '237px',
-            height: '237px',
-            aspectRatio: '1',
-            borderRadius: '60px',
+            background: 'linear-gradient(180deg, #00a5ff 0%, #0412fa 100%)',
           }}
         >
           <img
@@ -55,62 +43,13 @@ const FounderMessage = () => {
         </div>
 
         {/* Content */}
-        <div
-          className="flex flex-col justify-center items-start flex-1 relative overflow-hidden"
-          style={{ gap: '5px', padding: '12px 12px 0 0' }}
-        >
-          {/* Title Row */}
-          <div className="flex flex-row items-center justify-start w-full" style={{ gap: '24px' }}>
-            <h2
-              className="whitespace-pre text-start"
-              style={{
-                fontFamily: '"Inter", sans-serif',
-                fontSize: '36px',
-                fontWeight: 500,
-                letterSpacing: '-0.02em',
-                color: 'rgb(51, 51, 51)',
-              }}
-            >
-              {t('founder.title', "Hello, I'm Adel, CEO & Teacher at Rekaz")}
-            </h2>
-
-            {/* CEO Badge */}
-            <div className="flex items-center gap-1.5 flex-shrink-0">
-              <span
-                style={{
-                  fontFamily: '"DM Sans", sans-serif',
-                  fontSize: '14px',
-                  fontWeight: 500,
-                  color: 'var(--color-rekaz-dark, #292929)',
-                }}
-              >
-                {t('founder.badge', 'CEO & Teacher')}
-              </span>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 256 256"
-                className="flex-shrink-0"
-                style={{ width: '20px', height: '20px', fill: 'rgb(0, 77, 102)' }}
-              >
-                <path d="M216,96A88,88,0,1,0,72,163.83V240a8,8,0,0,0,11.58,7.16L128,225l44.43,22.21A8.07,8.07,0,0,0,176,248a8,8,0,0,0,8-8V163.83A87.85,87.85,0,0,0,216,96ZM56,96a72,72,0,1,1,72,72A72.08,72.08,0,0,1,56,96Zm16,0a56,56,0,1,1,56,56A56.06,56.06,0,0,1,72,96Z" />
-              </svg>
-            </div>
-          </div>
+        <div className="flex flex-col justify-center items-center md:items-start flex-1 relative overflow-hidden w-full gap-1 p-0 md:pt-3 md:pe-3">
+          <h2 className="font-satoshi text-center md:text-start text-2xl md:text-[28px] font-medium tracking-[-0.02em] text-[#333333] whitespace-normal md:whitespace-nowrap w-full">
+            {t('founder.title', "Hello, I'm Adel, CEO & Teacher at Rekaz")}
+          </h2>
 
           {/* Bio */}
-          <p
-            className="relative text-start"
-            style={{
-              fontFamily: '"Satoshi", sans-serif',
-              fontSize: '18px',
-              lineHeight: '1.6em',
-              color: 'rgb(89, 89, 89)',
-              maxWidth: '630px',
-              wordBreak: 'break-word',
-              overflowWrap: 'break-word',
-              whiteSpace: 'pre-wrap',
-            }}
-          >
+          <p className="relative text-center md:text-start font-dm text-base md:text-[18px] text-[#595959] max-w-full md:max-w-[630px] break-words whitespace-pre-wrap leading-relaxed mt-2 md:mt-0">
             {t('founder.bio', "I want you to know that our mission is bigger than teaching subjects — it's about helping you believe in yourself, discover your potential, and achieve your dreams. Every lesson we give is designed with your future in mind, because I believe each of you has the ability to succeed and make a difference. Rekaz is more than a school; it's a place where together we build the confidence, knowledge, and ambition that will carry you forward in life.")}
           </p>
 

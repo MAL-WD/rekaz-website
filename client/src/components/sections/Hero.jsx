@@ -7,7 +7,7 @@ const Hero = () => {
   const { t } = useTranslation();
 
   return (
-    <section className="relative w-full flex justify-center pt-[132px] pb-[60px] overflow-hidden bg-white">
+    <section className="relative w-full flex justify-center pt-[100px] md:pt-[132px] pb-[40px] md:pb-[60px] overflow-hidden bg-white">
       {/* Background Elements */}
       <div className="absolute inset-0 z-0 bg-[#ffffff]" />
       
@@ -66,13 +66,7 @@ const Hero = () => {
 
           {/* Heading */}
           <h1 
-            className="font-satoshi font-bold text-[48px] md:text-[64px] leading-[1.15em] tracking-[-0.045em] text-start"
-            style={{
-              backgroundImage: 'linear-gradient(270deg, rgb(1, 2, 23) 45%, rgb(4, 18, 250) 105%)',
-              WebkitBackgroundClip: 'text',
-              WebkitTextFillColor: 'transparent',
-              backgroundClip: 'text',
-            }}
+            className="font-satoshi font-bold text-[48px] md:text-[64px] leading-[1.15em] tracking-[-0.045em] text-start animated-gradient-text"
           >
             {t('hero.title', 'Rekaz Institute for Education, Training & Consulting')}
           </h1>

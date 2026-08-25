@@ -10,7 +10,7 @@ const HowItWorks = () => {
     <section className='py-24 bg-rekaz-bg'>
       <Container>
         <div className='grid lg:grid-cols-2 gap-16 items-center'>
-          <div className='flex flex-col'>
+          <div className='flex flex-col items-start'>
             <SectionTag text={t('howItWorks.tag', 'Your Journey Starts Here')} />
             <h2 className='text-4xl md:text-5xl font-satoshi font-bold text-rekaz-black mt-6 mb-12 leading-tight text-start'>
               {t('howItWorks.title', 'Choose your path, learn with purpose, and move closer to your goals.')}
