@@ -37,28 +37,26 @@ const WhyRekaz = () => {
         }
       );
 
-      // Cards animation (scale 0.9 -> 1, opacity 0 -> 1)
-      const cards = [
-        { el: card1Ref.current, delay: 0 },
-        { el: card2Ref.current, delay: 0.1 },
-        { el: card3Ref.current, delay: 0 },
-        { el: card4Ref.current, delay: 0.1 },
-      ];
-
-      cards.forEach(({ el, delay }) => {
+      // Use a single scroll trigger for the grid, and animate all cards
+      // This ensures the trigger bounding box is stable and large
+      if (card1Ref.current) {
         gsap.fromTo(
-          el,
-          { opacity: 0, scale: 0.9 },
+          [card1Ref.current, card2Ref.current, card3Ref.current, card4Ref.current],
+          { opacity: 0, y: 30 },
           {
-            opacity: 1, scale: 1, duration, ease: springEase, delay,
+            opacity: 1,
+            y: 0,
+            duration: 0.8,
+            ease: springEase,
+            stagger: 0.15, // stagger them slightly
             scrollTrigger: {
-              trigger: el,
-              start: 'top 90%',
+              trigger: card1Ref.current.parentNode, // trigger on the grid container
+              start: 'top 85%',
               toggleActions: 'play none none none',
             },
           }
         );
-      });
+      }
     });
 
     return () => ctx.revert();
@@ -79,7 +77,7 @@ const WhyRekaz = () => {
 
         <div className='grid md:grid-cols-2 gap-6'>
           {/* Pack-BAC Card */}
-          <Card ref={card1Ref} style={{ opacity: 0 }} className='p-8 md:p-12 flex flex-col items-start text-start'>
+          <Card ref={card1Ref} className='p-8 md:p-12 flex flex-col items-start text-start'>
             <div className='text-xs font-bold uppercase tracking-wider text-rekaz-muted mb-4'>{t('whyRekaz.specialPacks', 'Special Packs')}</div>
             <h3 className='text-2xl font-satoshi font-bold mb-4'>{t('whyRekaz.packBacTitle', 'Pack-BAC: more learning, better value')}</h3>
             <p className='text-rekaz-grey mb-8 font-dm leading-relaxed'>
@@ -95,7 +93,7 @@ const WhyRekaz = () => {
           </Card>
 
           {/* Valid Certificates */}
-          <Card ref={card2Ref} style={{ opacity: 0 }} className='p-8 md:p-12 flex flex-col items-start text-start'>
+          <Card ref={card2Ref} className='p-8 md:p-12 flex flex-col items-start text-start'>
             <div className='flex items-center gap-2 mb-4'>
               <h3 className='text-2xl font-satoshi font-bold'>{t('whyRekaz.validCertificates', 'Valid Certificates')}</h3>
               <span className='bg-green-100 text-green-600 rounded-full p-1 text-xs'>✓</span>
@@ -123,7 +121,7 @@ const WhyRekaz = () => {
           </Card>
 
           {/* Consultation */}
-          <Card ref={card3Ref} style={{ opacity: 0 }} className='p-8 md:p-12 flex flex-col items-start text-start'>
+          <Card ref={card3Ref} className='p-8 md:p-12 flex flex-col items-start text-start'>
             <div className='text-xs font-bold uppercase tracking-wider text-rekaz-muted mb-4'>{t('whyRekaz.consultationTag', 'Consultation')}</div>
             <h3 className='text-2xl font-satoshi font-bold mb-4'>{t('whyRekaz.guidanceTitle', 'Guidance for every next step')}</h3>
             <p className='text-rekaz-grey mb-8 font-dm leading-relaxed'>
@@ -136,7 +134,7 @@ const WhyRekaz = () => {
           </Card>
 
           {/* E-Learning */}
-          <Card ref={card4Ref} style={{ opacity: 0 }} className='p-8 md:p-12 flex flex-col items-start text-start'>
+          <Card ref={card4Ref} className='p-8 md:p-12 flex flex-col items-start text-start'>
             <h3 className='text-2xl font-satoshi font-bold mb-4'>{t('whyRekaz.eLearning', 'E-Learning Platform')}</h3>
             <p className='text-rekaz-grey mb-8 font-dm leading-relaxed'>
               {t('whyRekaz.eLearningDesc', 'Learn anything, anywhere and anytime through Rekaz’s modern e-learning platform.')}

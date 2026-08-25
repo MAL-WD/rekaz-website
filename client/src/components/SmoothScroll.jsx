@@ -57,7 +57,7 @@ const SmoothScroll = ({ children }) => {
     };
   }, [isAdminPath, isMobile]);
 
-  return <div>{children}</div>;
+  return <div className="w-full overflow-x-hidden">{children}</div>;
 };
 
 export default SmoothScroll;

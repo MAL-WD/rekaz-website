@@ -31,13 +31,13 @@ const Navbar = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 flex justify-center w-full ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 flex justify-center w-full overflow-hidden ${
         isScrolled ? 'bg-white shadow-sm py-[12px]' : 'bg-transparent py-[20px]'
       }`}
     >
-      <div className="w-full max-w-[1200px] px-[20px] md:px-[25px] flex justify-between items-center h-[58px]">
+      <div className="w-full max-w-[1200px] mx-auto px-[20px] md:px-[25px] flex justify-between items-center h-[58px] min-w-0">
         {/* Logo */}
-        <Link to="/" className="flex items-center gap-[10px] z-50">
+        <Link to="/" className="flex items-center gap-[10px] z-50 flex-shrink-0">
           <div className="w-[35px] h-[35px] md:w-[38px] md:h-[38px] relative overflow-hidden rounded-full flex-shrink-0">
             <img 
               src={logo} 
@@ -80,7 +80,7 @@ const Navbar = () => {
 
         {/* Mobile menu button */}
         <button
-          className="md:hidden z-50 p-2 text-rekaz-dark"
+          className="md:hidden z-50 p-2 text-rekaz-dark flex-shrink-0"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
         >
           <svg
@@ -106,7 +106,7 @@ const Navbar = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.2 }}
-            className="absolute top-[62px] left-0 right-0 z-40 bg-white border-b border-gray-100 px-[36px] py-[36px] flex flex-col gap-[24px] md:hidden shadow-lg"
+            className="absolute top-[62px] inset-x-0 z-40 bg-white border-b border-gray-100 px-[36px] py-[36px] flex flex-col gap-[24px] md:hidden shadow-lg w-full"
           >
             <nav className="flex flex-col gap-[24px] text-start">
               {navLinks.map((link) => (
