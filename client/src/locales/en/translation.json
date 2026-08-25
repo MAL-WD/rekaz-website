@@ -1,0 +1,306 @@
+{
+  "navbar": {
+    "home": "Home",
+    "about": "About Us",
+    "programs": "Programs",
+    "training": "Training",
+    "consulting": "Consulting",
+    "blog": "Blog",
+    "faq": "FAQ",
+    "contact": "Contact",
+    "enroll": "Join Rekaz"
+  },
+  "hero": {
+    "title": "Rekaz Institute for Education, Training & Consulting",
+    "subtitle": "Empowering students and learners with knowledge, skills, and guidance for a brighter future.",
+    "cta": "Join Rekaz",
+    "secondary": "Explore Our Programs",
+    "reviews": "14,380+ Reviews"
+  },
+  "partners": {
+    "text": "Supporting students for BEM and BAC with learning, guidance, and ambition."
+  },
+  "founder": {
+    "title": "Hello, I'm Adel, CEO & Teacher at Rekaz",
+    "badge": "CEO & Teacher",
+    "bio": "I want you to know that our mission is bigger than teaching subjects — it's about helping you believe in yourself, discover your potential, and achieve your dreams. Every lesson we give is designed with your future in mind, because I believe each of you has the ability to succeed and make a difference. Rekaz is more than a school; it's a place where together we build the confidence, knowledge, and ambition that will carry you forward in life."
+  },
+  "aboutPreview": {
+    "tag": "About Us",
+    "text": "At Rekaz, we believe education is more than lessons — it is the foundation for building confident, ambitious, and successful lives. From the early years of CEM to the challenges of BEM and BAC, our mission is to guide every student with care, innovation, and passion. Rekaz is not just a school, but a home where dreams are nurtured, values are strengthened, and futures are shaped.",
+    "button": "Meet Rekaz"
+  },
+  "whyRekaz": {
+    "tag": "Why Rekaz",
+    "title": "Discover What Makes Rekaz Different ",
+    "subtitle": "More than lessons. A foundation for your future.",
+    "specialPacks": "Special Packs",
+    "packBacTitle": "Pack-BAC: more learning, better value",
+    "packBacDesc": "Make quality education more accessible with offers such as Pack-BAC: 3 subjects for the price of only 2.",
+    "premiumPackBac": "Premium Pack-BAC",
+    "packBacPrice": "4000 DA",
+    "packBacPriceDesc": "Affordable learning with Pack-BAC: 3 subjects for 4000 DA — the price of only 2 subjects.",
+    "validCertificates": "Valid Certificates",
+    "validCertificatesDesc": "Practical professional formations in entrepreneurship, marketing, digital skills, and more — with valid certificates upon completion.",
+    "entrepreneurship": "Entrepreneurship",
+    "marketing": "Marketing",
+    "cyberSecurity": "Cyber Security",
+    "course": "Course",
+    "consultationTag": "Consultation",
+    "guidanceTitle": "Guidance for every next step",
+    "guidanceDesc": "Get practical academic, career, and business guidance from people who understand your goals.",
+    "businessConsultation": "Business Consultation",
+    "businessConsultationDesc": "Educational, career, and business consultation to help students, families, and entrepreneurs build a clear path toward success.",
+    "eLearning": "E-Learning Platform",
+    "eLearningDesc": "Learn anything, anywhere and anytime through Rekaz's modern e-learning platform.",
+    "startLearning": "Start Learning",
+    "viewCourses": "View Courses",
+    "studentDashboard": "Student Dashboard",
+    "studentDashboardDesc": "Review completed lessons, subject progress, attendance, and upcoming revision tasks in one place."
+  },
+  "testimonialBanner": {
+    "quote": "\"Rekaz changed the way I see education. The teachers didn't just prepare me for exams — they helped me believe in myself. I felt supported, motivated, and ready for both school and life.\"",
+    "name": "Lazreg Mohamed",
+    "role": "Student"
+  },
+  "programs": {
+    "tag": "Programs",
+    "title": "Our Programs",
+    "cem": {
+      "tag": "CEM • BEM",
+      "title": "CEM — Middle School",
+      "desc": "Complete support across all subjects from 1CEM to 4CEM, building strong foundations, strengthening knowledge and preparing students confidently for the BEM."
+    },
+    "lycee": {
+      "tag": "Lycée • BAC",
+      "title": "LYCÉE — High School",
+      "desc": "All-subject support from 1AS to 3AS, helping students build strong academic foundations and prepare strategically for the BAC."
+    },
+    "formations": {
+      "tag": "Certificates",
+      "title": "Professional Formations",
+      "desc": "Practical formations in entrepreneurship, marketing, digital skills and more, designed to develop real-world skills and provide valid certificates upon completion."
+    },
+    "growthTag": "Growth",
+    "growthTitle": "Business Growth & Monitoring",
+    "growthDesc": "From marketing and digital marketing to cybersecurity and advanced management, we provide strategies and continuous follow-up to help businesses grow, improve and stay ahead.",
+    "guidanceTag": "Guidance",
+    "consultationTitle": "Consultation",
+    "consultationDesc": "Educational, career and business consultation to help students, families and entrepreneurs make better decisions and build a clear path toward success."
+  },
+  "benefits": {
+    "tag": "Rekaz Advantages",
+    "title": "Helping Students Turn Effort Into Achievement",
+    "items": [
+      { "title": "All Subjects", "desc": "Personalized support across the subjects that matter most for confident progress." },
+      { "title": "CEM → BEM", "desc": "Build strong foundations and prepare with structure, exercises, and encouragement." },
+      { "title": "Lycée → BAC", "desc": "Strengthen advanced learning and prepare strategically for your BAC." },
+      { "title": "Professional Formations", "desc": "Develop practical future-ready skills in entrepreneurship, marketing, and digital fields." },
+      { "title": "Valid Certificates", "desc": "Complete professional formations and earn certificates that reflect your learning." },
+      { "title": "Educational & Business Consultation", "desc": "Make informed academic, career, and growth decisions with meaningful guidance." }
+    ]
+  },
+  "howItWorks": {
+    "tag": "Your Journey Starts Here",
+    "title": "Choose your path, learn with purpose, and move closer to your goals.",
+    "steps": [
+      { "step": "01", "title": "Choose Your Program", "desc": "Find the academic program, formation, or consultation that matches your goals." },
+      { "step": "02", "title": "Learn & Grow", "desc": "Study with experienced teachers, modern methods, and continuous support." },
+      { "step": "03", "title": "Practice & Improve", "desc": "Strengthen your skills through exercises, mock exams, and practical learning." }
+    ]
+  },
+  "testimonials": {
+    "tag": "Testimonials",
+    "title": "Words from students, parents, and learners",
+    "reviews": [
+      { "name": "Yasmine", "quote": "Rekaz changed the way I see education. The teachers didn't just prepare me for exams — they helped me believe in myself." },
+      { "name": "Amine", "quote": "The support and clear explanations helped me organize my BAC preparation with much more confidence." },
+      { "name": "Nadia", "role": "Parent", "quote": "I saw my daughter become more motivated, confident, and willing to ask questions. Rekaz really cares." },
+      { "name": "Rayan", "quote": "My professional formation gave me practical skills I can use right away, plus a certificate I'm proud of." },
+      { "name": "Sara", "quote": "The teachers make difficult lessons feel possible. I always leave class ready to try again." },
+      { "name": "Karim", "quote": "The career guidance helped me see a clearer direction after BEM." }
+    ]
+  },
+  "integration": {
+    "title": "Learning, guidance, and skills for every ambition",
+    "subtitle": "Explore education, professional training, e-learning, and consultation designed for your next step.",
+    "button": "Explore Programs"
+  },
+  "blog": {
+    "tag": "Resources",
+    "title": "Explore helpful articles for students, families, learners, and entrepreneurs",
+    "articles": [
+      { "type": "Article", "date": "Dec 19, 2024", "title": "How to Prepare Effectively for the BAC" },
+      { "type": "News", "date": "Dec 13, 2024", "title": "5 Smart Habits Every Successful Student Should Build" },
+      { "type": "News", "date": "Dec 13, 2024", "title": "How to Stay Motivated During Exam Season" }
+    ]
+  },
+  "faq": {
+    "tag": "FAQ",
+    "title": "Questions about Rekaz? We're here to help.",
+    "items": [
+      { "q": "Which school levels does Rekaz support?", "a": "We support all CEM (Middle School) levels from 1CEM to 4CEM/BEM, and all Lycée (High School) levels from 1AS to 3AS/BAC." },
+      { "q": "Do you teach all subjects?", "a": "Yes, we provide comprehensive support across all subjects required for both middle school and high school curriculums." },
+      { "q": "What is included in BEM and BAC preparation?", "a": "Our preparation includes intensive subject review, past paper practice, mock exams, and strategic guidance to build confidence." },
+      { "q": "What professional formations are available?", "a": "We offer practical courses in entrepreneurship, marketing, digital skills, cybersecurity, and advanced management." },
+      { "q": "Are certificates provided after formations?", "a": "Yes, all our professional formations conclude with a valid certificate upon successful completion." },
+      { "q": "Can I learn online?", "a": "Our modern E-Learning platform is launching soon, allowing you to learn anything, anywhere, anytime." }
+    ]
+  },
+  "cta": {
+    "pill": " Start Today",
+    "title": "Your Future Starts With One Decision",
+    "button": "Start Your Journey — Join Us",
+    "subtitle": "For students, learners & families"
+  },
+  "footer": {
+    "slogan": "Empowering the next generation through innovative education and practical skill development.",
+    "newsletter": "Subscribe to our newsletter",
+    "emailPlaceholder": "Enter your email",
+    "subscribe": "Subscribe",
+    "rekazLinks": "Rekaz",
+    "aboutUs": "About Us",
+    "ourTeam": "Our Team",
+    "careers": "Careers",
+    "newsEvents": "News & Events",
+    "programsTitle": "Programs",
+    "middleSchool": "Middle School (CEM)",
+    "highSchool": "High School (Lycée)",
+    "professionalTraining": "Professional Training",
+    "consultingLink": "Consulting",
+    "contactTitle": "Contact",
+    "address": "123 Education Street,\nAlgiers, Algeria",
+    "phone": "+213 (0) 555 123 456",
+    "email": "contact@rekaz.edu",
+    "copyright": "Rekaz Educational Institute. All rights reserved.",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service"
+  },
+  "inscription": {
+    "pageTitle": "Online Inscription & Registration | Rekaz Institute",
+    "pageDesc": "Register online for Rekaz Institute programs in Béchar: Middle School (CEM & BEM), High School (Lycée & BAC), Professional Training & Certifications, and Consulting.",
+    "tag": "Online Registration • Inscription",
+    "heading": "Join Rekaz Institute",
+    "headerSubtitle": "Take the first step toward academic excellence and career success. Complete the form below and our admissions team will contact you within 24 hours.",
+    "guarantee1": "Personalized Academic Mentoring",
+    "guarantee2": "Expert & Certified Instructors",
+    "guarantee3": "In-Person Béchar Center + Online Access",
+    "successBadge": "Application Successfully Received",
+    "successTitle": "Congratulations, {{name}}!",
+    "successMessage": "Your pre-registration with Rekaz Institute has been submitted. Our admissions team will reach out via phone or WhatsApp within 24 hours to confirm your group schedule.",
+    "appReference": "Application Reference",
+    "programLabel": "Program:",
+    "phoneLabel": "Phone Number:",
+    "subjectsLabel": "Selected Subjects / Modules:",
+    "modeLabel": "Learning Mode:",
+    "whatsappConfirm": "Confirm on WhatsApp",
+    "newRegistration": "New Registration",
+    "step1Title": "Select Your Study Program",
+    "step2Title": "Academic Level & Subjects",
+    "step3Title": "Student / Applicant Information",
+    "fieldLabel": "Field / Formation Specialization",
+    "gradeLabel": "Grade / Academic Level",
+    "branchLabel": "Academic Branch / Stream",
+    "learningModeLabel": "Learning Mode",
+    "inPerson": "In-Person (At Rekaz Learning Center, Béchar)",
+    "online": "Online (Interactive Virtual Classroom)",
+    "hybrid": "Hybrid (In-Person + Online Recordings)",
+    "selectSubjects": "Select Subjects or Modules:",
+    "packBacTitle": "Special Pack-BAC Offer",
+    "packBacDesc": "Get comprehensive tutoring across 3 major subjects for only 4,000 DZD/month.",
+    "packBacPrice": "4000 DZD",
+    "fullName": "Full Name",
+    "phoneWhatsapp": "Phone Number (WhatsApp)",
+    "emailOptional": "Email Address (Optional)",
+    "cityWilaya": "City / Wilaya",
+    "currentSchool": "Current School / High School / College",
+    "sessionTiming": "Preferred Session Timing",
+    "weekend": "Weekend Intensive Sessions (Friday / Saturday)",
+    "evening": "Weekday Evening Sessions",
+    "flexible": "Flexible Group Timing",
+    "parentSection": "Parent / Guardian Contact (For Middle & High School Students)",
+    "parentName": "Parent's Full Name",
+    "parentPhone": "Parent's Phone Number",
+    "relationship": "Relationship",
+    "father": "Father",
+    "mother": "Mother",
+    "guardian": "Guardian / Legal Representative",
+    "notesLabel": "Additional Notes or Specific Goals (Optional)",
+    "notesPlaceholder": "Specify any target subjects, exam goals, or special requirements here...",
+    "privacyNote": " Your personal data is kept strictly confidential and used solely for academic enrollment and communication.",
+    "submitting": "Submitting Application...",
+    "confirmReg": "Confirm Registration →",
+    "helpTag": "Need Guidance or Advice?",
+    "helpTitle": "Our admissions team is here to assist you",
+    "helpDesc": "Contact us directly by phone or visit us at our center in Béchar.",
+    "contactUs": "Contact Us",
+    "programs": {
+      "cem": { "title": "Middle School (CEM • BEM)", "subtitle": "Comprehensive tutoring from 1CEM to BEM success", "badge": "1AM to 4AM" },
+      "lycee": { "title": "High School (Lycée • BAC)", "subtitle": "Targeted preparation and strategic BAC revision", "badge": "1AS to 3AS / BAC" },
+      "formation": { "title": "Professional Training & Skills", "subtitle": "Certified courses in tech, business & languages", "badge": "Certificate Included" },
+      "consultation": { "title": "Consulting & Academic Guidance", "subtitle": "University orientation & personal coaching", "badge": "VIP Mentorship" }
+    },
+    "levels": {
+      "1am": "1st Year Middle School (1AM)",
+      "2am": "2nd Year Middle School (2AM)",
+      "3am": "3rd Year Middle School (3AM)",
+      "4am": "4th Year Middle School (4AM - BEM Exam)",
+      "1as": "1st Year High School (1AS - Common Core)",
+      "2as": "2nd Year High School (2AS)",
+      "3as": "3rd Year High School (3AS - BAC Preparation)",
+      "devWeb": "Full-Stack Web & Mobile Development",
+      "designUiux": "Graphic Design & UI/UX",
+      "langues": "Foreign Languages (English / French / German)",
+      "marketingDigital": "Digital Marketing & E-Commerce",
+      "bureautique": "Office Automation & Advanced Secretarial",
+      "entrepreneuriat": "Entrepreneurship & Project Management",
+      "orientationBac": "Post-BAC Orientation & University Choice",
+      "coachingScolaire": "Academic Coaching & Study Methodologies",
+      "reconversion": "Career Transition & Skills Assessment"
+    },
+    "branches": {
+      "sciences": "Experimental Sciences",
+      "math": "Mathematics",
+      "techMath": "Technical Mathematics (Civil / Mechanical / Electrical / Process)",
+      "management": "Management & Economics",
+      "literature": "Literature & Philosophy",
+      "languages": "Foreign Languages"
+    },
+    "subjects": {
+      "math": "Mathematics",
+      "physics": "Physics & Chemistry",
+      "biology": "Natural Sciences (Biology)",
+      "french": "French",
+      "english": "English",
+      "arabic": "Arabic Language",
+      "svt": "Natural Sciences (SVT)",
+      "philosophy": "Philosophy",
+      "economics": "Economics & Management",
+      "law": "Law",
+      "accounting": "Accounting",
+      "coreCurriculum": "Core Curriculum",
+      "handsOn": "Hands-on Projects",
+      "mentorship": "1-on-1 Mentorship",
+      "certificate": "Final Certificate",
+      "discovery": "1-on-1 Discovery Session",
+      "skillsAssessment": "Skills & Interest Assessment",
+      "actionPlan": "Personalized Action Plan"
+    },
+    "errors": {
+      "fullName": "Full name is required",
+      "phone": "Phone number is required",
+      "phoneInvalid": "Please enter a valid phone number",
+      "emailInvalid": "Please enter a valid email address",
+      "subjects": "Please select at least one subject or option"
+    },
+    "placeholders": {
+      "fullName": "e.g. Mohamed Amine Benali",
+      "phone": "05 / 06 / 07 XX XX XX XX",
+      "email": "name@example.com",
+      "city": "Béchar / Other",
+      "school": "e.g. Ibn Khaldoun High School",
+      "parentName": "Guardian full name",
+      "parentPhone": "05 / 06 / 07 XX XX XX XX"
+    }
+  }
+}

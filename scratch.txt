@@ -1,0 +1,525 @@
+Named components:
+Navbar: <div class="framer-vxgxe3-container" data-framer-name="Navbar" name="Navbar">
+Container: <div class="framer-1iw0709" data-framer-name="Container" style="opacity: 1;gap:10px;row-gap:10px;column-gap:10px">
+Nav Content Wrapper: <div class="framer-eauveu" data-framer-name="Nav Content Wrapper" style="opacity: 1;">
+Button: <div class="framer-1i0gdiy" data-framer-name="Button" style="opacity:1" data-nce-sid="zzo5c6">
+Wrapper: <div class="framer-piwjzl" data-framer-name="Wrapper" style="opacity: 1;gap:22px;row-gap:22px;column-gap:22px">
+Nav-Links-wrapper: <div class="framer-1d1dxwp" data-framer-name="Nav-Links-wrapper" style="opacity:1" data-nce-sid="shebyd">
+Nav-Link: <div class="framer-ba2ess-container" data-framer-name="Nav-Link" name="Nav-Link" style="opacity: 1;">
+Nav-Link: <div class="framer-1j7cigf-container" data-framer-name="Nav-Link" name="Nav-Link" style="opacity: 1;">
+Nav-Link: <div class="framer-1ynaw9z-container" data-framer-name="Nav-Link" name="Nav-Link" style="opacity: 1;">
+Nav-Link: <div class="framer-11hfzzb-container" data-framer-name="Nav-Link" name="Nav-Link" style="opacity: 1;">
+Button: <div class="framer-c6mban-container" data-framer-name="Button" name="Button" style="opacity: 1;">
+Text Wrapper: <div class="framer-1nokqml" data-framer-name="Text Wrapper" style="opacity:1" data-nce-sid="whqbzc">
+Hero section: <div class="framer-pigemf" data-framer-name="Hero section" style="gap:10px;row-gap:10px;column-gap:10px">
+Container: <div class="framer-1tfvjrc" data-framer-name="Container" style="gap:60px;row-gap:60px;column-gap:60px">
+Text-wrapper: <div class="framer-bop595" data-framer-name="Text-wrapper" style="gap:20px;row-gap:20px;column-gap:20px">
+Rating: <div class="framer-1jbtpjw-container" data-framer-appear-id="1jbtpjw" data-framer-name="Rating" name="Rating" style="opacity: 1; transform: none; will-change: transform;" data-nce-scroll="true">
+Rating: <div name="Rating" class="framer-nCvL6 framer-uRfbP framer-1widlpk framer-v-1widlpk" data-framer-name="Rating" style="opacity: 1;gap:12px;row-gap:12px;column-gap:12px">
+Images-wrapper: <div class="framer-16r5io6" data-framer-name="Images-wrapper" style="opacity: 1;gap:10px;row-gap:10px;column-gap:10px">
+Image: <div class="framer-n5icvj" data-border="true" data-framer-name="Image" style="opacity:1" data-nce-sid="mpgmwn">
+Image: <div class="framer-22ra7v" data-border="true" data-framer-name="Image" style="transform:translateY(-50%);opacity:1" data-nce-sid="mpgmwn">
+Image: <div class="framer-15efoma" data-border="true" data-framer-name="Image" style="transform:translateY(-50%);opacity:1" data-nce-sid="mpgmwn">
+Stars: <div class="framer-s7rzft" data-framer-name="Stars" style="opacity: 1;gap:7px;row-gap:7px;column-gap:7px">
+Stars Path: <div data-framer-component-type="SVG" data-framer-name="Stars Path" parentsize="0" _constraints="[object Object]" rotation="0" shadows="" class="framer-3hv2fk" aria-hidden="true" style="image-rendering: pixelated; flex-shrink: 0; opacity: 1;">
+Button-Wrapper: <div class="framer-ca42r4" data-framer-appear-id="ca42r4" data-framer-name="Button-Wrapper" style="opacity: 1; transform: none; will-change: transform;gap:16px;row-gap:16px;column-gap:16px" data-nce-scroll="true" data-nce-scroll-delay="400">
+Button: <div class="framer-1s08717-container" data-framer-name="Button" name="Button">
+Text Wrapper: <div class="framer-1nokqml" data-framer-name="Text Wrapper" style="opacity:1" data-nce-sid="whqbzc">
+Button: <div class="framer-qq5gh6-container" data-framer-name="Button" name="Button">
+Text Wrapper: <div class="framer-1nokqml" data-framer-name="Text Wrapper" style="opacity:1" data-nce-sid="whqbzc">
+Spacer: <div class="framer-cowcmy" data-framer-name="Spacer" style="gap:20px;row-gap:20px;column-gap:20px">
+Curved Ribbon with Blue Gradient: <div class="framer-a9dexq" data-framer-name="Curved Ribbon with Blue Gradient">
+BG: <div class="framer-fx8xg6" data-framer-name="BG" data-nce-sid="1459jd0">
+Partners: <div class="framer-c8et2c" data-framer-name="Partners" style="gap:10px;row-gap:10px;column-gap:10px">
+Container: <div class="framer-1vesdfu" data-framer-name="Container" style="gap:40px;row-gap:40px;column-gap:40px">
+Logos: <div class="framer-g3foq9-container" data-framer-name="Logos" name="Logos">
+Logo: <div class="framer-z7wgvi" data-framer-name="Logo" style="flex-shrink:0">
+Logo: <div class="framer-1j3f69d" data-framer-name="Logo" style="flex-shrink:0">
+Logo: <div class="framer-kfe6z" data-framer-name="Logo" style="flex-shrink:0">
+Logo: <div class="framer-1ha5mbb" data-framer-name="Logo" style="flex-shrink:0">
+Logo: <div class="framer-ahwpob" data-framer-name="Logo" style="flex-shrink:0">
+Logo: <div class="framer-z7wgvi" data-framer-name="Logo" style="flex-shrink: 0;">
+Logo: <div class="framer-1j3f69d" data-framer-name="Logo" style="flex-shrink: 0;">
+Logo: <div class="framer-kfe6z" data-framer-name="Logo" style="flex-shrink: 0;">
+Logo: <div class="framer-1ha5mbb" data-framer-name="Logo" style="flex-shrink: 0;">
+Logo: <div class="framer-ahwpob" data-framer-name="Logo" style="flex-shrink: 0;">
+Logo: <div class="framer-z7wgvi" data-framer-name="Logo" style="flex-shrink: 0;">
+Logo: <div class="framer-1j3f69d" data-framer-name="Logo" style="flex-shrink: 0;">
+Logo: <div class="framer-kfe6z" data-framer-name="Logo" style="flex-shrink: 0;">
+Logo: <div class="framer-1ha5mbb" data-framer-name="Logo" style="flex-shrink: 0;">
+Logo: <div class="framer-ahwpob" data-framer-name="Logo" style="flex-shrink: 0;">
+Logo: <div class="framer-z7wgvi" data-framer-name="Logo" style="flex-shrink: 0;">
+Logo: <div class="framer-1j3f69d" data-framer-name="Logo" style="flex-shrink: 0;">
+Logo: <div class="framer-kfe6z" data-framer-name="Logo" style="flex-shrink: 0;">
+Logo: <div class="framer-1ha5mbb" data-framer-name="Logo" style="flex-shrink: 0;">
+Logo: <div class="framer-ahwpob" data-framer-name="Logo" style="flex-shrink: 0;">
+Content: <div class="framer-1ltz1d" data-border="true" data-framer-name="Content" data-nce-sid="119pasj">
+Nataniel: <div data-framer-component-type="Stack" data-layoutid="AD1uRb789" id="HnlAPbjQ2" data-framer-name="Nataniel" data-framer-generated="true" class="framer-rqhbs3" style="display:flex;flex:0 0 auto;height:100%;width:100%;flex-flow:row;place-content:center;align-items:center;padding:0px;transform:none;opacity:1" data-nce-sid="dglq68">
+Avatar: <div class="framer-kj56m6" data-framer-name="Avatar" intrinsicwidth="440" intrinsicheight="440" style="border-radius: 60px; transform: none; opacity: 1;">
+Icon: <div class="framer-67o0k framer-efxGX framer-w5cofo framer-v-w5cofo" data-framer-name="Icon" style="opacity:1" data-nce-sid="1yrky03">
+Variant 1: <div class="framer-cTKKI framer-1ohqnu6 framer-v-1ohqnu6" data-framer-name="Variant 1" style="opacity: 1;gap:12px;row-gap:12px;column-gap:12px">
+Twitter: <div class="framer-wmnvc0-container" data-framer-name="Twitter" name="Twitter" style="opacity: 1;">
+Framer: <div class="framer-94oi8x-container" data-framer-name="Framer" name="Framer" style="opacity: 1;">
+LinkedIn: <div class="framer-su3r8d-container" data-framer-name="LinkedIn" name="LinkedIn" style="opacity: 1;">
+Youtube: <div class="framer-1bnsa74-container" data-framer-name="Youtube" name="Youtube" style="opacity: 1;">
+Content: <div class="framer-1n6xi96" data-framer-name="Content" style="gap:28px;row-gap:28px;column-gap:28px">
+Dotted Highlight Tag: <div class="framer-sSh1T framer-Z5paO framer-xf0dM framer-9xh6r2 framer-v-1neujbl" data-border="true" data-framer-name="Dotted Highlight Tag" style="opacity:1" data-nce-sid="2zcdj5">
+Gradient Overlay: <div class="framer-zg4psl" data-framer-name="Gradient Overlay" style="opacity:0.2" data-nce-sid="13s277">
+Title: <div class="framer-1pw8fxn" data-framer-name="Title" data-framer-component-type="RichTextContainer" style="transform:none;opacity:1" data-nce-sid="o5c3i1">
+Icon: <div class="framer-5n0mfo" data-border="true" data-framer-name="Icon" style="opacity:1" data-nce-sid="1bw5sct">
+Blue Line: <div class="framer-1ahrcnp" data-framer-name="Blue Line" style="background-position-x: ; background-position-y: ; background-size: ; background-repeat: ; background-attachment: ; background-origin: ; background-clip: ; background-color: ; will-change: transform; opacity: 0.0434143; transform: scale(0.33039); background-image: linear-gradient(90deg, rgba(79, 26, 214, 0) 0%, rgb(79, 26, 214) 50%, rgba(0, 85, 255, 0) 100%);" data-nce-scroll-link="true" data-nce-scroll-link-from="opacity: 0; transform: scale(0.3)" data-nce-scroll-link-to="opacity: 0.341277; transform: scale(0.538894)">
+Reveal Text: <div class="framer-p0ih05-container" data-framer-name="Reveal Text" name="Reveal Text">
+Text: <div class="framer-16xb1fn" data-framer-name="Text" data-framer-component-type="RichTextContainer" style="transform:none;opacity:1" data-nce-sid="8xgzdi">
+Features: <div class="framer-o3qalq" data-framer-name="Features" style="gap:10px;row-gap:10px;column-gap:10px">
+Container: <div class="framer-fasvk2" data-framer-name="Container" style="gap:88px;row-gap:88px;column-gap:88px">
+Text-wrapper: <div class="framer-lyy5cx" data-framer-name="Text-wrapper" style="will-change: transform; opacity: 1; transform: none;gap:22px;row-gap:22px;column-gap:22px" data-nce-scroll="true">
+Section-Tag: <div class="framer-9lu9zh-container" data-framer-name="Section-Tag" name="Section-Tag">
+Section-Tag: <div name="Section-Tag" class="framer-SnwEg framer-1yg7lys framer-v-1yg7lys" data-border="true" data-framer-name="Section-Tag" style="opacity:1" data-nce-sid="19szm39">
+Heading Wrapper: <div class="framer-12z0o7v" data-framer-name="Heading Wrapper" style="gap:12px;row-gap:12px;column-gap:12px">
+Icon: <div class="framer-19gg9gg" data-framer-name="Icon" data-nce-sid="1xxw1x1">
+Features-wrapper: <div class="framer-1h91dhi" data-framer-name="Features-wrapper" style="gap:58px;row-gap:58px;column-gap:58px">
+Features: <div class="framer-s1kgno" data-border="true" data-framer-name="Features" data-nce-sid="i5av7e">
+Text-wrapper: <div class="framer-z8x95l" data-framer-name="Text-wrapper" style="will-change: transform; opacity: 1; transform: none;gap:22px;row-gap:22px;column-gap:22px" data-nce-scroll="true">
+Feature-Tag: <div class="framer-orqocu-container" data-framer-name="Feature-Tag" name="Feature-Tag">
+Label: <div name="Feature-Tag" class="framer-j3UFp framer-b03Mm framer-it5g64 framer-v-it5g64" data-framer-name="Label" style="opacity:1" data-nce-sid="1mysagb">
+Content-Box: <div class="framer-crc9cw" data-framer-name="Content-Box" style="will-change: transform; opacity: 1; transform: none;background-color:rgb(255, 255, 255);background:rgb(255, 255, 255) none repeat scroll 0% 0% / auto padding-box border-box;border-radius:28px;box-shadow:rgba(0, 0, 0, 0.03) 0px 1px 32px 0px" data-nce-scroll="true">
+Text-wrapper: <div class="framer-svtcai" data-framer-name="Text-wrapper" style="gap:7px;row-gap:7px;column-gap:7px">
+Heading-wrapper: <div class="framer-12ri331" data-framer-name="Heading-wrapper" style="gap:10px;row-gap:10px;column-gap:10px">
+Tag: <div class="framer-7cftfe" data-framer-name="Tag" data-nce-sid="gy43py">
+Image: <div class="framer-nl4ntx" data-framer-name="Image" style="gap:16px;row-gap:16px;column-gap:16px">
+Boxes: <div class="framer-sowpf1" data-framer-name="Boxes">
+Text-wrapper: <div class="framer-v2unkc" data-framer-name="Text-wrapper" style="gap:9px;row-gap:9px;column-gap:9px">
+Features: <div class="framer-tnrewr" data-border="true" data-framer-name="Features" data-nce-sid="i5av7e">
+Mainwrapper: <div class="framer-tshph0" data-framer-name="Mainwrapper" style="will-change: transform; opacity: 1; transform: none;background-color:rgb(255, 255, 255);background:rgb(255, 255, 255) none repeat scroll 0% 0% / auto padding-box border-box;border-radius:28px;box-shadow:rgba(0, 0, 0, 0.03) 0px 1px 32px 0px" data-nce-scroll="true">
+Text-wrapper: <div class="framer-19m66in" data-framer-name="Text-wrapper" style="gap:7px;row-gap:7px;column-gap:7px">
+Heading-wrapper: <div class="framer-v3ouwq" data-framer-name="Heading-wrapper" style="gap:10px;row-gap:10px;column-gap:10px">
+L: <div class="framer-j8skxh" data-framer-name="L" style="gap:10px;row-gap:10px;column-gap:10px">
+Badge: <div data-framer-component-type="SVG" data-framer-name="Badge" parentsize="0" _constraints="[object Object]" rotation="0" shadows="" class="framer-gbz3ky" aria-hidden="true" style="image-rendering:pixelated;flex-shrink:0;background-size:100% 100%" data-nce-sid="c5e4wj">
+content-Box: <div class="framer-1myu62h" data-framer-name="content-Box" style="gap:16px;row-gap:16px;column-gap:16px">
+Content-wrapper: <div class="framer-1qey9g7" data-framer-name="Content-wrapper" style="gap:11px;row-gap:11px;column-gap:11px">
+Icon: <div class="framer-140jgtu" data-framer-name="Icon" style="border-radius:1000px;gap:10px;row-gap:10px;column-gap:10px">
+Text-wrapper: <div class="framer-19cy2hf" data-framer-name="Text-wrapper" style="gap:7px;row-gap:7px;column-gap:7px">
+Content-wrapper: <div class="framer-1bg8gr7" data-framer-name="Content-wrapper" style="gap:11px;row-gap:11px;column-gap:11px">
+Icon: <div class="framer-tynua8" data-framer-name="Icon" style="border-radius:1000px;gap:10px;row-gap:10px;column-gap:10px">
+Text-wrapper: <div class="framer-1p5q4w3" data-framer-name="Text-wrapper" style="gap:7px;row-gap:7px;column-gap:7px">
+Content-wrapper: <div class="framer-1svx2s4" data-framer-name="Content-wrapper" style="gap:11px;row-gap:11px;column-gap:11px">
+Icon: <div class="framer-gv3cbk" data-framer-name="Icon" style="border-radius:1000px;gap:10px;row-gap:10px;column-gap:10px">
+Text-wrapper: <div class="framer-11elsgq" data-framer-name="Text-wrapper" style="gap:7px;row-gap:7px;column-gap:7px">
+Buttons-wrapper: <div class="framer-1gy9gqs" data-framer-name="Buttons-wrapper" style="gap:10px;row-gap:10px;column-gap:10px">
+Button: <div class="framer-124m8ee" data-framer-name="Button" data-nce-sid="1xxw1x1">
+Button: <div class="framer-ochxn6" data-border="true" data-framer-name="Button" style="border-radius:14px;gap:10px;row-gap:10px;column-gap:10px">
+Text-wrapper: <div class="framer-17ex39p" data-framer-name="Text-wrapper" style="will-change: transform; opacity: 1; transform: none;gap:22px;row-gap:22px;column-gap:22px" data-nce-scroll="true">
+Feature-tag: <div class="framer-1iylsh8-container" data-framer-name="Feature-tag" name="Feature-tag">
+Label: <div name="Feature-tag" class="framer-j3UFp framer-b03Mm framer-it5g64 framer-v-it5g64" data-framer-name="Label" style="opacity:1" data-nce-sid="1mysagb">
+Features: <div class="framer-1isbmo4" data-border="true" data-framer-name="Features" data-nce-sid="i5av7e">
+Text-wrapper: <div class="framer-wxb7a9" data-framer-name="Text-wrapper" style="will-change: transform; opacity: 1; transform: none;gap:22px;row-gap:22px;column-gap:22px" data-nce-scroll="true">
+Feature-Tag: <div class="framer-qpcfza-container" data-framer-name="Feature-Tag" name="Feature-Tag">
+Label: <div name="Feature-Tag" class="framer-j3UFp framer-b03Mm framer-it5g64 framer-v-it5g64" data-framer-name="Label" style="opacity:1" data-nce-sid="1mysagb">
+Card: <div class="framer-bhw27" data-framer-name="Card" style="will-change: transform; opacity: 1; transform: none;background-color:rgb(255, 255, 255);background:rgb(255, 255, 255) none repeat scroll 0% 0% / auto padding-box border-box;border-radius:28px;box-shadow:rgba(0, 0, 0, 0.03) 0px 1px 32px 0px" data-nce-scroll="true">
+Text-wrapper: <div class="framer-hjju3i" data-framer-name="Text-wrapper" style="gap:10px;row-gap:10px;column-gap:10px">
+Top-content: <div class="framer-lfxkw1" data-framer-name="Top-content">
+Dots: <div class="framer-1hj7gcj" data-framer-name="Dots" style="gap:10px;row-gap:10px;column-gap:10px">
+Graph: <div class="framer-1q2hmgj" data-framer-name="Graph" style="gap:16px;row-gap:16px;column-gap:16px">
+Features: <div class="framer-uxmxf9" data-border="true" data-framer-name="Features" data-nce-sid="i5av7e">
+Mainwrapper: <div class="framer-14bdp9b" data-framer-name="Mainwrapper" style="will-change: transform; opacity: 1; transform: none;background-color:rgb(255, 255, 255);background:rgb(255, 255, 255) none repeat scroll 0% 0% / auto padding-box border-box;border-radius:28px;box-shadow:rgba(0, 0, 0, 0.03) 0px 1px 32px 0px" data-nce-scroll="true">
+Text-wrapper: <div class="framer-yfarv7" data-framer-name="Text-wrapper" style="gap:7px;row-gap:7px;column-gap:7px">
+Heading-wrapper: <div class="framer-1taqzp4" data-framer-name="Heading-wrapper" style="gap:10px;row-gap:10px;column-gap:10px">
+L: <div class="framer-1445qw0" data-framer-name="L" style="gap:10px;row-gap:10px;column-gap:10px">
+Badge: <div data-framer-component-type="SVG" data-framer-name="Badge" parentsize="0" _constraints="[object Object]" rotation="0" shadows="" class="framer-xasy9" aria-hidden="true" style="image-rendering:pixelated;flex-shrink:0;background-size:100% 100%" data-nce-sid="c5e4wj">
+content-Box: <div class="framer-1gw90en" data-framer-name="content-Box" style="gap:16px;row-gap:16px;column-gap:16px">
+Content-wrapper: <div class="framer-1pmqke0" data-framer-name="Content-wrapper" style="gap:11px;row-gap:11px;column-gap:11px">
+Icon: <div class="framer-1jan5oy" data-framer-name="Icon" style="border-radius:1000px;gap:10px;row-gap:10px;column-gap:10px">
+Text-wrapper: <div class="framer-1evrf6a" data-framer-name="Text-wrapper" style="gap:7px;row-gap:7px;column-gap:7px">
+Content-wrapper: <div class="framer-1n1kljc" data-framer-name="Content-wrapper" style="gap:11px;row-gap:11px;column-gap:11px">
+Icon: <div class="framer-1ilsg15" data-framer-name="Icon" style="border-radius:1000px;gap:10px;row-gap:10px;column-gap:10px">
+Text-wrapper: <div class="framer-1gca2gz" data-framer-name="Text-wrapper" style="gap:7px;row-gap:7px;column-gap:7px">
+Content-wrapper: <div class="framer-b0x80y" data-framer-name="Content-wrapper" style="gap:11px;row-gap:11px;column-gap:11px">
+Icon: <div class="framer-1pw7cu2" data-framer-name="Icon" style="border-radius:1000px;gap:10px;row-gap:10px;column-gap:10px">
+Text-wrapper: <div class="framer-6tewlk" data-framer-name="Text-wrapper" style="gap:7px;row-gap:7px;column-gap:7px">
+Buttons-wrapper: <div class="framer-1365qot" data-framer-name="Buttons-wrapper" style="gap:10px;row-gap:10px;column-gap:10px">
+Button: <div class="framer-9m1nto" data-framer-name="Button" data-nce-sid="1xxw1x1">
+Button: <div class="framer-cdkymv" data-border="true" data-framer-name="Button" style="border-radius:14px;gap:10px;row-gap:10px;column-gap:10px">
+Text-wrapper: <div class="framer-aorxhq" data-framer-name="Text-wrapper" style="will-change: transform; opacity: 1; transform: none;gap:22px;row-gap:22px;column-gap:22px" data-nce-scroll="true">
+Feature-tag: <div class="framer-919zpu-container" data-framer-name="Feature-tag" name="Feature-tag">
+Label: <div name="Feature-tag" class="framer-j3UFp framer-b03Mm framer-it5g64 framer-v-it5g64" data-framer-name="Label" style="opacity:1" data-nce-sid="1mysagb">
+Reviews: <div class="framer-1yjcira" data-framer-name="Reviews" style="gap:10px;row-gap:10px;column-gap:10px">
+Container: <div class="framer-1cvjbl7" data-framer-name="Container" style="will-change: transform; opacity: 1; transform: none;background-image:linear-gradient(rgb(0, 165, 255) 0%, rgb(4, 18, 250) 100%);background:rgba(0, 0, 0, 0) linear-gradient(rgb(0, 165, 255) 0%, rgb(4, 18, 250) 100%) repeat scroll 0% 0% / auto padding-box border-box;border-radius:42px" data-nce-scroll="true">
+Main-Wrapper: <div class="framer-s5afg6" data-framer-name="Main-Wrapper" style="gap:38px;row-gap:38px;column-gap:38px">
+Stars: <div class="framer-juocsp" data-framer-name="Stars" style="gap:5px;row-gap:5px;column-gap:5px">
+Star-Icon: <div class="framer-1g4tma1" data-framer-name="Star-Icon">
+Star-Icon: <div class="framer-xt7tsl" data-framer-name="Star-Icon">
+Star-Icon: <div class="framer-17evqsn" data-framer-name="Star-Icon">
+Star-Icon: <div class="framer-fgoypr" data-framer-name="Star-Icon">
+Star-Icon: <div class="framer-1nfncla" data-framer-name="Star-Icon">
+User-content-wrapper: <div class="framer-19a3uig" data-framer-name="User-content-wrapper" style="gap:20px;row-gap:20px;column-gap:20px">
+Image: <div class="framer-tjj46j" data-framer-name="Image" style="border-radius:1000px">
+Text Wrapper: <div class="framer-oizogr" data-framer-name="Text Wrapper" style="gap:3px;row-gap:3px;column-gap:3px">
+Container: <div class="framer-101f802" data-framer-name="Container" style="gap:68px;row-gap:68px;column-gap:68px">
+Heading Wrapper: <div class="framer-qvk75s" data-framer-name="Heading Wrapper" style="gap:16px;row-gap:16px;column-gap:16px">
+Section-Tag: <div class="framer-1yw8pkd-container" data-framer-appear-id="1yw8pkd" data-framer-name="Section-Tag" name="Section-Tag" style="opacity: 1; transform: none; will-change: transform;" data-nce-scroll="true">
+Section-Tag: <div name="Section-Tag" class="framer-SnwEg framer-1yg7lys framer-v-1yg7lys" data-border="true" data-framer-name="Section-Tag" style="opacity:1" data-nce-sid="19szm39">
+Features-wrapper: <div class="framer-41xmaq" data-framer-name="Features-wrapper" style="gap:58px;row-gap:58px;column-gap:58px">
+Features: <div class="framer-mpwkf7" data-border="true" data-framer-name="Features" data-nce-sid="3jxwcp">
+Text-wrapper: <div class="framer-rd63g0" data-framer-name="Text-wrapper" style="will-change: transform; opacity: 1; transform: none;gap:22px;row-gap:22px;column-gap:22px" data-nce-scroll="true">
+Feature-Tag: <div class="framer-3gtpr-container" data-framer-name="Feature-Tag" name="Feature-Tag">
+Label: <div name="Feature-Tag" class="framer-j3UFp framer-b03Mm framer-it5g64 framer-v-it5g64" data-framer-name="Label" style="opacity:1" data-nce-sid="1mysagb">
+Content-Box: <div class="framer-1b62h1a" data-framer-name="Content-Box" style="will-change: transform; opacity: 1; transform: none;border-radius:28px;box-shadow:rgba(0, 0, 0, 0.03) 0px 1px 32px 0px" data-nce-scroll="true">
+Features: <div class="framer-brpm6" data-border="true" data-framer-name="Features" data-nce-sid="3jxwcp">
+Mainwrapper: <div class="framer-47rk83" data-framer-name="Mainwrapper" style="will-change: transform; opacity: 1; transform: none;border-radius:28px;box-shadow:rgba(0, 0, 0, 0.03) 0px 1px 32px 0px" data-nce-scroll="true">
+Text-wrapper: <div class="framer-19q0mz6" data-framer-name="Text-wrapper" style="will-change: transform; opacity: 1; transform: none;gap:22px;row-gap:22px;column-gap:22px" data-nce-scroll="true">
+Feature-tag: <div class="framer-gs2o7t-container" data-framer-name="Feature-tag" name="Feature-tag">
+Label: <div name="Feature-tag" class="framer-j3UFp framer-b03Mm framer-it5g64 framer-v-it5g64" data-framer-name="Label" style="opacity:1" data-nce-sid="1mysagb">
+Features: <div class="framer-1l35vxl" data-border="true" data-framer-name="Features" data-nce-sid="3jxwcp">
+Text-wrapper: <div class="framer-vfcr2y" data-framer-name="Text-wrapper" style="will-change: transform; opacity: 1; transform: none;gap:22px;row-gap:22px;column-gap:22px" data-nce-scroll="true">
+Feature-Tag: <div class="framer-19ui96s-container" data-framer-name="Feature-Tag" name="Feature-Tag">
+Label: <div name="Feature-Tag" class="framer-j3UFp framer-b03Mm framer-it5g64 framer-v-it5g64" data-framer-name="Label" style="opacity:1" data-nce-sid="1mysagb">
+Card: <div class="framer-13nufnr" data-framer-name="Card" style="will-change: transform; opacity: 1; transform: none;border-radius:28px;box-shadow:rgba(0, 0, 0, 0.03) 0px 1px 32px 0px" data-nce-scroll="true">
+Features: <div class="framer-1s9voty" data-border="true" data-framer-name="Features" data-nce-sid="i5av7e">
+Content-Box: <div class="framer-138wt0s" data-framer-name="Content-Box" style="will-change: transform; opacity: 1; transform: none;background-color:rgb(255, 255, 255);background:rgb(255, 255, 255) none repeat scroll 0% 0% / auto padding-box border-box;border-radius:28px;box-shadow:rgba(0, 0, 0, 0.03) 0px 1px 32px 0px" data-nce-scroll="true">
+Top-Content: <div class="framer-1h3tkrq" data-framer-name="Top-Content">
+Text-wrapper: <div class="framer-28xdk7" data-framer-name="Text-wrapper" style="gap:7px;row-gap:7px;column-gap:7px">
+Icon-wrapper: <div class="framer-iiz869" data-framer-name="Icon-wrapper" data-nce-sid="lix0qk">
+Icon: <div class="framer-wx7ahm" data-framer-name="Icon" style="gap:10px;row-gap:10px;column-gap:10px">
+Text-wrapper: <div class="framer-4r8ldz" data-framer-name="Text-wrapper" style="gap:16px;row-gap:16px;column-gap:16px">
+Content-wrapper: <div class="framer-nu8vx5" data-framer-name="Content-wrapper" style="gap:11px;row-gap:11px;column-gap:11px">
+Icon-wrapper: <div class="framer-16wefbs" data-framer-name="Icon-wrapper" data-nce-sid="3a6qsg">
+Icon: <div class="framer-khs01v" data-framer-name="Icon">
+Text-wrapper: <div class="framer-noxj3o" data-framer-name="Text-wrapper" style="gap:10px;row-gap:10px;column-gap:10px">
+Content-wrapper: <div class="framer-v9fec4" data-framer-name="Content-wrapper" style="gap:11px;row-gap:11px;column-gap:11px">
+Icon-wrapper: <div class="framer-1k9upjg" data-framer-name="Icon-wrapper" data-nce-sid="3a6qsg">
+Icon: <div class="framer-1s74wsz" data-framer-name="Icon">
+Text-wrapper: <div class="framer-spd9xo" data-framer-name="Text-wrapper" style="gap:10px;row-gap:10px;column-gap:10px">
+Content-wrapper: <div class="framer-1otjom8" data-framer-name="Content-wrapper" style="gap:11px;row-gap:11px;column-gap:11px">
+Icon-wrapper: <div class="framer-1p1p5f1" data-framer-name="Icon-wrapper" data-nce-sid="3a6qsg">
+Icon: <div class="framer-1uysho9" data-framer-name="Icon">
+Text-wrapper: <div class="framer-1ukh5ve" data-framer-name="Text-wrapper" style="gap:10px;row-gap:10px;column-gap:10px">
+Text-content-wrapper: <div class="framer-1ei8y41" data-framer-name="Text-content-wrapper">
+Text-wrapper: <div class="framer-1e91xvj" data-framer-name="Text-wrapper" style="gap:12px;row-gap:12px;column-gap:12px">
+Padding-wrapper: <div class="framer-jgnwkf" data-framer-name="Padding-wrapper" style="border-radius:1000px;gap:10px;row-gap:10px;column-gap:10px">
+Text-wrapper: <div class="framer-m5b23f" data-framer-name="Text-wrapper" style="gap:12px;row-gap:12px;column-gap:12px">
+Padding-wrapper: <div class="framer-1knz2l" data-framer-name="Padding-wrapper" style="border-radius:1000px;gap:10px;row-gap:10px;column-gap:10px">
+Text-wrapper: <div class="framer-5rq4b5" data-framer-name="Text-wrapper" style="gap:12px;row-gap:12px;column-gap:12px">
+Padding-wrapper: <div class="framer-1v5t8xv" data-framer-name="Padding-wrapper" data-nce-sid="lix0qk">
+Text-wrapper: <div class="framer-1fpheur" data-framer-name="Text-wrapper" style="gap:12px;row-gap:12px;column-gap:12px">
+Padding-wrapper: <div class="framer-1m0gnxo" data-framer-name="Padding-wrapper" style="border-radius:1000px;gap:10px;row-gap:10px;column-gap:10px">
+Text-wrapper: <div class="framer-1c186b0" data-framer-name="Text-wrapper" style="gap:12px;row-gap:12px;column-gap:12px">
+Padding-wrapper: <div class="framer-1qyvrao" data-framer-name="Padding-wrapper" style="border-radius:1000px;gap:10px;row-gap:10px;column-gap:10px">
+Text-wrapper: <div class="framer-xhnnff" data-framer-name="Text-wrapper" style="gap:12px;row-gap:12px;column-gap:12px">
+Padding-wrapper: <div class="framer-1jvvw92" data-framer-name="Padding-wrapper" style="border-radius:1000px;gap:10px;row-gap:10px;column-gap:10px">
+Text-wrapper: <div class="framer-13v8wyk" data-framer-name="Text-wrapper" style="will-change: transform; opacity: 1; transform: none;gap:22px;row-gap:22px;column-gap:22px" data-nce-scroll="true">
+Feature-Tag: <div class="framer-xod5cg-container" data-framer-name="Feature-Tag" name="Feature-Tag">
+Label: <div name="Feature-Tag" class="framer-j3UFp framer-b03Mm framer-it5g64 framer-v-it5g64" data-framer-name="Label" style="opacity:1" data-nce-sid="1mysagb">
+Features: <div class="framer-1lyztkl" data-border="true" data-framer-name="Features" data-nce-sid="i5av7e">
+Text-wrapper: <div class="framer-8nf188" data-framer-name="Text-wrapper" style="will-change: transform; opacity: 1; transform: none;gap:22px;row-gap:22px;column-gap:22px" data-nce-scroll="true">
+Feature-Tag: <div class="framer-j0o0sx-container" data-framer-name="Feature-Tag" name="Feature-Tag">
+Label: <div name="Feature-Tag" class="framer-j3UFp framer-b03Mm framer-it5g64 framer-v-it5g64" data-framer-name="Label" style="opacity:1" data-nce-sid="1mysagb">
+Card: <div class="framer-phk5ak" data-framer-name="Card" style="will-change: transform; opacity: 1; transform: none;background-color:rgb(255, 255, 255);background:rgb(255, 255, 255) none repeat scroll 0% 0% / auto padding-box border-box;border-radius:28px;box-shadow:rgba(0, 0, 0, 0.03) 0px 1px 32px 0px" data-nce-scroll="true">
+Text-wrapper: <div class="framer-ygybr8" data-framer-name="Text-wrapper" style="gap:10px;row-gap:10px;column-gap:10px">
+Top-content: <div class="framer-cbiphl" data-framer-name="Top-content">
+Dots: <div class="framer-1etioqq" data-framer-name="Dots" style="gap:10px;row-gap:10px;column-gap:10px">
+Graph: <div class="framer-1xecljz" data-framer-name="Graph" style="gap:16px;row-gap:16px;column-gap:16px">
+Features: <div class="framer-bktieb" data-border="true" data-framer-name="Features" data-nce-sid="i5av7e">
+Card: <div class="framer-2fxmtr" data-framer-name="Card" style="will-change: transform; opacity: 1; transform: none;background-color:rgb(255, 255, 255);background:rgb(255, 255, 255) none repeat scroll 0% 0% / auto padding-box border-box;border-radius:28px;box-shadow:rgba(0, 0, 0, 0.03) 0px 1px 32px 0px" data-nce-scroll="true">
+Text-wrapper: <div class="framer-18bjzmu" data-framer-name="Text-wrapper" style="gap:7px;row-gap:7px;column-gap:7px">
+Heading-wrapper: <div class="framer-1y317rl" data-framer-name="Heading-wrapper" style="gap:10px;row-gap:10px;column-gap:10px">
+Image: <div class="framer-1u18zx" data-framer-name="Image">
+Text-wrapper: <div class="framer-ph26h8" data-framer-name="Text-wrapper" style="gap:10px;row-gap:10px;column-gap:10px">
+Line: <div class="framer-1sl2mxg" data-framer-name="Line" data-nce-sid="h7iwqk">
+Heading-wrapper: <div class="framer-1g5xms2" data-framer-name="Heading-wrapper">
+Inner-content-wrapper: <div class="framer-1dtq5io" data-framer-name="Inner-content-wrapper" style="gap:10px;row-gap:10px;column-gap:10px">
+Tag: <div class="framer-17tirg3" data-framer-name="Tag" style="gap:3px;row-gap:3px;column-gap:3px">
+Icon: <div class="framer-13p0qkl" data-framer-name="Icon">
+Text-wrapper: <div class="framer-15886bc" data-framer-name="Text-wrapper" style="will-change: transform; opacity: 1; transform: none;gap:28px;row-gap:28px;column-gap:28px" data-nce-scroll="true">
+Feature-Tag: <div class="framer-mh1jmy-container" data-framer-name="Feature-Tag" name="Feature-Tag">
+Label: <div name="Feature-Tag" class="framer-j3UFp framer-b03Mm framer-it5g64 framer-v-it5g64" data-framer-name="Label" style="opacity:1" data-nce-sid="1mysagb">
+Features: <div class="framer-1yg2xxa" data-border="true" data-framer-name="Features" data-nce-sid="i5av7e">
+Text-wrapper: <div class="framer-rafqqo" data-framer-name="Text-wrapper" style="will-change: transform; opacity: 1; transform: none;gap:28px;row-gap:28px;column-gap:28px" data-nce-scroll="true">
+Feature-Tag: <div class="framer-1trhrwj-container" data-framer-name="Feature-Tag" name="Feature-Tag">
+Label: <div name="Feature-Tag" class="framer-j3UFp framer-b03Mm framer-it5g64 framer-v-it5g64" data-framer-name="Label" style="opacity:1" data-nce-sid="1mysagb">
+Card: <div class="framer-13l4xym" data-framer-name="Card" style="will-change: transform; opacity: 1; transform: none;background-color:rgb(255, 255, 255);background:rgb(255, 255, 255) none repeat scroll 0% 0% / auto padding-box border-box;border-radius:28px;box-shadow:rgba(0, 0, 0, 0.03) 0px 1px 32px 0px" data-nce-scroll="true">
+Text-wrapper: <div class="framer-hr5p4v" data-framer-name="Text-wrapper" style="gap:7px;row-gap:7px;column-gap:7px">
+Heading-wrapper: <div class="framer-a3ekd5" data-framer-name="Heading-wrapper" style="gap:10px;row-gap:10px;column-gap:10px">
+Tag: <div class="framer-1n4uflh" data-framer-name="Tag" data-nce-sid="lix0qk">
+Icon: <div class="framer-1lxdybw" data-framer-name="Icon" style="gap:10px;row-gap:10px;column-gap:10px">
+Image: <div class="framer-757iad" data-framer-name="Image">
+Bottom-content: <div class="framer-1vookwr" data-framer-name="Bottom-content" style="gap:24px;row-gap:24px;column-gap:24px">
+Tag: <div class="framer-1pmbycy" data-framer-name="Tag" data-nce-sid="3a6qsg">
+Features: <div class="framer-gb2kzd" data-border="true" data-framer-name="Features" data-nce-sid="i5av7e">
+Card: <div class="framer-1jo8iid" data-framer-name="Card" style="will-change: transform; opacity: 1; transform: none;background-color:rgb(255, 255, 255);background:rgb(255, 255, 255) none repeat scroll 0% 0% / auto padding-box border-box;border-radius:28px;box-shadow:rgba(0, 0, 0, 0.03) 0px 1px 32px 0px" data-nce-scroll="true">
+Text-wrapper: <div class="framer-1ikzqw5" data-framer-name="Text-wrapper" style="gap:7px;row-gap:7px;column-gap:7px">
+Top-content-wrapper: <div class="framer-fikrd0" data-framer-name="Top-content-wrapper" style="gap:10px;row-gap:10px;column-gap:10px">
+Tag: <div class="framer-19uzl4v" data-framer-name="Tag" data-nce-sid="3a6qsg">
+Image: <div class="framer-l8p24n" data-framer-name="Image">
+Static-Tag: <div class="framer-m1xq3b" data-border="true" data-framer-name="Static-Tag" style="border-radius:14px;gap:10px;row-gap:10px;column-gap:10px">
+Text-wrapper: <div class="framer-1owi9ko" data-framer-name="Text-wrapper" style="will-change: transform; opacity: 1; transform: none;gap:28px;row-gap:28px;column-gap:28px" data-nce-scroll="true">
+Features-Tag: <div class="framer-16xp9dt-container" data-framer-name="Features-Tag" name="Features-Tag">
+Label: <div name="Features-Tag" class="framer-j3UFp framer-b03Mm framer-it5g64 framer-v-it5g64" data-framer-name="Label" style="opacity:1" data-nce-sid="1mysagb">
+Benefits: <div class="framer-10m4kaj" data-framer-name="Benefits" style="gap:10px;row-gap:10px;column-gap:10px">
+Container: <div class="framer-9uld8l" data-framer-name="Container" style="gap:88px;row-gap:88px;column-gap:88px">
+Heading Wrapper: <div class="framer-1tym0jc" data-framer-name="Heading Wrapper" style="will-change: transform; opacity: 1; transform: none;gap:10px;row-gap:10px;column-gap:10px" data-nce-scroll="true">
+Section-Tag: <div class="framer-11p9etz-container" data-framer-name="Section-Tag" name="Section-Tag">
+Section-Tag: <div name="Section-Tag" class="framer-SnwEg framer-1yg7lys framer-v-1yg7lys" data-border="true" data-framer-name="Section-Tag" style="opacity:1" data-nce-sid="19szm39">
+Benefits-Grid: <div class="framer-1u0vqxr" data-framer-name="Benefits-Grid" style="gap:52px;row-gap:52px;column-gap:52px">
+Benefit-Card: <div class="framer-11i1w5a-container" data-framer-name="Benefit-Card" name="Benefit-Card" style="will-change: transform; opacity: 1; transform: none;" data-nce-scroll="true">
+Benefit-Card: <div name="Benefit-Card" class="framer-JDEVN framer-89pJm framer-t6CX0 framer-9h4y61 framer-v-9h4y61" data-framer-name="Benefit-Card" style="width: 100%; border-radius: 26px; opacity: 1;gap:28px;row-gap:28px;column-gap:28px">
+Icon-wrap: <div class="framer-1lsts2j" data-framer-name="Icon-wrap" style="opacity:1" data-nce-sid="nedrel">
+Icon: <div class="framer-zveh2o" data-framer-name="Icon" style="opacity: 1;">
+Text-wrapper: <div class="framer-163f5gf" data-framer-name="Text-wrapper" style="opacity: 1;gap:7px;row-gap:7px;column-gap:7px">
+Benefit-Card: <div class="framer-oecqe2-container" data-framer-name="Benefit-Card" name="Benefit-Card" style="will-change: transform; opacity: 1; transform: none;" data-nce-scroll="true">
+Benefit-Card: <div name="Benefit-Card" class="framer-JDEVN framer-89pJm framer-t6CX0 framer-9h4y61 framer-v-9h4y61" data-framer-name="Benefit-Card" style="width: 100%; border-radius: 26px; opacity: 1;gap:28px;row-gap:28px;column-gap:28px">
+Icon-wrap: <div class="framer-1lsts2j" data-framer-name="Icon-wrap" style="opacity:1" data-nce-sid="nedrel">
+Icon: <div class="framer-zveh2o" data-framer-name="Icon" style="opacity: 1;">
+Text-wrapper: <div class="framer-163f5gf" data-framer-name="Text-wrapper" style="opacity: 1;gap:7px;row-gap:7px;column-gap:7px">
+Benefit-Card: <div class="framer-mh08tz-container" data-framer-name="Benefit-Card" name="Benefit-Card" style="will-change: transform; opacity: 1; transform: none;" data-nce-scroll="true">
+Benefit-Card: <div name="Benefit-Card" class="framer-JDEVN framer-89pJm framer-t6CX0 framer-9h4y61 framer-v-9h4y61" data-framer-name="Benefit-Card" style="width: 100%; border-radius: 26px; opacity: 1;gap:28px;row-gap:28px;column-gap:28px">
+Icon-wrap: <div class="framer-1lsts2j" data-framer-name="Icon-wrap" style="opacity:1" data-nce-sid="nedrel">
+Icon: <div class="framer-zveh2o" data-framer-name="Icon" style="opacity: 1;">
+Text-wrapper: <div class="framer-163f5gf" data-framer-name="Text-wrapper" style="opacity: 1;gap:7px;row-gap:7px;column-gap:7px">
+Benefit-Card: <div class="framer-1l0ycga-container" data-framer-name="Benefit-Card" name="Benefit-Card" style="will-change: transform; opacity: 1; transform: none;" data-nce-scroll="true">
+Benefit-Card: <div name="Benefit-Card" class="framer-JDEVN framer-89pJm framer-t6CX0 framer-9h4y61 framer-v-9h4y61" data-framer-name="Benefit-Card" style="width: 100%; border-radius: 26px; opacity: 1;gap:28px;row-gap:28px;column-gap:28px">
+Icon-wrap: <div class="framer-1lsts2j" data-framer-name="Icon-wrap" style="opacity:1" data-nce-sid="nedrel">
+Icon: <div class="framer-zveh2o" data-framer-name="Icon" style="opacity: 1;">
+Text-wrapper: <div class="framer-163f5gf" data-framer-name="Text-wrapper" style="opacity: 1;gap:7px;row-gap:7px;column-gap:7px">
+Benefit-Card: <div class="framer-1o67y2j-container" data-framer-name="Benefit-Card" name="Benefit-Card" style="will-change: transform; opacity: 1; transform: none;" data-nce-scroll="true">
+Benefit-Card: <div name="Benefit-Card" class="framer-JDEVN framer-89pJm framer-t6CX0 framer-9h4y61 framer-v-9h4y61" data-framer-name="Benefit-Card" style="width: 100%; border-radius: 26px; opacity: 1;gap:28px;row-gap:28px;column-gap:28px">
+Icon-wrap: <div class="framer-1lsts2j" data-framer-name="Icon-wrap" style="opacity:1" data-nce-sid="nedrel">
+Icon: <div class="framer-zveh2o" data-framer-name="Icon" style="opacity: 1;">
+Text-wrapper: <div class="framer-163f5gf" data-framer-name="Text-wrapper" style="opacity: 1;gap:7px;row-gap:7px;column-gap:7px">
+Benefit-Card: <div class="framer-15m6web-container" data-framer-name="Benefit-Card" name="Benefit-Card" style="will-change: transform; opacity: 1; transform: none;" data-nce-scroll="true">
+Benefit-Card: <div name="Benefit-Card" class="framer-JDEVN framer-89pJm framer-t6CX0 framer-9h4y61 framer-v-9h4y61" data-framer-name="Benefit-Card" style="width: 100%; border-radius: 26px; opacity: 1;gap:28px;row-gap:28px;column-gap:28px">
+Icon-wrap: <div class="framer-1lsts2j" data-framer-name="Icon-wrap" style="opacity:1" data-nce-sid="nedrel">
+Icon: <div class="framer-zveh2o" data-framer-name="Icon" style="opacity: 1;">
+Text-wrapper: <div class="framer-163f5gf" data-framer-name="Text-wrapper" style="opacity: 1;gap:7px;row-gap:7px;column-gap:7px">
+How It works: <div class="framer-1ffnpmy" data-framer-name="How It works" style="gap:10px;row-gap:10px;column-gap:10px">
+Container: <div class="framer-1g668ft" data-framer-name="Container" style="gap:76px;row-gap:76px;column-gap:76px">
+Heading Wrapper: <div class="framer-o1nhtl" data-framer-name="Heading Wrapper" style="will-change: transform; opacity: 1; transform: none;gap:12px;row-gap:12px;column-gap:12px" data-nce-scroll="true">
+Section-Tag: <div class="framer-emazv2-container" data-framer-name="Section-Tag" name="Section-Tag">
+Section-Tag: <div name="Section-Tag" class="framer-SnwEg framer-1yg7lys framer-v-1yg7lys" data-border="true" data-framer-name="Section-Tag" style="opacity:1" data-nce-sid="19szm39">
+2x-Grid: <div class="framer-7jkolo" data-framer-name="2x-Grid">
+Image: <div class="framer-7nh4kv" data-framer-name="Image" style="border-radius:24px;gap:10px;row-gap:10px;column-gap:10px">
+Steps: <div class="framer-1u7pnnx" data-framer-name="Steps" style="gap:38px;row-gap:38px;column-gap:38px">
+How-it-work-steps: <div class="framer-gj0dwp-container" data-framer-name="How-it-work-steps" name="How-it-work-steps" style="will-change: transform; opacity: 1; transform: none;" data-nce-scroll="true">
+How it work-Card: <div name="How-it-work-steps" class="framer-8LN4o framer-uRfbP framer-MER2I framer-3OYub framer-vmyoki framer-v-vmyoki" data-framer-name="How it work-Card" style="width: 100%; opacity: 1;gap:24px;row-gap:24px;column-gap:24px">
+Number-Wrapper: <div class="framer-hkojn4" data-framer-name="Number-Wrapper" style="opacity:1" data-nce-sid="1qn8y9g">
+Text-wrapper: <div class="framer-a90pb8" data-framer-name="Text-wrapper" style="opacity: 1;gap:12px;row-gap:12px;column-gap:12px">
+How-it-work-steps: <div class="framer-1gvd5qy-container" data-framer-name="How-it-work-steps" name="How-it-work-steps" style="will-change: transform; opacity: 1; transform: none;" data-nce-scroll="true">
+How it work-Card: <div name="How-it-work-steps" class="framer-8LN4o framer-uRfbP framer-MER2I framer-3OYub framer-vmyoki framer-v-vmyoki" data-framer-name="How it work-Card" style="width: 100%; opacity: 1;gap:24px;row-gap:24px;column-gap:24px">
+Number-Wrapper: <div class="framer-hkojn4" data-framer-name="Number-Wrapper" style="opacity:1" data-nce-sid="1qn8y9g">
+Text-wrapper: <div class="framer-a90pb8" data-framer-name="Text-wrapper" style="opacity: 1;gap:12px;row-gap:12px;column-gap:12px">
+How-it-work-steps: <div class="framer-mntp1e-container" data-framer-name="How-it-work-steps" name="How-it-work-steps" style="will-change: transform; opacity: 1; transform: none;" data-nce-scroll="true">
+How it work-Card: <div name="How-it-work-steps" class="framer-8LN4o framer-uRfbP framer-MER2I framer-3OYub framer-vmyoki framer-v-vmyoki" data-framer-name="How it work-Card" style="width: 100%; opacity: 1;gap:24px;row-gap:24px;column-gap:24px">
+Number-Wrapper: <div class="framer-hkojn4" data-framer-name="Number-Wrapper" style="opacity:1" data-nce-sid="1qn8y9g">
+Text-wrapper: <div class="framer-a90pb8" data-framer-name="Text-wrapper" style="opacity: 1;gap:12px;row-gap:12px;column-gap:12px">
+Testimonials: <div class="framer-qlslxv" data-framer-name="Testimonials" style="gap:10px;row-gap:10px;column-gap:10px">
+Container: <div class="framer-17lgndm" data-framer-name="Container" style="gap:88px;row-gap:88px;column-gap:88px">
+Heading Wrapper: <div class="framer-5gsvfk" data-framer-name="Heading Wrapper" style="will-change: transform; opacity: 1; transform: none;gap:12px;row-gap:12px;column-gap:12px" data-nce-scroll="true">
+Section-Tag: <div class="framer-1vxkl7h-container" data-framer-name="Section-Tag" name="Section-Tag">
+Section-Tag: <div name="Section-Tag" class="framer-SnwEg framer-1yg7lys framer-v-1yg7lys" data-border="true" data-framer-name="Section-Tag" style="opacity:1" data-nce-sid="19szm39">
+3x-Grid: <div class="framer-1ilipui" data-framer-name="3x-Grid" style="gap:18px;row-gap:18px;column-gap:18px">
+Testimonials content-wrapper: <div class="framer-1hn6q5u" data-framer-name="Testimonials content-wrapper" style="gap:16px;row-gap:16px;column-gap:16px">
+Testimonial-card: <div class="framer-1c8vzwp-container" data-framer-name="Testimonial-card" name="Testimonial-card" style="will-change: transform; opacity: 1; transform: none;" data-nce-scroll="true">
+Testimonial Content: <div class="framer-11pnqva" data-framer-name="Testimonial Content" style="opacity: 1;gap:16px;row-gap:16px;column-gap:16px">
+Testimonial Image: <div class="framer-8wsgkl" data-framer-name="Testimonial Image" style="border-radius: 1000px; opacity: 1;">
+Name: <div class="framer-1vcjta7" data-framer-name="Name" style="opacity: 1;gap:8px;row-gap:8px;column-gap:8px">
+Images Wrapper: <div class="framer-66u53v" data-framer-name="Images Wrapper" style="filter: invert(0); opacity: 1;gap:2px;row-gap:2px;column-gap:2px">
+Icon: <div class="framer-128xwgf" data-framer-name="Icon" style="opacity: 1;">
+Icon: <div class="framer-xza2gf" data-framer-name="Icon" style="opacity: 1;">
+Icon: <div class="framer-46pmql" data-framer-name="Icon" style="opacity: 1;">
+Icon: <div class="framer-f1cug2" data-framer-name="Icon" style="opacity: 1;">
+Icon: <div class="framer-1w4jo88" data-framer-name="Icon" style="opacity: 1;">
+Testimonial-card: <div class="framer-pln51n-container" data-framer-name="Testimonial-card" name="Testimonial-card" style="will-change: transform; opacity: 1; transform: none;" data-nce-scroll="true">
+Testimonial Content: <div class="framer-11pnqva" data-framer-name="Testimonial Content" style="opacity: 1;gap:16px;row-gap:16px;column-gap:16px">
+Testimonial Image: <div class="framer-8wsgkl" data-framer-name="Testimonial Image" style="border-radius: 1000px; opacity: 1;">
+Name: <div class="framer-1vcjta7" data-framer-name="Name" style="opacity: 1;gap:8px;row-gap:8px;column-gap:8px">
+Images Wrapper: <div class="framer-66u53v" data-framer-name="Images Wrapper" style="filter: invert(0); opacity: 1;gap:2px;row-gap:2px;column-gap:2px">
+Icon: <div class="framer-128xwgf" data-framer-name="Icon" style="opacity: 1;">
+Icon: <div class="framer-xza2gf" data-framer-name="Icon" style="opacity: 1;">
+Icon: <div class="framer-46pmql" data-framer-name="Icon" style="opacity: 1;">
+Icon: <div class="framer-f1cug2" data-framer-name="Icon" style="opacity: 1;">
+Icon: <div class="framer-1w4jo88" data-framer-name="Icon" style="opacity: 1;">
+Testimonial-card: <div class="framer-1w3ohjq-container" data-framer-name="Testimonial-card" name="Testimonial-card" style="will-change: transform; opacity: 1; transform: none;" data-nce-scroll="true">
+Testimonial Content: <div class="framer-11pnqva" data-framer-name="Testimonial Content" style="opacity: 1;gap:16px;row-gap:16px;column-gap:16px">
+Testimonial Image: <div class="framer-8wsgkl" data-framer-name="Testimonial Image" style="border-radius: 1000px; opacity: 1;">
+Name: <div class="framer-1vcjta7" data-framer-name="Name" style="opacity: 1;gap:8px;row-gap:8px;column-gap:8px">
+Images Wrapper: <div class="framer-66u53v" data-framer-name="Images Wrapper" style="filter: invert(0); opacity: 1;gap:2px;row-gap:2px;column-gap:2px">
+Icon: <div class="framer-128xwgf" data-framer-name="Icon" style="opacity: 1;">
+Icon: <div class="framer-xza2gf" data-framer-name="Icon" style="opacity: 1;">
+Icon: <div class="framer-46pmql" data-framer-name="Icon" style="opacity: 1;">
+Icon: <div class="framer-f1cug2" data-framer-name="Icon" style="opacity: 1;">
+Icon: <div class="framer-1w4jo88" data-framer-name="Icon" style="opacity: 1;">
+Testimonials content-wrapper: <div class="framer-1gnj1yr" data-framer-name="Testimonials content-wrapper" style="gap:16px;row-gap:16px;column-gap:16px">
+Testimonial-card: <div class="framer-9x48xx-container" data-framer-name="Testimonial-card" name="Testimonial-card" style="will-change: transform; opacity: 1; transform: none;" data-nce-scroll="true">
+Testimonial Content: <div class="framer-11pnqva" data-framer-name="Testimonial Content" style="opacity: 1;gap:16px;row-gap:16px;column-gap:16px">
+Testimonial Image: <div class="framer-8wsgkl" data-framer-name="Testimonial Image" style="border-radius: 1000px; opacity: 1;">
+Name: <div class="framer-1vcjta7" data-framer-name="Name" style="opacity: 1;gap:8px;row-gap:8px;column-gap:8px">
+Images Wrapper: <div class="framer-66u53v" data-framer-name="Images Wrapper" style="filter: invert(0); opacity: 1;gap:2px;row-gap:2px;column-gap:2px">
+Icon: <div class="framer-128xwgf" data-framer-name="Icon" style="opacity: 1;">
+Icon: <div class="framer-xza2gf" data-framer-name="Icon" style="opacity: 1;">
+Icon: <div class="framer-46pmql" data-framer-name="Icon" style="opacity: 1;">
+Icon: <div class="framer-f1cug2" data-framer-name="Icon" style="opacity: 1;">
+Icon: <div class="framer-1w4jo88" data-framer-name="Icon" style="opacity: 1;">
+Testimonial-card: <div class="framer-131z5zd-container" data-framer-name="Testimonial-card" name="Testimonial-card" style="will-change: transform; opacity: 1; transform: none;" data-nce-scroll="true">
+Testimonial Content: <div class="framer-11pnqva" data-framer-name="Testimonial Content" style="opacity: 1;gap:16px;row-gap:16px;column-gap:16px">
+Testimonial Image: <div class="framer-8wsgkl" data-framer-name="Testimonial Image" style="border-radius: 1000px; opacity: 1;">
+Name: <div class="framer-1vcjta7" data-framer-name="Name" style="opacity: 1;gap:8px;row-gap:8px;column-gap:8px">
+Images Wrapper: <div class="framer-66u53v" data-framer-name="Images Wrapper" style="filter: invert(0); opacity: 1;gap:2px;row-gap:2px;column-gap:2px">
+Icon: <div class="framer-128xwgf" data-framer-name="Icon" style="opacity: 1;">
+Icon: <div class="framer-xza2gf" data-framer-name="Icon" style="opacity: 1;">
+Icon: <div class="framer-46pmql" data-framer-name="Icon" style="opacity: 1;">
+Icon: <div class="framer-f1cug2" data-framer-name="Icon" style="opacity: 1;">
+Icon: <div class="framer-1w4jo88" data-framer-name="Icon" style="opacity: 1;">
+Testimonial-card: <div class="framer-3xd652-container" data-framer-name="Testimonial-card" name="Testimonial-card" style="will-change: transform; opacity: 1; transform: none;" data-nce-scroll="true">
+Testimonial Content: <div class="framer-11pnqva" data-framer-name="Testimonial Content" style="opacity: 1;gap:16px;row-gap:16px;column-gap:16px">
+Testimonial Image: <div class="framer-8wsgkl" data-framer-name="Testimonial Image" style="border-radius: 1000px; opacity: 1;">
+Name: <div class="framer-1vcjta7" data-framer-name="Name" style="opacity: 1;gap:8px;row-gap:8px;column-gap:8px">
+Images Wrapper: <div class="framer-66u53v" data-framer-name="Images Wrapper" style="filter: invert(0); opacity: 1;gap:2px;row-gap:2px;column-gap:2px">
+Icon: <div class="framer-128xwgf" data-framer-name="Icon" style="opacity: 1;">
+Icon: <div class="framer-xza2gf" data-framer-name="Icon" style="opacity: 1;">
+Icon: <div class="framer-46pmql" data-framer-name="Icon" style="opacity: 1;">
+Icon: <div class="framer-f1cug2" data-framer-name="Icon" style="opacity: 1;">
+Icon: <div class="framer-1w4jo88" data-framer-name="Icon" style="opacity: 1;">
+Testimonials content-wrapper: <div class="framer-pl0dk4 hidden-hpg3td hidden-nvv1mk" data-framer-name="Testimonials content-wrapper" style="gap:16px;row-gap:16px;column-gap:16px">
+Testimonial-card: <div class="framer-iwry0o-container" data-framer-name="Testimonial-card" name="Testimonial-card" style="will-change: transform; opacity: 1; transform: none;" data-nce-scroll="true">
+Testimonial Content: <div class="framer-11pnqva" data-framer-name="Testimonial Content" style="opacity: 1;gap:16px;row-gap:16px;column-gap:16px">
+Testimonial Image: <div class="framer-8wsgkl" data-framer-name="Testimonial Image" style="border-radius: 1000px; opacity: 1;">
+Name: <div class="framer-1vcjta7" data-framer-name="Name" style="opacity: 1;gap:8px;row-gap:8px;column-gap:8px">
+Images Wrapper: <div class="framer-66u53v" data-framer-name="Images Wrapper" style="filter: invert(0); opacity: 1;gap:2px;row-gap:2px;column-gap:2px">
+Icon: <div class="framer-128xwgf" data-framer-name="Icon" style="opacity: 1;">
+Icon: <div class="framer-xza2gf" data-framer-name="Icon" style="opacity: 1;">
+Icon: <div class="framer-46pmql" data-framer-name="Icon" style="opacity: 1;">
+Icon: <div class="framer-f1cug2" data-framer-name="Icon" style="opacity: 1;">
+Icon: <div class="framer-1w4jo88" data-framer-name="Icon" style="opacity: 1;">
+Testimonial-card: <div class="framer-wuutu4-container" data-framer-name="Testimonial-card" name="Testimonial-card" style="will-change: transform; opacity: 1; transform: none;" data-nce-scroll="true">
+Testimonial Content: <div class="framer-11pnqva" data-framer-name="Testimonial Content" style="opacity: 1;gap:16px;row-gap:16px;column-gap:16px">
+Testimonial Image: <div class="framer-8wsgkl" data-framer-name="Testimonial Image" style="border-radius: 1000px; opacity: 1;">
+Name: <div class="framer-1vcjta7" data-framer-name="Name" style="opacity: 1;gap:8px;row-gap:8px;column-gap:8px">
+Images Wrapper: <div class="framer-66u53v" data-framer-name="Images Wrapper" style="filter: invert(0); opacity: 1;gap:2px;row-gap:2px;column-gap:2px">
+Icon: <div class="framer-128xwgf" data-framer-name="Icon" style="opacity: 1;">
+Icon: <div class="framer-xza2gf" data-framer-name="Icon" style="opacity: 1;">
+Icon: <div class="framer-46pmql" data-framer-name="Icon" style="opacity: 1;">
+Icon: <div class="framer-f1cug2" data-framer-name="Icon" style="opacity: 1;">
+Icon: <div class="framer-1w4jo88" data-framer-name="Icon" style="opacity: 1;">
+Testimonial-card: <div class="framer-1s1gzqg-container" data-framer-name="Testimonial-card" name="Testimonial-card" style="will-change: transform; opacity: 1; transform: none;" data-nce-scroll="true">
+Testimonial Content: <div class="framer-11pnqva" data-framer-name="Testimonial Content" style="opacity: 1;gap:16px;row-gap:16px;column-gap:16px">
+Testimonial Image: <div class="framer-8wsgkl" data-framer-name="Testimonial Image" style="border-radius: 1000px; opacity: 1;">
+Name: <div class="framer-1vcjta7" data-framer-name="Name" style="opacity: 1;gap:8px;row-gap:8px;column-gap:8px">
+Images Wrapper: <div class="framer-66u53v" data-framer-name="Images Wrapper" style="filter: invert(0); opacity: 1;gap:2px;row-gap:2px;column-gap:2px">
+Icon: <div class="framer-128xwgf" data-framer-name="Icon" style="opacity: 1;">
+Icon: <div class="framer-xza2gf" data-framer-name="Icon" style="opacity: 1;">
+Icon: <div class="framer-46pmql" data-framer-name="Icon" style="opacity: 1;">
+Icon: <div class="framer-f1cug2" data-framer-name="Icon" style="opacity: 1;">
+Icon: <div class="framer-1w4jo88" data-framer-name="Icon" style="opacity: 1;">
+Integration: <div class="framer-1rcjllp" data-framer-name="Integration" style="gap:48px;row-gap:48px;column-gap:48px">
+Top-content-wrapper: <div class="framer-693vqo" data-framer-name="Top-content-wrapper" style="will-change: transform; opacity: 1; transform: none;gap:24px;row-gap:24px;column-gap:24px" data-nce-scroll="true">
+Text-wrapper: <div class="framer-1uuvu1t" data-framer-name="Text-wrapper" style="gap:20px;row-gap:20px;column-gap:20px">
+Button: <div class="framer-1g1v4e0-container" data-framer-name="Button" name="Button">
+Text Wrapper: <div class="framer-1nokqml" data-framer-name="Text Wrapper" style="opacity:1" data-nce-sid="whqbzc">
+Icon: <div class="framer-1go5muk-container" data-framer-name="Icon" name="Icon">
+Integration-Icon: <div name="Icon" class="framer-fuh3G framer-1ndnxr4 framer-v-1ndnxr4" data-framer-name="Integration-Icon" style="height:100%;width:100%;opacity:1" data-nce-sid="10jn7q4">
+Icon: <div class="framer-orlfpe" data-framer-name="Icon" style="opacity: 1;">
+Icon: <div class="framer-y49tx3-container" data-framer-name="Icon" name="Icon">
+Integration-Icon: <div name="Icon" class="framer-fuh3G framer-1ndnxr4 framer-v-1ndnxr4" data-framer-name="Integration-Icon" style="height:100%;width:100%;opacity:1" data-nce-sid="10jn7q4">
+Icon: <div class="framer-orlfpe" data-framer-name="Icon" style="opacity: 1;">
+Icon: <div class="framer-x7zj7-container" data-framer-name="Icon" name="Icon">
+Integration-Icon: <div name="Icon" class="framer-fuh3G framer-1ndnxr4 framer-v-1ndnxr4" data-framer-name="Integration-Icon" style="height:100%;width:100%;opacity:1" data-nce-sid="10jn7q4">
+Icon: <div class="framer-orlfpe" data-framer-name="Icon" style="opacity: 1;">
+Icon: <div class="framer-t6y6bd-container" data-framer-name="Icon" name="Icon">
+Integration-Icon: <div name="Icon" class="framer-fuh3G framer-1ndnxr4 framer-v-1ndnxr4" data-framer-name="Integration-Icon" style="height:100%;width:100%;opacity:1" data-nce-sid="10jn7q4">
+Icon: <div class="framer-orlfpe" data-framer-name="Icon" style="opacity: 1;">
+Icon: <div class="framer-16w0xfp-container" data-framer-name="Icon" name="Icon">
+Integration-Icon: <div name="Icon" class="framer-fuh3G framer-1ndnxr4 framer-v-1ndnxr4" data-framer-name="Integration-Icon" style="height:100%;width:100%;opacity:1" data-nce-sid="10jn7q4">
+Icon: <div class="framer-orlfpe" data-framer-name="Icon" style="opacity: 1;">
+Icon: <div class="framer-s0co-container" data-framer-name="Icon" name="Icon">
+Integration-Icon: <div name="Icon" class="framer-fuh3G framer-1ndnxr4 framer-v-1ndnxr4" data-framer-name="Integration-Icon" style="height:100%;width:100%;opacity:1" data-nce-sid="10jn7q4">
+Icon: <div class="framer-orlfpe" data-framer-name="Icon" style="opacity: 1;">
+Blogs: <div class="framer-13tm86l" data-framer-name="Blogs" style="gap:10px;row-gap:10px;column-gap:10px">
+Container: <div class="framer-1mtc9ga" data-framer-name="Container" style="gap:88px;row-gap:88px;column-gap:88px">
+Heading Wrapper: <div class="framer-dg07z7" data-framer-name="Heading Wrapper" style="will-change: transform; opacity: 1; transform: none;gap:12px;row-gap:12px;column-gap:12px" data-nce-scroll="true">
+Section-Tag: <div class="framer-80t1h6-container" data-framer-name="Section-Tag" name="Section-Tag">
+Section-Tag: <div name="Section-Tag" class="framer-SnwEg framer-1yg7lys framer-v-1yg7lys" data-border="true" data-framer-name="Section-Tag" style="opacity:1" data-nce-sid="19szm39">
+Blogs-Grid: <div class="framer-4i4h64" data-framer-name="Blogs-Grid" style="gap:20px;row-gap:20px;column-gap:20px">
+Blog-Card: <div class="framer-1788q8l-container" data-framer-name="Blog-Card" name="Blog-Card" style="will-change: transform; opacity: 1; transform: none;" data-nce-scroll="true">
+Image: <div class="framer-1bfyha9" data-framer-name="Image" style="border-radius: 18px; transform: none; opacity: 1;border:0px none rgb(0, 0, 238)">
+Content-wrapper: <div class="framer-1i93ssc" data-framer-name="Content-wrapper" style="opacity:1" data-nce-sid="146b4yv">
+Text-wrapper: <div class="framer-bcyf06" data-framer-name="Text-wrapper" style="opacity:1" data-nce-sid="1ni39ki">
+Tag: <div class="framer-x10hq5" data-border="true" data-framer-name="Tag" style="opacity:1" data-nce-sid="b1ob84">
+Inner-Text-wrapper: <div class="framer-t92ui9" data-framer-name="Inner-Text-wrapper" style="opacity:1" data-nce-sid="whqbzc">
+Blog-Card: <div class="framer-1788q8l-container" data-framer-name="Blog-Card" name="Blog-Card" style="will-change: transform; opacity: 1; transform: none;" data-nce-scroll="true">
+Image: <div class="framer-1bfyha9" data-framer-name="Image" style="border-radius: 18px; transform: none; opacity: 1;border:0px none rgb(0, 0, 238)">
+Content-wrapper: <div class="framer-1i93ssc" data-framer-name="Content-wrapper" style="opacity:1" data-nce-sid="146b4yv">
+Text-wrapper: <div class="framer-bcyf06" data-framer-name="Text-wrapper" style="opacity:1" data-nce-sid="1ni39ki">
+Tag: <div class="framer-x10hq5" data-border="true" data-framer-name="Tag" style="opacity:1" data-nce-sid="b1ob84">
+Inner-Text-wrapper: <div class="framer-t92ui9" data-framer-name="Inner-Text-wrapper" style="opacity:1" data-nce-sid="whqbzc">
+Blog-Card: <div class="framer-1788q8l-container" data-framer-name="Blog-Card" name="Blog-Card" style="will-change: transform; opacity: 1; transform: none;" data-nce-scroll="true">
+Image: <div class="framer-1bfyha9" data-framer-name="Image" style="border-radius: 18px; transform: none; opacity: 1;border:0px none rgb(0, 0, 238)">
+Content-wrapper: <div class="framer-1i93ssc" data-framer-name="Content-wrapper" style="opacity:1" data-nce-sid="146b4yv">
+Text-wrapper: <div class="framer-bcyf06" data-framer-name="Text-wrapper" style="opacity:1" data-nce-sid="1ni39ki">
+Tag: <div class="framer-x10hq5" data-border="true" data-framer-name="Tag" style="opacity:1" data-nce-sid="b1ob84">
+Inner-Text-wrapper: <div class="framer-t92ui9" data-framer-name="Inner-Text-wrapper" style="opacity:1" data-nce-sid="whqbzc">
+Container: <div class="framer-j9wqk8" data-framer-name="Container" style="gap:68px;row-gap:68px;column-gap:68px">
+Heading Wrapper: <div class="framer-5d4jou" data-framer-name="Heading Wrapper" style="will-change: transform; opacity: 1; transform: none;gap:12px;row-gap:12px;column-gap:12px" data-nce-scroll="true">
+Section-Tag: <div class="framer-1mz6hsr-container" data-framer-name="Section-Tag" name="Section-Tag">
+Section-Tag: <div name="Section-Tag" class="framer-SnwEg framer-1yg7lys framer-v-1yg7lys" data-border="true" data-framer-name="Section-Tag" style="opacity:1" data-nce-sid="19szm39">
+FAQ's: <div class="framer-1hi6j2b-container" data-framer-name="FAQ's" name="FAQ's">
+Desktop: <div name="FAQ's" class="framer-Puv4c framer-j2nadb framer-v-j2nadb" data-framer-name="Desktop" style="max-width: 100%; width: 100%; opacity: 1;gap:22px;row-gap:22px;column-gap:22px">
+FAQ-Item: <div class="framer-1ndz3db-container" data-framer-name="FAQ-Item" name="FAQ-Item" style="will-change: transform; opacity: 1; transform: none;" data-nce-scroll="true">
+FAQ-Closed: <div name="FAQ-Item" class="framer-X1LBR framer-3OYub framer-t6CX0 framer-1dw374h framer-v-1dw374h" data-framer-name="FAQ-Closed" data-highlight="true" tabindex="0" style="width:100%;border-bottom-left-radius:16px;border-bottom-right-radius:16px;border-top-left-radius:16px;border-top-right-radius:16px;opacity:1" data-nce-sid="sxeya7">
+Question: <div class="framer-1ikyynn" data-framer-name="Question" style="opacity: 1;gap:24px;row-gap:24px;column-gap:24px" data-nce-crawl-group="0" data-nce-crawl-item="0">
+Icon: <div class="framer-1eggkz6" data-framer-name="Icon" style="opacity: 1;">
+FAQ-Closed: <div class="framer-X1LBR framer-3OYub framer-t6CX0 framer-1dw374h framer-v-1dw374h" data-framer-name="FAQ-Closed" data-highlight="true" tabindex="0" style="width:100%;border-bottom-left-radius:16px;border-bottom-right-radius:16px;border-top-left-radius:16px;border-top-right-radius:16px;opacity:1" data-nce-sid="sxeya7">
+Question: <div class="framer-1ikyynn" data-framer-name="Question" style="opacity: 1;gap:24px;row-gap:24px;column-gap:24px" data-nce-crawl-group="0" data-nce-crawl-item="1">
+Icon: <div class="framer-1eggkz6" data-framer-name="Icon" style="opacity: 1;">
+FAQ-Closed: <div class="framer-X1LBR framer-3OYub framer-t6CX0 framer-1dw374h framer-v-1dw374h" data-framer-name="FAQ-Closed" data-highlight="true" tabindex="0" style="width:100%;border-bottom-left-radius:16px;border-bottom-right-radius:16px;border-top-left-radius:16px;border-top-right-radius:16px;opacity:1" data-nce-sid="sxeya7">
+Question: <div class="framer-1ikyynn" data-framer-name="Question" style="opacity: 1;gap:24px;row-gap:24px;column-gap:24px" data-nce-crawl-group="0" data-nce-crawl-item="2">
+Icon: <div class="framer-1eggkz6" data-framer-name="Icon" style="opacity: 1;">
+FAQ-Closed: <div class="framer-X1LBR framer-3OYub framer-t6CX0 framer-1dw374h framer-v-1dw374h" data-framer-name="FAQ-Closed" data-highlight="true" tabindex="0" style="width:100%;border-bottom-left-radius:16px;border-bottom-right-radius:16px;border-top-left-radius:16px;border-top-right-radius:16px;opacity:1" data-nce-sid="sxeya7">
+Question: <div class="framer-1ikyynn" data-framer-name="Question" style="opacity: 1;gap:24px;row-gap:24px;column-gap:24px" data-nce-crawl-group="0" data-nce-crawl-item="3">
+Icon: <div class="framer-1eggkz6" data-framer-name="Icon" style="opacity: 1;">
+FAQ-Closed: <div class="framer-X1LBR framer-3OYub framer-t6CX0 framer-1dw374h framer-v-1dw374h" data-framer-name="FAQ-Closed" data-highlight="true" tabindex="0" style="width:100%;border-bottom-left-radius:16px;border-bottom-right-radius:16px;border-top-left-radius:16px;border-top-right-radius:16px;opacity:1" data-nce-sid="sxeya7">
+Question: <div class="framer-1ikyynn" data-framer-name="Question" style="opacity: 1;gap:24px;row-gap:24px;column-gap:24px" data-nce-crawl-group="0" data-nce-crawl-item="4">
+Icon: <div class="framer-1eggkz6" data-framer-name="Icon" style="opacity: 1;">
+FAQ-Closed: <div class="framer-X1LBR framer-3OYub framer-t6CX0 framer-1dw374h framer-v-1dw374h" data-framer-name="FAQ-Closed" data-highlight="true" tabindex="0" style="width:100%;border-bottom-left-radius:16px;border-bottom-right-radius:16px;border-top-left-radius:16px;border-top-right-radius:16px;opacity:1" data-nce-sid="sxeya7">
+Question: <div class="framer-1ikyynn" data-framer-name="Question" style="opacity: 1;gap:24px;row-gap:24px;column-gap:24px" data-nce-crawl-group="0" data-nce-crawl-item="5">
+Icon: <div class="framer-1eggkz6" data-framer-name="Icon" style="opacity: 1;">
+CTA: <div class="framer-2s9oeo-container" data-framer-name="CTA" name="CTA">
+Container: <div class="framer-858fbc" data-framer-name="Container" style="opacity:1" data-nce-sid="aoaeul">
+Content Wrapper: <div class="framer-5ay7u5" data-framer-name="Content Wrapper" style="opacity: 1;gap:34px;row-gap:34px;column-gap:34px">
+Top Heading: <div class="framer-wmdcqy" data-framer-name="Top Heading" style="opacity: 1;gap:20px;row-gap:20px;column-gap:20px">
+Icon-wrapper: <div class="framer-1lqrqk9" data-framer-name="Icon-wrapper" style="opacity:1" data-nce-sid="gblzok">
+Icon: <div class="framer-1euhqyy" data-framer-name="Icon" style="opacity: 1;">
+Button: <div class="framer-yfd20m-container" data-framer-name="Button" name="Button" style="opacity: 1;">
+Text Wrapper: <div class="framer-1nokqml" data-framer-name="Text Wrapper" style="opacity:1" data-nce-sid="whqbzc">
+Rating: <div class="framer-15nondt" data-framer-name="Rating" style="opacity: 1;gap:12px;row-gap:12px;column-gap:12px">
+Images-wrapper: <div class="framer-b7b9xd" data-framer-name="Images-wrapper" style="opacity: 1;gap:10px;row-gap:10px;column-gap:10px">
+Image: <div class="framer-13ui18e" data-border="true" data-framer-name="Image" style="opacity:1" data-nce-sid="mpgmwn">
+Image: <div class="framer-mhbrcn" data-border="true" data-framer-name="Image" style="transform:translateY(-50%);opacity:1" data-nce-sid="mpgmwn">
+Image: <div class="framer-wwo28f" data-border="true" data-framer-name="Image" style="transform:translateY(-50%);opacity:1" data-nce-sid="mpgmwn">
+Stars: <div class="framer-z0xy9t" data-framer-name="Stars" style="opacity: 1;gap:7px;row-gap:7px;column-gap:7px">
+Stars Item: <div class="framer-133i25b" data-framer-name="Stars Item" style="opacity: 1;gap:2px;row-gap:2px;column-gap:2px">
+Image: <div class="framer-uxm5iw" data-framer-name="Image" style="opacity: 1;">
+Image: <div class="framer-babw3z" data-framer-name="Image" style="opacity: 1;">
+Image: <div class="framer-1ffsuev" data-framer-name="Image" style="opacity: 1;">
+Image: <div class="framer-52xy2f" data-framer-name="Image" style="opacity: 1;">
+Image: <div class="framer-10i2s1q" data-framer-name="Image" style="opacity: 1;">
+Lines: <div class="framer-d6m651" data-framer-name="Lines" style="opacity:0.055">
+Footer: <div class="framer-1uroioc-container" data-framer-name="Footer" name="Footer">
+Container: <div class="framer-4z4e25" data-framer-name="Container" style="opacity: 1;gap:10px;row-gap:10px;column-gap:10px">
+Main-wrapper: <div class="framer-16uwmpc" data-framer-name="Main-wrapper" style="opacity: 1;gap:78px;row-gap:78px;column-gap:78px">
+Top-content-wrapper: <div class="framer-1grh6xi" data-framer-name="Top-content-wrapper" style="opacity: 1;">
+Branding: <div class="framer-23fjq" data-framer-name="Branding" style="opacity: 1;gap:18px;row-gap:18px;column-gap:18px">
+Button: <div class="framer-x1ji72" data-framer-name="Button" style="opacity:1" data-nce-sid="z6w5p2">
+Social: <div class="framer-1pz0wde" data-framer-name="Social" style="opacity: 1;gap:8px;row-gap:8px;column-gap:8px">
+Social-Icon: <div class="framer-pe82rz-container" data-framer-name="Social-Icon" name="Social-Icon" style="opacity: 1;">
+Social-Icon: <div class="framer-1pxx6ww-container" data-framer-name="Social-Icon" name="Social-Icon" style="opacity: 1;">
+Social-Icon: <div class="framer-zf9xv1-container" data-framer-name="Social-Icon" name="Social-Icon" style="opacity: 1;">
+Email: <div class="framer-1rglwhy" data-framer-name="Email" style="opacity: 1;gap:16px;row-gap:16px;column-gap:16px">
+Input: <div class="framer-15sxma9-container" data-framer-name="Input" name="Input" style="opacity: 1;">
+Spacer: <div class="framer-1xwfrtf" data-framer-name="Spacer" style="opacity: 1;">
+3x-Grid: <div class="framer-45cbb3" data-framer-name="3x-Grid" style="opacity: 1;gap:32px;row-gap:32px;column-gap:32px">
+Links Wrapper: <div class="framer-1jz984r" data-framer-name="Links Wrapper" style="opacity: 1;gap:14px;row-gap:14px;column-gap:14px">
+Footer-Link: <div class="framer-15p36hq-container" data-framer-name="Footer-Link" name="Footer-Link" style="opacity: 1;">
+Links Wrapper: <div class="framer-d0jnwr" data-framer-name="Links Wrapper" style="opacity: 1;gap:14px;row-gap:14px;column-gap:14px">
+Links Wrapper: <div class="framer-9csptv" data-framer-name="Links Wrapper" style="opacity: 1;gap:14px;row-gap:14px;column-gap:14px">
+Wrapper: <div class="framer-yd467p" data-framer-name="Wrapper" style="opacity: 1;gap:5px;row-gap:5px;column-gap:5px">
+Found id="main"
+id="main" data-framer-hydrate-v2="{&quot;routeId&quot;:&quot;rlkX9Huzi&quot;,&quot;localeId&quot;:&quot;default&quot;,&quot;breakpoints&quot;:[{&quot;hash&quot;:&quot;1st11v&quot;,&quot;mediaQuery&quot;:&quot;(min-width: 1200px)&quot;},{&quot;hash&quot;:&quot;hpg3td&quot;,&quot;mediaQuery&quot;:&quot;(min-width: 810px) and (max-width: 1199.98px)&quot;},{&quot;hash&quot;:&quot;nvv1mk&quot;,&quot;mediaQuery&quot;:&quot;(max-width: 809.98px)&quot;},{&quot;hash&quot;:&quot;19yibz1&quot;,&quot;mediaQuery&quot;:&quot;(max-width: 809.98px)&quot;},{&quot;hash&quot;:&quot;1kjlkfj&quot;,&quot;mediaQuery&quot;:&quot;(min-width: 810px) and (max-width: 1199.98px)&quot;},{&quot;hash&quot;:&quot;z6um3i&quot;,&quot;mediaQuery&quot;:&quot;(min-width: 1200px)&quot;}]}" data-framer-ssr-released-at="2026-08-19T22:05:33.062Z" data-framer-page-optimized-at="2026-08-22T00:59:10.907Z" data-framer-generated-page=""><!--$--><style data-framer-html-style="">:root body { background: rgb(255, 255, 255); }</style><div class="framer-L3CCr framer-z6um3i" data-layout-template="true" style="min-height:100vh;width:auto"><div class="framer-vxgxe3-container" data-framer-name="Navbar" name="Navbar"><div class="ssr-variant"><nav name="Navbar" class="framer-slWxo framer-1j3k9q1 framer-v-1j3k9q1" data-framer-name="Desktop" style="width:100%;opacity:1" data-nce-sid="hljlgj"><div class="framer-1iw0709" data-framer-name="Container" style="opacity: 1;gap:10px;row-gap:10px;column-gap:10px"><div class="framer-eauveu" data-framer-name="Nav Content Wrapper" style="opacity: 1;"><!--$--><a class="framer-bwmwmy framer-16koqng" data-framer-name="Logo" href="./index.html" data-framer-page-link-current="true" style="opacity:1" data-nce-sid="16w59pv"><div class="framer-1i0gdiy" data-framer-name="Button" style="opacity:1" data-nce-sid="zzo5c6"><div class="framer-njd3ez" style="opacity: 1;"><div style="position:absolute;border-radius:inherit;corner-shape:inherit;top:0;right:0;bottom:0;left:0" data-framer-background-image-wrapper="true"><img decoding="auto" width="669" height="669" sizes="(min-width: 810px) and (max-width: 1199.98px) 35px, (min-width: 1200px) 35px, (max-width: 809.98px) 35px" srcset="https://framerusercontent.com/images/Cgo1QGj8dYtM8KPWmWTmyBOwIRY.png?scale-down-to=512&amp;width=669&amp;height=669 512w, https://framerusercontent.com/images/Cgo1QGj8dYtM8KPWmWTmyBOwIRY.png?width=669&amp;height=669 669w" src="https://framerusercontent.com/images/Cgo1QGj8dYtM8KPWmWTmyBOwIRY.png?width=669&amp;height=669" alt="" style="display:block;width:100%;height:100%;border-radius:inherit;corner-shape:inherit;object-position:center;object-fit:cover" loading="lazy"></div></div></div><div class="framer-1v626wh" data-framer-component-type="RichTextContainer" style="transform:none;opacity:1" data-nce-sid="xe4o9s"><p dir="auto" class="framer-text" style="--font-selector:RlM7U2F0b3NoaS1tZWRpdW0=;--framer-font-family:&quot;Satoshi&quot;, &quot;Satoshi Placeholder&quot;, sans-serif;--framer-font-size:25px;--framer-font-weight:500;--framer-letter-spacing:-0.025em;--framer-text-color:var(--extracted-r6o4lv, rgb(10, 10, 10))">Rekaz</p></div></a><!--/$--><div class="framer-piwjzl" data-framer-name="Wrapper" style="opacity: 1;gap:22px;row-gap:22px;column-gap:22px"><div class="framer-1d1dxwp" data-framer-name="Nav-Links-wrapper" style="opacity:1" data-nce-sid="shebyd"><!--$--><div class="framer-ba2ess-container" data-framer-name="Nav-Link" name="Nav-Link" style="opacity: 1;"><!--$--><a name="Nav-Link" class="framer-xCY7c framer-b03Mm framer-vzumm1 framer-v-vzumm1 framer-1rkvlt" data-framer-name="Navlink" href="javascript:void(0)" style="opacity: 1; cursor: default;" data-nce-hover-nav="true" data-nce-sid="whqbzc"><div class="framer-mrzplb" data-framer-component-type="RichTextContainer" style="transform:none;opacity:1" data-nce-sid="1697b4c"><p class="framer-text framer-styles-preset-1h80r55" data-styles-preset="mGT4epGIx">Education</p></div></a><!--/$--></div><!--/$--><!--$--><div class="framer-1j7cigf-container" data-framer-name="Nav-Link" name="Nav-Link" style="opacity: 1;"><!--$--><a name="Nav-Link" class="framer-xCY7c framer-b03Mm framer-vzumm1 framer-v-vzumm1 framer-1rkvlt" data-framer-name="Navlink" href="javascript:void(0)" style="opacity: 1; cursor: default;" data-nce-hover-nav="true" data-nce-sid="whqbzc"><div class="framer-mrzplb" data-framer-component-type="RichTextContainer" style="transform:none;opacity:1" data-nce-sid="1697b4c"><p class="framer-text framer-styles-preset-1h80r55" data-styles-preset="mGT4epGIx">Programs</p></div></a><!--/$--></div><!--/$--><!--$--><div class="framer-1ynaw9z-container" data-framer-name="Nav-Link" name="Nav-Link" style="opacity: 1;"><!--$--><a name="Nav-Link" class="framer-xCY7c framer-b03Mm framer-vzumm1 framer-v-vzumm1 framer-1rkvlt" data-framer-name="Navlink" href="javascript:void(0)" style="opacity: 1; cursor: default;" data-nce-hover-nav="true" data-nce-sid="whqbzc"><div class="framer-mrzplb" data-framer-component-type="RichTextCon
