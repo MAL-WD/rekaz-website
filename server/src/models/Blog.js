@@ -31,7 +31,7 @@ const blogSchema = new mongoose.Schema(
     },
     author: {
       type: String, // author name (plain string for now)
-      default: 'Rekaz Team',
+      default: 'Rēkāz Team',
     },
     authorImage: {
       type: String,

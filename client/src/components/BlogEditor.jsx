@@ -151,7 +151,7 @@ const BlogEditor = () => {
               <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" d={isRTL ? "M9 5l7 7-7 7" : "M15 19l-7-7 7-7"} />
               </svg>
-              <span className="font-satoshi font-semibold text-lg">Rekaz Editor</span>
+              <span className="font-satoshi font-semibold text-lg">Rēkāz Editor</span>
             </Link>
           </div>
 

@@ -28,7 +28,7 @@ const TestimonialBanner = () => {
           </div>
           
           <h3 className="text-xl md:text-2xl lg:text-3xl font-satoshi font-bold text-white leading-relaxed max-w-3xl mb-10 relative z-10 tracking-tight">
-            &ldquo;{t('testimonialBanner.quote', "Rekaz changed the way I see education. The teachers didn't just prepare me for exams — they helped me believe in myself. I felt supported, motivated, and ready for both school and life.")}&rdquo;
+            &ldquo;{t('testimonialBanner.quote', "Rēkāz changed the way I see education. The teachers didn't just prepare me for exams — they helped me believe in myself. I felt supported, motivated, and ready for both school and life.")}&rdquo;
           </h3>
           
           <div className="flex items-center gap-3 relative z-10">

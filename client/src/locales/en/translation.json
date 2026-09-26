@@ -8,12 +8,12 @@
     "blog": "Blog",
     "faq": "FAQ",
     "contact": "Contact",
-    "enroll": "Join Rekaz"
+    "enroll": "Join Rēkāz"
   },
   "hero": {
-    "title": "Rekaz Establishment for Education, Training & Consulting",
+    "title": "Rēkāz Establishment for Education, Training & Consulting",
     "subtitle": "Empowering students and learners with knowledge, skills, and guidance for a brighter future.",
-    "cta": "Join Rekaz",
+    "cta": "Join Rēkāz",
     "secondary": "Explore Our Programs",
     "reviews": "14,380+ Reviews"
   },
@@ -21,18 +21,18 @@
     "text": "Supporting students for BEM and BAC with learning, guidance, and ambition."
   },
   "founder": {
-    "title": "Hello, I'm Adel, CEO & Teacher at Rekaz",
+    "title": "Hello, I'm Adel, CEO & Teacher at Rēkāz",
     "badge": "CEO & Teacher",
-    "bio": "I want you to know that our mission is bigger than teaching subjects — it's about helping you believe in yourself, discover your potential, and achieve your dreams. Every lesson we give is designed with your future in mind, because I believe each of you has the ability to succeed and make a difference. Rekaz is more than a school; it's a place where together we build the confidence, knowledge, and ambition that will carry you forward in life."
+    "bio": "I want you to know that our mission is bigger than teaching subjects — it's about helping you believe in yourself, discover your potential, and achieve your dreams. Every lesson we give is designed with your future in mind, because I believe each of you has the ability to succeed and make a difference. Rēkāz is more than a school; it's a place where together we build the confidence, knowledge, and ambition that will carry you forward in life."
   },
   "aboutPreview": {
     "tag": "About Us",
-    "text": "At Rekaz, we believe education is more than lessons — it is the foundation for building confident, ambitious, and successful lives. From the early years of CEM to the challenges of BEM and BAC, our mission is to guide every student with care, innovation, and passion. Rekaz is not just a school, but a home where dreams are nurtured, values are strengthened, and futures are shaped.",
-    "button": "Meet Rekaz"
+    "text": "At Rēkāz, we believe education is more than lessons — it is the foundation for building confident, ambitious, and successful lives. From the early years of CEM to the challenges of BEM and BAC, our mission is to guide every student with care, innovation, and passion. Rēkāz is not just a school, but a home where dreams are nurtured, values are strengthened, and futures are shaped.",
+    "button": "Meet Rēkāz"
   },
   "whyRekaz": {
-    "tag": "Why Rekaz",
-    "title": "Discover What Makes Rekaz Different ",
+    "tag": "Why Rēkāz",
+    "title": "Discover What Makes Rēkāz Different ",
     "subtitle": "More than lessons. A foundation for your future.",
     "specialPacks": "Special Packs",
     "packBacTitle": "Pack-BAC: more learning, better value",
@@ -51,14 +51,14 @@
     "businessConsultation": "Business Consultation",
     "businessConsultationDesc": "Educational, career, and business consultation to help students, families, and entrepreneurs build a clear path toward success.",
     "eLearning": "E-Learning Platform",
-    "eLearningDesc": "Learn anything, anywhere and anytime through Rekaz's modern e-learning platform.",
+    "eLearningDesc": "Learn anything, anywhere and anytime through Rēkāz's modern e-learning platform.",
     "startLearning": "Start Learning",
     "viewCourses": "View Courses",
     "studentDashboard": "Student Dashboard",
     "studentDashboardDesc": "Review completed lessons, subject progress, attendance, and upcoming revision tasks in one place."
   },
   "testimonialBanner": {
-    "quote": "\"Rekaz changed the way I see education. The teachers didn't just prepare me for exams — they helped me believe in myself. I felt supported, motivated, and ready for both school and life.\"",
+    "quote": "\"Rēkāz changed the way I see education. The teachers didn't just prepare me for exams — they helped me believe in myself. I felt supported, motivated, and ready for both school and life.\"",
     "name": "Lazreg Mohamed",
     "role": "Student"
   },
@@ -88,7 +88,7 @@
     "consultationDesc": "Educational, career and business consultation to help students, families and entrepreneurs make better decisions and build a clear path toward success."
   },
   "benefits": {
-    "tag": "Rekaz Advantages",
+    "tag": "Rēkāz Advantages",
     "title": "Helping Students Turn Effort Into Achievement",
     "items": [
       {
@@ -144,7 +144,7 @@
     "reviews": [
       {
         "name": "Yasmine",
-        "quote": "Rekaz changed the way I see education. The teachers didn't just prepare me for exams — they helped me believe in myself."
+        "quote": "Rēkāz changed the way I see education. The teachers didn't just prepare me for exams — they helped me believe in myself."
       },
       {
         "name": "Amine",
@@ -153,7 +153,7 @@
       {
         "name": "Nadia",
         "role": "Parent",
-        "quote": "I saw my daughter become more motivated, confident, and willing to ask questions. Rekaz really cares."
+        "quote": "I saw my daughter become more motivated, confident, and willing to ask questions. Rēkāz really cares."
       },
       {
         "name": "Rayan",
@@ -198,10 +198,10 @@
   },
   "faq": {
     "tag": "FAQ",
-    "title": "Questions about Rekaz? We're here to help.",
+    "title": "Questions about Rēkāz? We're here to help.",
     "items": [
       {
-        "q": "Which school levels does Rekaz support?",
+        "q": "Which school levels does Rēkāz support?",
         "a": "We support all CEM (Middle School) levels from 1CEM to 4CEM/BEM, and all Lycée (High School) levels from 1AS to 3AS/BAC."
       },
       {
@@ -237,7 +237,7 @@
     "newsletter": "Subscribe to our newsletter",
     "emailPlaceholder": "Enter your email",
     "subscribe": "Subscribe",
-    "rekazLinks": "Rekaz",
+    "rekazLinks": "Rēkāz",
     "aboutUs": "About Us",
     "ourTeam": "Our Team",
     "careers": "Careers",
@@ -251,22 +251,22 @@
     "address": "Hay El Karma, Opposite Tariq Ibn Ziyad Mosque",
     "phone": "+213 783 12 12 99",
     "email": "schoolrekaz@gmail.com",
-    "copyright": "Rekaz Educational Establishment. All rights reserved.",
+    "copyright": "Rēkāz Educational Establishment. All rights reserved.",
     "privacy": "Privacy Policy",
     "terms": "Terms of Service"
   },
   "inscription": {
-    "pageTitle": "Online Inscription & Registration | Rekaz Establishment",
-    "pageDesc": "Register online for Rekaz Establishment programs in Béchar: Middle School (CEM), High School (Lycée), Professional Training & Certifications, and Consulting.",
+    "pageTitle": "Online Inscription & Registration | Rēkāz Establishment",
+    "pageDesc": "Register online for Rēkāz Establishment programs in Béchar: Middle School (CEM), High School (Lycée), Professional Training & Certifications, and Consulting.",
     "tag": "Online Registration • Inscription",
-    "heading": "Join Rekaz Establishment",
+    "heading": "Join Rēkāz Establishment",
     "headerSubtitle": "Take the first step toward academic excellence and career success. Complete the form below and our admissions team will contact you within 24 hours.",
     "guarantee1": "Personalized Academic Mentoring",
     "guarantee2": "Expert & Certified Instructors",
     "guarantee3": "In-Person Béchar Center + Online Access",
     "successBadge": "Application Successfully Received",
     "successTitle": "Congratulations, {{name}}!",
-    "successMessage": "Your pre-registration with Rekaz Establishment has been submitted. Our admissions team will reach out via phone or WhatsApp within 24 hours to confirm your group schedule.",
+    "successMessage": "Your pre-registration with Rēkāz Establishment has been submitted. Our admissions team will reach out via phone or WhatsApp within 24 hours to confirm your group schedule.",
     "appReference": "Application Reference",
     "programLabel": "Program:",
     "phoneLabel": "Phone Number:",
@@ -281,7 +281,7 @@
     "gradeLabel": "Grade / Academic Level",
     "branchLabel": "Academic Branch / Stream",
     "learningModeLabel": "Learning Mode",
-    "inPerson": "In-Person (At Rekaz Learning Center, Béchar)",
+    "inPerson": "In-Person (At Rēkāz Learning Center, Béchar)",
     "online": "Online (Interactive Virtual Classroom)",
     "hybrid": "Hybrid (In-Person + Online Recordings)",
     "selectSubjects": "Select Subjects or Modules:",
@@ -406,8 +406,8 @@
     "parentSectionTitle": "Parent / Guardian Contact (For Middle & High School Students)"
   },
   "aboutPage": {
-    "metaTitle": "About Us | Rekaz Establishment",
-    "metaDesc": "Learn about Rekaz Establishment, our mission, vision, and our founder Adel.",
+    "metaTitle": "About Us | Rēkāz Establishment",
+    "metaDesc": "Learn about Rēkāz Establishment, our mission, vision, and our founder Adel.",
     "sectionTag": "About Us",
     "heroTitle1": "Empowering Minds,",
     "heroTitle2": "Shaping Futures",
@@ -420,7 +420,7 @@
     "founderTitle": "Meet Adel",
     "founderRole": "CEO & Teacher",
     "founderQuote": "\"I want you to know that our mission is bigger than teaching subjects — it's about helping you believe in yourself, discover your potential, and achieve your dreams.\"",
-    "founderDesc": "As an educator and leader, Adel brings his passion for teaching and his vision for a better educational framework to every student that walks through the doors of Rekaz Establishment.",
+    "founderDesc": "As an educator and leader, Adel brings his passion for teaching and his vision for a better educational framework to every student that walks through the doors of Rēkāz Establishment.",
     "pillarsTitle": "Our Pillars",
     "pillar1Title": "Academic Excellence",
     "pillar1Desc": "Providing top-tier educational support for all levels to ensure outstanding academic results.",
@@ -437,10 +437,10 @@
     "ctaButton": "Join Us Now — Register"
   },
   "contactPage": {
-    "metaTitle": "Contact Us | Rekaz Establishment",
-    "metaDesc": "Get in touch with Rekaz Establishment. We are here to answer your questions and help you with your educational journey.",
+    "metaTitle": "Contact Us | Rēkāz Establishment",
+    "metaDesc": "Get in touch with Rēkāz Establishment. We are here to answer your questions and help you with your educational journey.",
     "sectionTag": "Contact Us",
-    "heroTitle": "Get in Touch with Rekaz",
+    "heroTitle": "Get in Touch with Rēkāz",
     "heroDesc": "Have questions about our programs, registrations, or consultation services? Our team is ready to help you.",
     "phoneLabel": "Phone Number",
     "whatsappAvailable": "Available on WhatsApp",
@@ -485,8 +485,8 @@
     "ctaSubtitle": "For students, learners & families"
   },
   "consultationPage": {
-    "metaTitle": "Consultation Services | Rekaz Establishment",
-    "metaDesc": "Educational, Career, and Business Consultation services provided by Rekaz Establishment.",
+    "metaTitle": "Consultation Services | Rēkāz Establishment",
+    "metaDesc": "Educational, Career, and Business Consultation services provided by Rēkāz Establishment.",
     "sectionTag": "Guidance",
     "heroTitle": "Expert Consultation",
     "heroDesc": "Whether you're a student deciding your academic future or a business owner looking for growth strategies, our expert consultants are here to guide you every step of the way.",
@@ -509,7 +509,7 @@
     "ctaButton": "Schedule Now"
   },
   "programsPage": {
-    "metaTitle": "Our Programs | Rekaz Establishment",
+    "metaTitle": "Our Programs | Rēkāz Establishment",
     "metaDesc": "Explore our educational programs including CEM, Lycée, Professional Formations, and Consultation services.",
     "sectionTag": "Explore",
     "heroTitle": "Our Programs",
@@ -532,7 +532,7 @@
     "ctaButton": "Get in Touch"
   },
   "programCEM": {
-    "metaTitle": "CEM — Middle School | Rekaz Establishment",
+    "metaTitle": "CEM — Middle School | Rēkāz Establishment",
     "metaDesc": "Middle school support for 1CEM, 2CEM, 3CEM, and 4CEM/BEM. Strong foundations and progressive preparation.",
     "sectionTag": "Middle School",
     "heroTitle1": "CEM — Middle School",
@@ -556,13 +556,13 @@
     "ben3Title": "All Subjects Included",
     "ben3Desc": "Comprehensive tutoring without leaving gaps.",
     "ctaTitle": "Start Your Journey",
-    "ctaDesc": "Join thousands of students who have improved their grades and confidence with Rekaz.",
+    "ctaDesc": "Join thousands of students who have improved their grades and confidence with Rēkāz.",
     "ctaButton": "Register for CEM / BEM",
     "teachersTitle": "Our Teachers — Middle School",
     "teachersDesc": "A dedicated team of specialized educators accompanying CEM students every step of the way."
   },
   "programLycee": {
-    "metaTitle": "Lycée — High School | Rekaz Establishment",
+    "metaTitle": "Lycée — High School | Rēkāz Establishment",
     "metaDesc": "High school support for 1AS, 2AS, 3AS/BAC. Expert preparation strategies and special BAC packs.",
     "sectionTag": "High School",
     "heroTitle1": "Lycée — High School",
@@ -592,7 +592,7 @@
     "teachersDesc": "A dedicated team of specialized educators guiding Lycée students toward BAC success."
   },
   "programFormations": {
-    "metaTitle": "Professional Formations | Rekaz Establishment",
+    "metaTitle": "Professional Formations | Rēkāz Establishment",
     "metaDesc": "Gain practical skills in Entrepreneurship, Marketing, Cybersecurity, and more. Valid certificates upon completion.",
     "sectionTag": "Certificates",
     "heroTitle": "Professional Formations",
@@ -647,7 +647,7 @@
     "ctaButton": "Start Your Journey"
   },
   "blogsPage": {
-    "label": "Rekaz Blog",
+    "label": "Rēkāz Blog",
     "title": "Insights for Students & Families",
     "desc": "Tips, guides, and updates to help you navigate your educational journey with confidence.",
     "searchPlaceholder": "Search articles…",
@@ -657,7 +657,7 @@
     "noArticles": "No articles found.",
     "clearSearch": "Clear search",
     "ctaTitle": "Your Future Starts With One Decision",
-    "ctaDesc": "Join thousands of students already on their journey with Rekaz.",
+    "ctaDesc": "Join thousands of students already on their journey with Rēkāz.",
     "ctaButton": "Start Your Journey",
     "error": "Failed to load blogs. Please try again."
   }

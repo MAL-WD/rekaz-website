@@ -79,7 +79,7 @@ const Hero = () => {
 
           {/* Heading */}
           <h1 className="font-satoshi font-bold text-[48px] md:text-[68px] lg:text-[76px] leading-[1.08em] tracking-[-0.05em] animated-gradient-text">
-            {t('hero.title', 'Rekaz Establishment for Education, Training & Consulting')}
+            {t('hero.title', 'Rēkāz Establishment for Education, Training & Consulting')}
           </h1>
 
           {/* Subtitle */}
@@ -99,7 +99,7 @@ const Hero = () => {
               className="flex items-center justify-center px-8 py-4 text-white rounded-[16px] font-satoshi font-semibold text-[15px] tracking-[-0.01em] hover:-translate-y-0.5 hover:scale-[1.01] transition-all duration-200"
               style={{ background: 'linear-gradient(150deg,#00a5ff 0%,#0412fa 100%)', boxShadow: '0 6px 24px rgba(0,165,255,0.32), inset 0 1px 0 rgba(255,255,255,0.18)' }}
             >
-              {t('hero.cta', 'Join Rekaz')}
+              {t('hero.cta', 'Join Rēkāz')}
             </Link>
             <Link
               to="/programs"

@@ -100,7 +100,7 @@ export default function NotFound() {
   return (
     <>
       <Helmet>
-        <title>{`404 – ${text.title} | Rekaz`}</title>
+        <title>{`404 – ${text.title} | Rēkāz`}</title>
       </Helmet>
 
       {/* ── Full-screen stage ── */}
@@ -333,7 +333,7 @@ export default function NotFound() {
           whiteSpace: 'nowrap',
           fontFamily: 'var(--font-satoshi)',
         }}>
-          REKAZ · ERROR 404
+          RĒKĀZ · ERROR 404
         </p>
       </section>
     </>

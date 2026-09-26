@@ -92,7 +92,7 @@ const Benefits = () => {
           transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
           className="mb-14"
         >
-          <SectionTag text={t('benefits.tag', 'Rekaz Advantages')} />
+          <SectionTag text={t('benefits.tag', 'Rēkāz Advantages')} />
           <h2 className="text-4xl md:text-5xl font-satoshi font-bold text-rekaz-black mt-5 max-w-2xl leading-[1.15] tracking-[-0.03em] text-start">
             {t('benefits.title', 'Helping Students Turn Effort Into Achievement')}
           </h2>

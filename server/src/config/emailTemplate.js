@@ -30,7 +30,7 @@ const getEmailHTML = ({ tag, title, fields, message }) => {
     <body style="font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; background-color: #fbfaff; color: #292929; margin: 0; padding: 0; -webkit-font-smoothing: antialiased;">
       <div style="width: 100%; background-color: #fbfaff; padding: 40px 20px; box-sizing: border-box;">
         <div style="max-width: 600px; margin: 0 auto; background-color: #ffffff; border-radius: 28px; overflow: hidden; box-shadow: 0 10px 30px rgba(4, 18, 250, 0.04); border: 1px solid #e0e0e0;">
-          <!-- Brand Top Accent Bar (Rekaz Gradient) -->
+          <!-- Brand Top Accent Bar (Rēkāz Gradient) -->
           <div style="height: 6px; background: linear-gradient(90deg, #00a5ff 0%, #0412fa 100%);"></div>
           
           <!-- Header -->
@@ -38,7 +38,7 @@ const getEmailHTML = ({ tag, title, fields, message }) => {
             <table style="width: 100%;">
               <tr>
                 <td>
-                  <h1 style="font-size: 24px; font-weight: 700; color: #010212; letter-spacing: -0.5px; margin: 0; font-family: 'Satoshi', sans-serif;">Rekaz</h1>
+                  <h1 style="font-size: 24px; font-weight: 700; color: #010212; letter-spacing: -0.5px; margin: 0; font-family: 'Satoshi', sans-serif;">Rēkāz</h1>
                   <div style="display: inline-block; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: #0412fa; background-color: rgba(4, 18, 250, 0.06); padding: 4px 10px; border-radius: 9999px; margin-top: 8px;">${tag}</div>
                 </td>
               </tr>
@@ -58,8 +58,8 @@ const getEmailHTML = ({ tag, title, fields, message }) => {
 
           <!-- Footer -->
           <div style="padding: 30px 40px; background-color: #010212; color: #fafafa; text-align: center; font-size: 12px; font-weight: 500;">
-            <p style="margin: 0 0 8px 0; color: #757575;">This is an automated notification from Rekaz Institute.</p>
-            <p style="margin: 0;">&copy; 2026 <a href="https://rekaz.dz" style="color: #00a5ff; text-decoration: none; font-weight: 600;">Rekaz Institute</a>. All rights reserved.</p>
+            <p style="margin: 0 0 8px 0; color: #757575;">This is an automated notification from Rēkāz Institute.</p>
+            <p style="margin: 0;">&copy; 2026 <a href="https://rekaz.dz" style="color: #00a5ff; text-decoration: none; font-weight: 600;">Rēkāz Institute</a>. All rights reserved.</p>
           </div>
         </div>
       </div>

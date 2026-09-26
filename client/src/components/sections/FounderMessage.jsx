@@ -23,7 +23,7 @@ const FounderMessage = () => {
           <div className="w-full h-full rounded-full overflow-hidden bg-white">
             <img
               src="https://framerusercontent.com/images/lKaaStgbmdIe8TfrIkFlKzHazV0.png"
-              alt={t('founder.title', "Hello, I'm Adel, CEO & Teacher at Rekaz")}
+              alt={t('founder.title', "Hello, I'm Adel, CEO & Teacher at Rēkāz")}
               className="w-full h-full object-cover scale-105"
               loading="lazy"
             />
@@ -33,12 +33,12 @@ const FounderMessage = () => {
         {/* Content */}
         <div className="flex flex-col items-center md:items-start flex-1 w-full gap-3">
           <h2 className="font-satoshi text-center md:text-start text-2xl md:text-[26px] font-bold tracking-[-0.02em] text-rekaz-black w-full">
-            {t('founder.title', "Hello, I'm Adel, CEO & Teacher at Rekaz")}
+            {t('founder.title', "Hello, I'm Adel, CEO & Teacher at Rēkāz")}
           </h2>
 
           {/* Bio */}
           <p className="text-center md:text-start font-dm text-[15px] text-rekaz-grey max-w-full md:max-w-[620px] leading-relaxed whitespace-pre-wrap">
-            {t('founder.bio', "I want you to know that our mission is bigger than teaching subjects — it's about helping you believe in yourself, discover your potential, and achieve your dreams. Every lesson we give is designed with your future in mind, because I believe each of you has the ability to succeed and make a difference. Rekaz is more than a school; it's a place where together we build the confidence, knowledge, and ambition that will carry you forward in life.")}
+            {t('founder.bio', "I want you to know that our mission is bigger than teaching subjects — it's about helping you believe in yourself, discover your potential, and achieve your dreams. Every lesson we give is designed with your future in mind, because I believe each of you has the ability to succeed and make a difference. Rēkāz is more than a school; it's a place where together we build the confidence, knowledge, and ambition that will carry you forward in life.")}
           </p>
 
           {/* Social Links */}

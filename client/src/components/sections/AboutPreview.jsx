@@ -19,14 +19,14 @@ const AboutPreview = () => {
           
           <div className="mt-8 mb-12 w-full max-w-4xl px-4 md:px-0">
             <TextColorLetters
-              text={t('aboutPreview.text', 'At Rekaz, we believe education is more than lessons — it is the foundation for building confident, ambitious, and successful lives. From the early years of CEM to the challenges of BEM and BAC, our mission is to guide every student with care, innovation, and passion. Rekaz is not just a school, but a home where dreams are nurtured, values are strengthened, and futures are shaped.')}
+              text={t('aboutPreview.text', 'At Rēkāz, we believe education is more than lessons — it is the foundation for building confident, ambitious, and successful lives. From the early years of CEM to the challenges of BEM and BAC, our mission is to guide every student with care, innovation, and passion. Rēkāz is not just a school, but a home where dreams are nurtured, values are strengthened, and futures are shaped.')}
               isRTL={i18n.language === 'ar'}
               fontSize={32}
             />
           </div>
           
           <Button to="/about" variant="primary">
-            {t('aboutPreview.button', 'Meet Rekaz')}
+            {t('aboutPreview.button', 'Meet Rēkāz')}
           </Button>
         </div>
       </Container>

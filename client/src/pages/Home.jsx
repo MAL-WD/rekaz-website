@@ -19,8 +19,8 @@ const Home = () => {
   return (
     <>
       <Helmet>
-        <title>Rekaz Establishment | Education, Training & Consulting</title>
-        <meta name='description' content='Rekaz in Béchar empowers students, learners, and businesses through education, training, and guidance.' />
+        <title>Rēkāz Establishment | Education, Training & Consulting</title>
+        <meta name='description' content='Rēkāz in Béchar empowers students, learners, and businesses through education, training, and guidance.' />
       </Helmet>
       
       <main className='w-full'>

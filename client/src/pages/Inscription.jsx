@@ -286,10 +286,10 @@ const Inscription = () => {
   return (
     <>
       <Helmet>
-        <title>Online Inscription & Registration | Rekaz Establishment</title>
+        <title>Online Inscription & Registration | Rēkāz Establishment</title>
         <meta
           name="description"
-          content="Register online for Rekaz Establishment programs in Béchar: Middle School (CEM), High School (Lycée), Professional Training & Certifications, and Consulting."
+          content="Register online for Rēkāz Establishment programs in Béchar: Middle School (CEM), High School (Lycée), Professional Training & Certifications, and Consulting."
         />
       </Helmet>
 

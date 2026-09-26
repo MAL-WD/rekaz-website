@@ -54,7 +54,7 @@ const PublishForm = () => {
         des: blog.des,
         content: blog.content,
         tags: blog.tags,
-        author: blog.author || 'Rekaz Team',
+        author: blog.author || 'Rēkāz Team',
         authorImage: blog.authorImage || '',
         draft: false,
       };

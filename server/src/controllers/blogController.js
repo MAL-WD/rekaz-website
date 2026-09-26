@@ -91,7 +91,7 @@ exports.createBlog = async (req, res) => {
       des: des || '',
       content: content || {},
       tags: tags || [],
-      author: author || 'Rekaz Team',
+      author: author || 'Rēkāz Team',
       authorImage: authorImage || '',
       readTime: readTime || '5 min read',
       draft: draft !== undefined ? draft : false,

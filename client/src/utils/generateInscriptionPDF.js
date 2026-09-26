@@ -361,7 +361,7 @@ export const generateInscriptionPDF = async (data) => {
     <!-- Header -->
     <div class="header">
       <div class="header-right">
-        <img src="${logoBase64}" alt="Rekaz Logo" class="logo">
+        <img src="${logoBase64}" alt="Rēkāz Logo" class="logo">
         <div class="header-text">
           <h1>مؤسسة ركاز للتعليم والتكوين والاستشارة</h1>
           <p>متعة الدراسة والتكوين كما لم ترها من قبل</p>

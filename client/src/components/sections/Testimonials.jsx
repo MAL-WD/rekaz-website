@@ -8,9 +8,9 @@ const Testimonials = () => {
   const { t } = useTranslation();
 
   const reviews = [
-    { img: 'JAj7AXUxTTfqevajqV2uwvFnHk.jpg', name: t('testimonials.reviews.0.name', 'Yasmine'), quote: t('testimonials.reviews.0.quote', 'Rekaz changed the way I see education. The teachers did not just prepare me for exams — they helped me believe in myself.') },
+    { img: 'JAj7AXUxTTfqevajqV2uwvFnHk.jpg', name: t('testimonials.reviews.0.name', 'Yasmine'), quote: t('testimonials.reviews.0.quote', 'Rēkāz changed the way I see education. The teachers did not just prepare me for exams — they helped me believe in myself.') },
     { img: 'fR0yFJ3SLBuR08Ae7NNWNWHtKfA.jpg', name: t('testimonials.reviews.1.name', 'Amine'), quote: t('testimonials.reviews.1.quote', 'The support and clear explanations helped me organize my BAC preparation with much more confidence.') },
-    { img: 'YfTc9K4UljAfcBAkz9urVAMCM.jpg', name: t('testimonials.reviews.2.name', 'Nadia'), role: t('testimonials.reviews.2.role', 'Parent'), quote: t('testimonials.reviews.2.quote', 'I saw my daughter become more motivated, confident, and willing to ask questions. Rekaz really cares.') },
+    { img: 'YfTc9K4UljAfcBAkz9urVAMCM.jpg', name: t('testimonials.reviews.2.name', 'Nadia'), role: t('testimonials.reviews.2.role', 'Parent'), quote: t('testimonials.reviews.2.quote', 'I saw my daughter become more motivated, confident, and willing to ask questions. Rēkāz really cares.') },
     { img: 'wLd2o0WOHV7vBCMG9QEwJj69on4.jpg', name: t('testimonials.reviews.3.name', 'Rayan'), quote: t('testimonials.reviews.3.quote', 'My professional formation gave me practical skills I can use right away, plus a certificate I am proud of.') },
     { img: 'Ha6Zo7ExGpVlUA5lxAJf4BuACU.jpg', name: t('testimonials.reviews.4.name', 'Sara'), quote: t('testimonials.reviews.4.quote', 'The teachers make difficult lessons feel possible. I always leave class ready to try again.') },
     { img: '6ZguZ1F1EvxOLaR48Ikiwa8elPI.jpg', name: t('testimonials.reviews.5.name', 'Karim'), quote: t('testimonials.reviews.5.quote', 'The career guidance helped me see a clearer direction after BEM.') }

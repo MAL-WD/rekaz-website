@@ -18,11 +18,11 @@ const Footer = () => {
               <div className="w-9 h-9 relative overflow-hidden rounded-full flex-shrink-0 bg-white/10 p-1">
                 <img 
                   src={logo} 
-                  alt="Rekaz Logo" 
+                  alt="Rēkāz Logo" 
                   className="w-full h-full object-contain"
                 />
               </div>
-              <span className="font-bold text-[22px] tracking-tight text-white">Rekaz</span>
+              <span className="font-bold text-[22px] tracking-tight text-white">Rēkāz</span>
             </Link>
             <p className="text-gray-400 text-[14px] mb-6 max-w-sm leading-relaxed">
               {t('footer.slogan', 'Empowering the next generation through innovative education and practical skill development.')}
@@ -61,7 +61,7 @@ const Footer = () => {
 
           {/* Links Columns */}
           <div className="text-start">
-            <h4 className="font-semibold text-[15px] tracking-wider uppercase text-white/55 mb-5">{t('footer.rekazLinks', 'Rekaz')}</h4>
+            <h4 className="font-semibold text-[15px] tracking-wider uppercase text-white/55 mb-5">{t('footer.rekazLinks', 'Rēkāz')}</h4>
             <ul className="space-y-3 text-[14px] text-gray-400">
               <li><Link to="/about" className="hover:text-white transition-colors">{t('footer.aboutUs', 'About Us')}</Link></li>
               <li><Link to="/team" className="hover:text-white transition-colors">{t('footer.ourTeam', 'Our Team')}</Link></li>
@@ -107,7 +107,7 @@ const Footer = () => {
 
         {/* Copyright */}
         <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4 text-[13px] text-gray-500">
-          <p>© {new Date().getFullYear()} {t('footer.copyright', 'Rekaz Educational Establishment. All rights reserved.')}</p>
+          <p>© {new Date().getFullYear()} {t('footer.copyright', 'Rēkāz Educational Establishment. All rights reserved.')}</p>
           <div className="flex gap-5">
             <Link to="/privacy" className="hover:text-white transition-colors">{t('footer.privacy', 'Privacy Policy')}</Link>
             <Link to="/terms" className="hover:text-white transition-colors">{t('footer.terms', 'Terms of Service')}</Link>

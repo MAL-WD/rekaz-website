@@ -33,9 +33,9 @@ const WhyRekaz = () => {
           transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
           className="flex flex-col items-center text-center mb-16 relative z-10"
         >
-          <SectionTag text={t('whyRekaz.tag', 'Why Rekaz')} />
+          <SectionTag text={t('whyRekaz.tag', 'Why Rēkāz')} />
           <h2 className="text-4xl md:text-5xl font-satoshi font-bold text-rekaz-black mt-5 mb-3 tracking-[-0.03em]">
-            {t('whyRekaz.title', 'Discover What Makes Rekaz Different ')}
+            {t('whyRekaz.title', 'Discover What Makes Rēkāz Different ')}
           </h2>
           <p className="font-instrument-serif text-[22px] text-rekaz-muted italic">
             {t('whyRekaz.subtitle', 'More than lessons. A foundation for your future.')}
@@ -146,7 +146,7 @@ const WhyRekaz = () => {
                 {t('whyRekaz.eLearning', 'E-Learning Platform')}
               </div>
               <p className="text-rekaz-grey mb-6 font-dm leading-relaxed text-[14px]">
-                {t('whyRekaz.eLearningDesc', "Learn anything, anywhere and anytime through Rekaz's modern e-learning platform.")}
+                {t('whyRekaz.eLearningDesc', "Learn anything, anywhere and anytime through Rēkāz's modern e-learning platform.")}
               </p>
               <div className="flex gap-2.5 mb-7">
                 <Button variant="primary" className="!px-4 !py-2.5 !text-xs !rounded-xl">

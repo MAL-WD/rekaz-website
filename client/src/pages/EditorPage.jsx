@@ -13,7 +13,7 @@ const blogStructure = {
   des: '',
   content: {},
   tags: [],
-  author: 'Rekaz Team',
+  author: 'Rēkāz Team',
   authorImage: '',
 };
 
@@ -45,7 +45,7 @@ const LoginGate = () => {
         {/* Logo */}
         <div className="text-center mb-10">
           <Link to="/" className="inline-flex items-center gap-2">
-            <span className="font-satoshi font-semibold text-2xl text-rekaz-dark">Rekaz</span>
+            <span className="font-satoshi font-semibold text-2xl text-rekaz-dark">Rēkāz</span>
           </Link>
           <p className="text-rekaz-grey font-dm text-sm mt-2">
             Editor access requires authentication
