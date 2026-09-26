@@ -16,6 +16,7 @@ import Inscription from './pages/Inscription';
 import BlogsPage from './pages/BlogsPage';
 import BlogPage from './pages/BlogPage';
 import EditorPage from './pages/EditorPage';
+import NotFound from './pages/NotFound';
 
 function App() {
   const { i18n } = useTranslation();
@@ -46,6 +47,8 @@ function App() {
               {/* Blog pages */}
               <Route path="/blogs" element={<BlogsPage />} />
               <Route path="/blogs/:blog_id" element={<BlogPage />} />
+              {/* 404 Page inside Layout for header/footer */}
+              <Route path="*" element={<NotFound />} />
             </Route>
 
             {/* Editor – full-page, no shared layout */}

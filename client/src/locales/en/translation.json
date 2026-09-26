@@ -1,4 +1,4 @@
-{
+﻿{
   "navbar": {
     "home": "Home",
     "about": "About Us",
@@ -248,9 +248,9 @@
     "professionalTraining": "Professional Training",
     "consultingLink": "Consulting",
     "contactTitle": "Contact",
-    "address": "123 Education Street,\nAlgiers, Algeria",
-    "phone": "+213 (0) 555 123 456",
-    "email": "contact@rekaz.edu",
+    "address": "Hay El Karma, Opposite Tariq Ibn Ziyad Mosque",
+    "phone": "+213 783 12 12 99",
+    "email": "schoolrekaz@gmail.com",
     "copyright": "Rekaz Educational Establishment. All rights reserved.",
     "privacy": "Privacy Policy",
     "terms": "Terms of Service"
@@ -662,3 +662,8 @@
     "error": "Failed to load blogs. Please try again."
   }
 }
+
+
+
+
+

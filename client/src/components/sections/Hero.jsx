@@ -84,7 +84,7 @@ const Hero = () => {
 
           {/* Subtitle */}
           <p className="font-satoshi font-medium text-[17px] md:text-[19px] text-[#5a5a6a] max-w-[560px] leading-[1.6]">
-            {t('hero.subtitle', 'Empowering students and learners with knowledge, skills, and guidance for a brighter future.')}
+            {t('hero.subtitle', 'متعة الدراسة والتكوين كما لم ترها من قبل')}
           </p>
 
           {/* Buttons */}

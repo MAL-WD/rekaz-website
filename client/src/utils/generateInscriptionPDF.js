@@ -363,20 +363,20 @@ export const generateInscriptionPDF = async (data) => {
       <div class="header-right">
         <img src="${logoBase64}" alt="Rekaz Logo" class="logo">
         <div class="header-text">
-          <h1>مؤسسة ركاز التعليمية</h1>
-          <p>Rekaz Establishment — Excellence in Education</p>
+          <h1>مؤسسة ركاز للتعليم والتكوين والاستشارة</h1>
+          <p>متعة الدراسة والتكوين كما لم ترها من قبل</p>
         </div>
       </div>
       <div class="header-left">
         بشار، الجزائر<br>
         rekaz.school<br>
-        rekazschool08@gmail.com
+        schoolrekaz@gmail.com
       </div>
     </div>
 
     <!-- Title -->
     <div class="title-banner">
-      <h2>📋 وصل التسجيل الإلكتروني</h2>
+      <h2>وصل التسجيل الإلكتروني</h2>
       <p>Electronic Registration Receipt</p>
     </div>
 
@@ -500,8 +500,8 @@ export const generateInscriptionPDF = async (data) => {
 
     <!-- Footer -->
     <div class="footer">
-      <p class="important">⚠️ هذا الوصل يُعتبر تسجيلاً مبدئياً — سيتم التأكيد النهائي بعد التواصل مع فريق القبول</p>
-      <p>مؤسسة ركاز التعليمية — بشار، الجزائر | rekazschool08@gmail.com</p>
+      <p class="important">يعدّ هذا الوصل دليل تسجيل أوّلي .. ويتمّ تأكيد تسجيلك بمكتب التسجيلات بهذا الوصل .</p>
+      <p>مؤسسة ركاز للتعليم والتكوين والاستشارة — بشار، الجزائر | schoolrekaz@gmail.com</p>
     </div>
   </div>
 </body>
@@ -513,3 +513,4 @@ export const generateInscriptionPDF = async (data) => {
     printWindow.document.close();
   }
 };
+

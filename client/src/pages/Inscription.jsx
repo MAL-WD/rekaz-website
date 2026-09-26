@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
@@ -14,7 +14,7 @@ const Inscription = () => {
     level: '3AS',
     filiere: 'Experimental Sciences',
     formationCategory: 'dev-web',
-    subjects: ['Mathematics', 'Physics & Chemistry'],
+    subjects: [],
     fullName: '',
     birthDate: '',
     phone: '',
@@ -166,11 +166,33 @@ const Inscription = () => {
       ...prev,
       programType: progId,
       level: defaultLevel,
-      subjects: availableSubjectsByProgram[progId]?.slice(0, 2) || [],
+      subjects: [],
       teacher: '',
       isPackBac: false
     }));
   };
+
+  const filteredTeachers = (teachersByProgram[formData.programType] || []).filter(teacher => {
+    if (!formData.subjects || formData.subjects.length === 0) return false;
+    return formData.subjects.some(sub => {
+      const s = sub.toLowerCase();
+      const tsEn = (teacher.subjectEn || '').toLowerCase();
+      const tsAr = (teacher.subject || '').toLowerCase();
+
+      if (s.includes('math') && (tsEn.includes('math') || tsAr.includes('رياضيات'))) return true;
+      if ((s.includes('physics') || s.includes('physique')) && (tsEn.includes('physics') || tsAr.includes('فيزياء'))) return true;
+      if ((s.includes('natural') || s.includes('svt') || s.includes('biology')) && (tsEn.includes('natural') || tsEn.includes('science') || tsAr.includes('علوم'))) return true;
+      if (s.includes('philosoph') && (tsEn.includes('philosoph') || tsAr.includes('فلسفة'))) return true;
+      if (s.includes('french') && (tsEn.includes('french') || tsAr.includes('فرنسية'))) return true;
+      if (s.includes('english') && (tsEn.includes('english') || tsAr.includes('إنجليزية'))) return true;
+      if (s.includes('arabic') && (tsEn.includes('arabic') || tsAr.includes('عربية'))) return true;
+      if (s.includes('account') && (tsEn.includes('account') || tsAr.includes('محاسبة'))) return true;
+      if ((s.includes('history') || s.includes('geography')) && (tsEn.includes('history') || tsEn.includes('geography') || tsAr.includes('تاريخ'))) return true;
+      if ((s.includes('economics') || s.includes('management') || s.includes('law')) && (tsEn.includes('eco') || tsEn.includes('law') || tsAr.includes('اقتصاد') || tsAr.includes('قانون'))) return true;
+
+      return tsEn && s.includes(tsEn);
+    });
+  });
 
   const toggleSubject = (subject) => {
     setFormData(prev => {
@@ -357,7 +379,7 @@ const Inscription = () => {
               {/* Direct Next Action Buttons */}
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                 <a
-                  href={`https://wa.me/213555123456?text=Hello%20Rekaz%20Establishment,%20I%20have%20completed%20my%20online%20registration%20(Ref:%20${registrationRef})`}
+                  href={`https://wa.me/213783121299?text=Hello%20Rekaz%20Establishment,%20I%20have%20completed%20my%20online%20registration%20(Ref:%20${registrationRef})`}
                   target="_blank"
                   rel="noreferrer"
                   className="w-full sm:w-auto px-6 py-3.5 rounded-[14px] bg-[#25D366] text-white font-satoshi font-semibold text-sm hover:bg-[#1EBE5D] transition-colors flex items-center justify-center gap-2 shadow-sm"
@@ -576,14 +598,14 @@ const Inscription = () => {
                     {errors.subjects && <p className="text-red-500 text-xs mt-2">{errors.subjects}</p>}
                   </div>
 
-                  {/* Teacher Selection — CEM & Lycée only */}
-                  {(formData.programType === 'cem' || formData.programType === 'lycee') && teachersByProgram[formData.programType] && (
+                  {/* Teacher Selection — CEM & Lycée only (appears after selecting subject/module) */}
+                  {(formData.programType === 'cem' || formData.programType === 'lycee') && filteredTeachers.length > 0 && (
                     <div className="mt-6">
                       <label className={labelClass}>
                         {t('inscription.teacherLabel', 'Select Your Teacher')} <span className="text-rekaz-grey font-normal text-xs">{t('inscription.optional', '(Optional)')}</span>
                       </label>
                       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 mt-2">
-                        {teachersByProgram[formData.programType].map((teacher) => {
+                        {filteredTeachers.map((teacher) => {
                           const isSelected = formData.teacher === teacher.nameEn;
                           return (
                             <button
@@ -919,11 +941,11 @@ const Inscription = () => {
                 className="px-6 py-3 bg-white/10 hover:bg-white/20 text-white rounded-xl text-sm font-satoshi font-semibold transition-colors"
               >{t('inscription.contactUs')}</Link>
               <a
-                href="tel:+213555123456"
+                href="tel:+213783121299"
                 className="px-6 py-3 text-white rounded-xl text-sm font-satoshi font-semibold shadow-md hover:brightness-105 transition-all"
                 style={{ background: 'linear-gradient(180deg, rgb(0, 165, 255) 0%, rgb(4, 18, 250) 100%)' }}
               >
-                 +213 555 123 456
+                 +213 783 12 12 99
               </a>
             </div>
           </div>
@@ -934,3 +956,4 @@ const Inscription = () => {
 };
 
 export default Inscription;
+

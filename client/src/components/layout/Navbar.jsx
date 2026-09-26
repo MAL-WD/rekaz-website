@@ -1,4 +1,4 @@
-﻿import { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
@@ -76,9 +76,9 @@ const Navbar = () => {
 
           <button
             onClick={toggleLanguage}
-            className="text-[13px] font-medium text-rekaz-dark/60 hover:text-rekaz-blue transition-colors px-2.5 py-1.5 rounded-full hover:bg-[rgba(4,18,250,0.05)]"
+            className="text-[13px] font-medium text-rekaz-dark/60 hover:text-rekaz-blue transition-colors px-2.5 py-1.5 rounded-full hover:bg-[rgba(4,18,250,0.05)] flex items-center gap-1"
           >
-            {i18n.language === 'ar' ? 'EN' : 'عربي'}
+            {i18n.language === 'ar' ? '🇬🇧 EN' : 'عربي'}
           </button>
 
           <Link
@@ -126,9 +126,9 @@ const Navbar = () => {
               ))}
               <button
                 onClick={() => { toggleLanguage(); setMobileMenuOpen(false); }}
-                className="text-start text-[15px] font-medium font-satoshi text-rekaz-blue px-3 py-2.5 rounded-xl hover:bg-[rgba(4,18,250,0.04)] transition-colors"
+                className="text-start text-[15px] font-medium font-satoshi text-rekaz-blue px-3 py-2.5 rounded-xl hover:bg-[rgba(4,18,250,0.04)] transition-colors flex items-center gap-2"
               >
-                {i18n.language === 'ar' ? 'English' : 'العربية'}
+                {i18n.language === 'ar' ? '🇬🇧 English' : 'العربية'}
               </button>
             </nav>
             <Link

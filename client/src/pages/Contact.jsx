@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import Container from '../components/ui/Container';
 import SectionTag from '../components/ui/SectionTag';
@@ -122,7 +122,7 @@ const Contact = () => {
               </div>
               <div>
                 <div className="text-xs text-rekaz-muted font-inter">{t('contactPage.phoneLabel')}</div>
-                <div className="text-rekaz-dark font-satoshi font-medium" dir="ltr">+213 555 123 456</div>
+                <div className="text-rekaz-dark font-satoshi font-medium" dir="ltr">+213 783 12 12 99</div>
                 <div className="text-[11px] text-green-600 mt-1 font-medium">{t('contactPage.whatsappAvailable')}</div>
               </div>
             </div>
@@ -136,7 +136,7 @@ const Contact = () => {
               </div>
               <div>
                 <div className="text-xs text-rekaz-muted font-inter">{t('contactPage.emailLabel')}</div>
-                <div className="text-rekaz-dark font-satoshi font-medium">contact@rekaz.edu</div>
+                <div className="text-rekaz-dark font-satoshi font-medium">schoolrekaz@gmail.com</div>
                 <div className="text-[11px] text-rekaz-grey mt-1">{t('contactPage.emailDesc')}</div>
               </div>
             </div>
@@ -317,3 +317,4 @@ const Contact = () => {
 };
 
 export default Contact;
+
