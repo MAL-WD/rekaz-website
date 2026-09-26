@@ -1,4 +1,4 @@
-﻿import React, { useState } from 'react';
+import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import Container from '../components/ui/Container';
 import SectionTag from '../components/ui/SectionTag';
@@ -65,7 +65,7 @@ const Contact = () => {
     setStatus('loading');
     
     try {
-      const response = await fetch('https://formspree.io/f/xyzkqabw', {
+      const response = await fetch(`${import.meta.env.VITE_API_URL || 'https://rekaz-website.onrender.com/api'}/contact`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData)

@@ -1,4 +1,4 @@
-﻿import React, { useState } from 'react';
+import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
@@ -258,7 +258,7 @@ const Inscription = () => {
       };
 
       try {
-        await fetch('/api/inscriptions', {
+        await fetch(`${import.meta.env.VITE_API_URL || 'https://rekaz-website.onrender.com/api'}/inscriptions`, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(payload)
