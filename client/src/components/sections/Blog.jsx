@@ -59,7 +59,7 @@ const Blog = () => {
                   {art.title}
                 </h3>
                 <div className="flex items-center gap-1.5 text-rekaz-cyan text-[13px] font-bold group-hover:translate-x-1.5 transition-transform duration-300 mt-auto">
-                  <span>Read Article</span>
+                  <span>{t('blog.readMore', 'Read Article')}</span>
                   <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
                     <path d="M5 12h14M12 5l7 7-7 7"/>
                   </svg>

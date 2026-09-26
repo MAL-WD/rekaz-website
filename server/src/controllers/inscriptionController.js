@@ -69,15 +69,38 @@ exports.createInscription = async (req, res, next) => {
   try {
     const inscription = await Inscription.create(req.body);
 
+    const programLabels = { cem: 'متوسط', lycee: 'ثانوي', formation: 'تكوين', consultation: 'استشارة' };
+    const modeLabels = { presentiel: 'حضوري', online: 'عن بعد', hybrid: 'هجين' };
+    const scheduleLabels = { weekend: 'نهاية الأسبوع', evening: 'مسائي', flexible: 'مرن' };
+
     const telegramMsg = `
-<b>📝 Nouvelle Inscription en Ligne</b>
-<b>Dossier:</b> ${inscription.referenceNumber}
-<b>Nom:</b> ${inscription.fullName}
-<b>Téléphone:</b> ${inscription.phone}
-<b>Programme:</b> ${inscription.programType.toUpperCase()} - ${inscription.level}
-<b>Matières:</b> ${(inscription.subjects || []).join(', ')}
-<b>Mode:</b> ${inscription.learningMode}
-<b>Ville:</b> ${inscription.city}
+📝 <b>تسجيل جديد في منصة ركاز</b>
+━━━━━━━━━━━━━━━━━━
+🆔 <b>رقم التتبع:</b> <code>${inscription._id}</code>
+📁 <b>رقم الملف:</b> ${inscription.referenceNumber}
+
+👤 <b>معلومات الطالب</b>
+├ <b>الاسم:</b> ${inscription.fullName}
+├ <b>الهاتف:</b> ${inscription.phone}
+├ <b>البريد:</b> ${inscription.email || '—'}
+└ <b>تاريخ الميلاد:</b> ${inscription.birthDate || '—'}
+
+🎓 <b>معلومات الدراسة</b>
+├ <b>البرنامج:</b> ${programLabels[inscription.programType] || inscription.programType}
+├ <b>المستوى:</b> ${inscription.level}${inscription.filiere ? `\n├ <b>الشعبة:</b> ${inscription.filiere}` : ''}
+├ <b>المواد:</b> ${(inscription.subjects || []).join('، ') || '—'}
+├ <b>طريقة التعلم:</b> ${modeLabels[inscription.learningMode] || inscription.learningMode}
+└ <b>التوقيت:</b> ${scheduleLabels[inscription.schedulePreference] || inscription.schedulePreference || '—'}
+
+📍 <b>العنوان:</b> ${inscription.city} (${inscription.wilaya})
+🏫 <b>المدرسة الحالية:</b> ${inscription.currentSchool || '—'}
+
+👨‍👩‍👦 <b>ولي الأمر</b>
+├ <b>الاسم:</b> ${inscription.parentName || '—'}
+├ <b>الهاتف:</b> ${inscription.parentPhone || '—'}
+└ <b>الصلة:</b> ${inscription.parentRelation || '—'}${inscription.notes ? `\n\n📝 <b>ملاحظات:</b> ${inscription.notes}` : ''}
+━━━━━━━━━━━━━━━━━━
+⏰ ${new Date(inscription.createdAt).toLocaleString('ar-DZ', { timeZone: 'Africa/Algiers' })}
     `;
 
     sendTelegramNotification(telegramMsg);

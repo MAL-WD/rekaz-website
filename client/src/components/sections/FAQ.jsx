@@ -1,4 +1,4 @@
-﻿import React, { useState } from 'react';
+import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion, AnimatePresence } from 'framer-motion';
 import Container from '../ui/Container';
@@ -12,7 +12,7 @@ const FAQ = () => {
     { q: t('faq.items.0.q', 'Which school levels does Rekaz support?'), a: t('faq.items.0.a', 'We support all CEM (Middle School) levels from 1CEM to 4CEM/BEM, and all Lycee (High School) levels from 1AS to 3AS/BAC.') },
     { q: t('faq.items.1.q', 'Do you teach all subjects?'), a: t('faq.items.1.a', 'Yes, we provide comprehensive support across all subjects required for both middle school and high school curriculums.') },
     { q: t('faq.items.2.q', 'What is included in BEM and BAC preparation?'), a: t('faq.items.2.a', 'Our preparation includes intensive subject review, past paper practice, mock exams, and strategic guidance to build confidence.') },
-    { q: t('faq.items.3.q', 'What professional formations are available?'), a: t('faq.items.3.a', 'We offer practical courses in entrepreneurship, marketing, digital skills, cybersecurity, and advanced management.') },
+    { q: t('faq.items.3.q', 'What professional formations are available?'), a: t('faq.items.3.a', 'We offer practical courses in entrepreneurship, marketing, digital skills, and advanced management.') },
     { q: t('faq.items.4.q', 'Are certificates provided after formations?'), a: t('faq.items.4.a', 'Yes, all our professional formations conclude with a valid certificate upon successful completion.') },
     { q: t('faq.items.5.q', 'Can I learn online?'), a: t('faq.items.5.a', 'Our modern E-Learning platform is launching soon, allowing you to learn anything, anywhere, anytime.') }
   ];

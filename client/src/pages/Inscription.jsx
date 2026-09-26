@@ -5,9 +5,10 @@ import { useTranslation } from 'react-i18next';
 import Container from '../components/ui/Container';
 import SectionTag from '../components/ui/SectionTag';
 import Button from '../components/ui/Button';
+import { generateInscriptionPDF } from '../utils/generateInscriptionPDF';
 
 const Inscription = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const [formData, setFormData] = useState({
     programType: 'lycee', // 'cem' | 'lycee' | 'formation' | 'consultation'
     level: '3AS-BAC',
@@ -26,9 +27,12 @@ const Inscription = () => {
     parentRelation: 'Father',
     learningMode: 'presentiel', // 'presentiel' | 'online' | 'hybrid'
     schedulePreference: 'weekend', // 'weekend' | 'evening' | 'flexible'
-    notes: ''
+    notes: '',
+    teacher: '',
+    isPackBac: false
   });
 
+  const [currentStep, setCurrentStep] = useState(1);
   const [status, setStatus] = useState('idle'); // 'idle' | 'loading' | 'success' | 'error'
   const [errors, setErrors] = useState({});
   const [registrationRef, setRegistrationRef] = useState('');
@@ -92,13 +96,34 @@ const Inscription = () => {
   };
 
   const filiereOptions = [
-    'Experimental Sciences',
-    'Mathematics',
-    'Technical Mathematics (Civil / Mechanical / Electrical / Process)',
-    'Management & Economics',
-    'Literature & Philosophy',
-    'Foreign Languages'
+    { value: 'Experimental Sciences', key: 'sciences' },
+    { value: 'Mathematics', key: 'math' },
+    { value: 'Technical Mathematics (Civil / Mechanical / Electrical / Process)', key: 'techMath' },
+    { value: 'Management & Economics', key: 'management' },
+    { value: 'Literature & Philosophy', key: 'literature' },
+    { value: 'Foreign Languages', key: 'languages' }
   ];
+
+  const subjectKeyMap = {
+    'Mathematics': 'math',
+    'Physics & Chemistry': 'physics',
+    'Natural Sciences (Biology)': 'biology',
+    'French': 'french',
+    'English': 'english',
+    'Arabic Language': 'arabic',
+    'Natural Sciences (SVT)': 'svt',
+    'Philosophy': 'philosophy',
+    'Economics & Management': 'economics',
+    'Law': 'law',
+    'Accounting': 'accounting',
+    'Core Curriculum': 'coreCurriculum',
+    'Hands-on Projects': 'handsOn',
+    '1-on-1 Mentorship': 'mentorship',
+    'Final Certificate': 'certificate',
+    '1-on-1 Discovery Session': 'discovery',
+    'Skills & Interest Assessment': 'skillsAssessment',
+    'Personalized Action Plan': 'actionPlan'
+  };
 
   const availableSubjectsByProgram = {
     cem: ['Mathematics', 'Physics & Chemistry', 'Natural Sciences (Biology)', 'French', 'English', 'Arabic Language'],
@@ -107,13 +132,43 @@ const Inscription = () => {
     consultation: ['1-on-1 Discovery Session', 'Skills & Interest Assessment', 'Personalized Action Plan']
   };
 
+  const teachersByProgram = {
+    lycee: [
+      { name: 'عادل عبد القدير', subject: 'فلسفة', nameEn: 'Adel Abd El Kader', subjectEn: 'Philosophy' },
+      { name: 'محمد الطيب قرارة', subject: 'فيزياء', nameEn: 'Mohamed El Tayeb Grara', subjectEn: 'Physics' },
+      { name: 'وليد فراج', subject: 'رياضيات', nameEn: 'Walid Faraj', subjectEn: 'Mathematics' },
+      { name: 'رقية منصوري', subject: 'علوم طبيعية', nameEn: 'Rokia Mansouri', subjectEn: 'Natural Sciences' },
+      { name: 'زقيدة عزالي', subject: 'علوم طبيعية', nameEn: 'Zguida Azali', subjectEn: 'Natural Sciences' },
+      { name: 'عادل عبد العزيز', subject: 'لغة عربية', nameEn: 'Adel Abd El Aziz', subjectEn: 'Arabic Language' },
+      { name: 'أميرة بسو', subject: 'إنجليزية', nameEn: 'Amira Bassou', subjectEn: 'English' },
+      { name: 'أسماء بن يحي', subject: 'فرنسية', nameEn: 'Asma Ben Yahia', subjectEn: 'French' },
+      { name: 'عبد العزيز قدير', subject: 'تاريخ وجغرافيا', nameEn: 'Abd El Aziz Kadir', subjectEn: 'History & Geography' },
+      { name: 'عماد سليماني', subject: 'رياضيات', nameEn: 'Imad Slimani', subjectEn: 'Mathematics' },
+      { name: 'سميرة طالبي', subject: 'محاسبة', nameEn: 'Samira Talbi', subjectEn: 'Accounting' },
+    ],
+    cem: [
+      { name: 'هديل مرسو', subject: 'رياضيات', nameEn: 'Hadil Mersou', subjectEn: 'Mathematics' },
+      { name: 'وليد فراج', subject: 'رياضيات', nameEn: 'Walid Faraj', subjectEn: 'Mathematics' },
+      { name: 'نور الهدى منوني', subject: 'فيزياء', nameEn: 'Nour El Hoda Manouni', subjectEn: 'Physics' },
+      { name: 'حمزة بالي', subject: 'فرنسية', nameEn: 'Hamza Bali', subjectEn: 'French' },
+      { name: 'خالد بن جيلالي', subject: 'إنجليزية', nameEn: 'Khaled Ben Jilali', subjectEn: 'English' },
+      { name: 'رياض براهمي', subject: 'إنجليزية', nameEn: 'Riad Brahmi', subjectEn: 'English' },
+      { name: 'عزالي', subject: 'علوم', nameEn: 'Azali', subjectEn: 'Sciences' },
+      { name: 'عادل عبد القدير عبد العزيز', subject: 'لغة عربية', nameEn: 'Adel Abd El Kader Abd El Aziz', subjectEn: 'Arabic Language' },
+      { name: 'عالي روقية', subject: '', nameEn: 'Ali Rokia', subjectEn: '' },
+      { name: 'بخضرة رزيقي', subject: 'فرنسية', nameEn: 'Bakhda Reziki', subjectEn: 'French' },
+    ]
+  };
+
   const handleProgramChange = (progId) => {
     const defaultLevel = levelsByProgram[progId]?.[0]?.value || '';
     setFormData(prev => ({
       ...prev,
       programType: progId,
       level: defaultLevel,
-      subjects: availableSubjectsByProgram[progId]?.slice(0, 2) || []
+      subjects: availableSubjectsByProgram[progId]?.slice(0, 2) || [],
+      teacher: '',
+      isPackBac: false
     }));
   };
 
@@ -129,7 +184,11 @@ const Inscription = () => {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
+    setFormData(prev => ({ 
+      ...prev, 
+      [name]: value,
+      ...(name === 'level' ? { isPackBac: false } : {})
+    }));
     if (errors[name]) {
       setErrors(prev => ({ ...prev, [name]: '' }));
     }
@@ -145,11 +204,22 @@ const Inscription = () => {
     if (formData.email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email.trim())) {
       newErrors.email = 'Please enter a valid email address';
     }
-    if (formData.subjects.length === 0) {
+    if (formData.subjects.length === 0 && !formData.isPackBac) {
       newErrors.subjects = 'Please select at least one subject or option';
     }
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
+  };
+
+  
+  const handleNextStep = () => {
+    setCurrentStep(prev => prev + 1);
+    window.scrollTo({ top: 120, behavior: 'smooth' });
+  };
+
+  const handlePrevStep = () => {
+    setCurrentStep(prev => prev - 1);
+    window.scrollTo({ top: 120, behavior: 'smooth' });
   };
 
   const handleSubmit = async (e) => {
@@ -194,10 +264,10 @@ const Inscription = () => {
   return (
     <>
       <Helmet>
-        <title>Online Inscription & Registration | Rekaz Institute</title>
+        <title>Online Inscription & Registration | Rekaz Establishment</title>
         <meta
           name="description"
-          content="Register online for Rekaz Institute programs in Béchar: Middle School (CEM & BEM), High School (Lycée & BAC), Professional Training & Certifications, and Consulting."
+          content="Register online for Rekaz Establishment programs in Béchar: Middle School (CEM & BEM), High School (Lycée & BAC), Professional Training & Certifications, and Consulting."
         />
       </Helmet>
 
@@ -205,29 +275,25 @@ const Inscription = () => {
         <Container>
           {/* Header Banner */}
           <div className="max-w-3xl mx-auto text-center mb-12">
-            <SectionTag text="Online Registration • Inscription" icon="" />
+            <SectionTag text={t('inscription.tag')} icon="" />
             <h1 
               className="text-4xl md:text-5xl lg:text-[54px] font-satoshi font-bold text-rekaz-black mt-5 mb-4 leading-[1.2] tracking-[-0.03em]"
-            >
-              Join Rekaz Institute
-            </h1>
-            <p className="text-lg md:text-xl text-rekaz-grey font-dm leading-relaxed">
-              Take the first step toward academic excellence and career success. Complete the form below and our admissions team will contact you within 24 hours.
-            </p>
+            >{t('inscription.heading')}</h1>
+            <p className="text-lg md:text-xl text-rekaz-grey font-dm leading-relaxed">{t('inscription.headerSubtitle')}</p>
 
             {/* Quick Guarantees Pill Badges */}
             <div className="flex flex-wrap items-center justify-center gap-3 mt-8">
               <div className="flex items-center gap-2 bg-white border border-gray-200/80 px-4 py-2 rounded-full text-xs font-semibold font-satoshi text-rekaz-dark shadow-sm">
                 <span className="w-2 h-2 rounded-full bg-emerald-500"></span>
-                Personalized Academic Mentoring
+                {t('inscription.guarantee1')}
               </div>
               <div className="flex items-center gap-2 bg-white border border-gray-200/80 px-4 py-2 rounded-full text-xs font-semibold font-satoshi text-rekaz-dark shadow-sm">
                 <span className="w-2 h-2 rounded-full bg-rekaz-cyan"></span>
-                Expert & Certified Instructors
+                {t('inscription.guarantee2')}
               </div>
               <div className="flex items-center gap-2 bg-white border border-gray-200/80 px-4 py-2 rounded-full text-xs font-semibold font-satoshi text-rekaz-dark shadow-sm">
                 <span className="w-2 h-2 rounded-full bg-rekaz-blue"></span>
-                In-Person Béchar Center + Online Access
+                {t('inscription.guarantee3')}
               </div>
             </div>
           </div>
@@ -245,48 +311,53 @@ const Inscription = () => {
               </div>
 
               <div className="inline-block px-4 py-1.5 rounded-full bg-emerald-50 text-emerald-700 text-xs font-bold uppercase tracking-wider mb-4 border border-emerald-200">
-                Application Successfully Received
+                {t('inscription.successBadge')}
               </div>
 
-              <h2 className="text-3xl font-satoshi font-bold text-rekaz-black mb-3">
-                Congratulations, {formData.fullName}!
-              </h2>
-              <p className="text-rekaz-grey font-dm mb-6 max-w-lg mx-auto">
-                Your pre-registration with Rekaz Institute has been submitted. Our admissions team will reach out via phone or WhatsApp within 24 hours to confirm your group schedule.
-              </p>
+              <h2 className="text-3xl font-satoshi font-bold text-rekaz-black mb-3">{t('inscription.successTitle', { name: formData.fullName })}</h2>
+              <p className="text-rekaz-grey font-dm mb-6 max-w-lg mx-auto">{t('inscription.successMessage')}</p>
 
               {/* Reference Card */}
               <div className="bg-[#fbfaff] border border-gray-200/80 rounded-2xl p-6 mb-8 text-left">
                 <div className="flex justify-between items-center pb-4 border-b border-gray-100 mb-4">
-                  <span className="text-xs font-semibold text-rekaz-muted uppercase tracking-wider">Application Reference</span>
+                  <span className="text-xs font-semibold text-rekaz-muted uppercase tracking-wider">{t('inscription.appReference')}</span>
                   <span className="font-mono font-bold text-rekaz-blue text-base bg-blue-50 px-3 py-1 rounded-lg border border-blue-100">
                     {registrationRef}
                   </span>
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
                   <div>
-                    <span className="text-rekaz-muted block text-xs">Program:</span>
+                    <span className="text-rekaz-muted block text-xs">{t('inscription.programLabel')}</span>
                     <span className="font-semibold text-rekaz-black capitalize">{formData.programType.toUpperCase()} ({formData.level})</span>
                   </div>
                   <div>
-                    <span className="text-rekaz-muted block text-xs">Phone Number:</span>
+                    <span className="text-rekaz-muted block text-xs">{t('inscription.phoneLabel')}</span>
                     <span className="font-semibold text-rekaz-black">{formData.phone}</span>
                   </div>
                   <div>
-                    <span className="text-rekaz-muted block text-xs">Selected Subjects / Modules:</span>
-                    <span className="font-semibold text-rekaz-black">{formData.subjects.join(', ')}</span>
+                    <span className="text-rekaz-muted block text-xs">{t('inscription.subjectsLabel')}</span>
+                    <span className="font-semibold text-rekaz-black">
+                      {formData.subjects.join(', ')}
+                      {formData.isPackBac && formData.programType === 'lycee' && formData.level === '3AS-BAC' && ' + (Pack-BAC)'}
+                    </span>
                   </div>
                   <div>
-                    <span className="text-rekaz-muted block text-xs">Learning Mode:</span>
+                    <span className="text-rekaz-muted block text-xs">{t('inscription.modeLabel')}</span>
                     <span className="font-semibold text-rekaz-black capitalize">{formData.learningMode}</span>
                   </div>
+                  {formData.teacher && (
+                    <div>
+                      <span className="text-rekaz-muted block text-xs">{t('inscription.teacherSelectedLabel', 'Selected Teacher:')}</span>
+                      <span className="font-semibold text-rekaz-black">{formData.teacher}</span>
+                    </div>
+                  )}
                 </div>
               </div>
 
               {/* Direct Next Action Buttons */}
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                 <a
-                  href={`https://wa.me/213555123456?text=Hello%20Rekaz%20Institute,%20I%20have%20completed%20my%20online%20registration%20(Ref:%20${registrationRef})`}
+                  href={`https://wa.me/213555123456?text=Hello%20Rekaz%20Establishment,%20I%20have%20completed%20my%20online%20registration%20(Ref:%20${registrationRef})`}
                   target="_blank"
                   rel="noreferrer"
                   className="w-full sm:w-auto px-6 py-3.5 rounded-[14px] bg-[#25D366] text-white font-satoshi font-semibold text-sm hover:bg-[#1EBE5D] transition-colors flex items-center justify-center gap-2 shadow-sm"
@@ -294,18 +365,30 @@ const Inscription = () => {
                   <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24">
                     <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.983.54 1.765.813 2.796.813 3.182 0 5.768-2.587 5.768-5.766 0-3.18-2.586-5.766-5.768-5.766zm9.969 5.828c0 5.518-4.482 10-10 10-1.745 0-3.37-.449-4.787-1.233l-5.213 1.365 1.39-5.077c-.896-1.472-1.39-3.197-1.39-5.055 0-5.518 4.482-10 10-10 5.518 0 10 4.482 10 10z"/>
                   </svg>
-                  Confirm on WhatsApp
+                  {t('inscription.whatsappConfirm')}
                 </a>
+
+                <button
+                  onClick={() => generateInscriptionPDF({ ...formData, referenceNumber: registrationRef })}
+                  className="w-full sm:w-auto px-6 py-3.5 rounded-[14px] text-white font-satoshi font-semibold text-sm hover:brightness-105 transition-all flex items-center justify-center gap-2 shadow-sm cursor-pointer"
+                  style={{ background: 'linear-gradient(180deg, rgb(0, 165, 255) 0%, rgb(4, 18, 250) 100%)' }}
+                >
+                  <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                  </svg>
+                  📄 تحميل وصل التسجيل PDF
+                </button>
 
                 <Button 
                   variant="outline" 
                   onClick={() => {
                     setStatus('idle');
+                    setCurrentStep(1);
                     setFormData(prev => ({ ...prev, fullName: '', phone: '', email: '', notes: '' }));
                   }}
                   className="w-full sm:w-auto"
                 >
-                  New Registration
+                  {t('inscription.newRegistration')}
                 </Button>
               </div>
             </div>
@@ -313,7 +396,26 @@ const Inscription = () => {
             /* Registration Form Container */
             <div className="max-w-4xl mx-auto bg-white border border-gray-100 rounded-[28px] p-6 sm:p-10 md:p-12 shadow-[0_12px_45px_rgba(0,0,0,0.04)]">
               <form onSubmit={handleSubmit} className="space-y-10">
-                {/* STEP 1: Choose Program Category */}
+
+                {/* Progress Indicator */}
+                <div className="mb-8">
+                  <div className="flex justify-between items-center mb-2">
+                    <span className="text-sm font-satoshi font-semibold text-rekaz-blue">
+                      {t('inscription.stepIndicator', { current: currentStep, total: 3 }).replace('{current}', currentStep).replace('{total}', 3)}
+                    </span>
+                    <span className="text-xs font-dm text-rekaz-grey">{Math.round((currentStep / 3) * 100)}%</span>
+                  </div>
+                  <div className="w-full bg-gray-100 rounded-full h-2">
+                    <div 
+                      className="bg-rekaz-blue h-2 rounded-full transition-all duration-500 ease-out" 
+                      style={{ width: `${(currentStep / 3) * 100}%`, background: 'linear-gradient(90deg, rgb(0, 165, 255) 0%, rgb(4, 18, 250) 100%)' }}
+                    ></div>
+                  </div>
+                </div>
+
+                {currentStep === 1 && (
+                  <div className="animate-fadeIn">
+                    {/* STEP 1: Choose Program Category */}
                 <div>
                   <div className="flex items-center gap-3 mb-6">
                     <span 
@@ -322,9 +424,7 @@ const Inscription = () => {
                     >
                       1
                     </span>
-                    <h2 className="text-2xl font-satoshi font-bold text-rekaz-black">
-                      Select Your Study Program
-                    </h2>
+                    <h2 className="text-2xl font-satoshi font-bold text-rekaz-black">{t('inscription.step1Title')}</h2>
                   </div>
 
                   <div className="grid sm:grid-cols-2 gap-4">
@@ -336,34 +436,34 @@ const Inscription = () => {
                           onClick={() => handleProgramChange(prog.id)}
                           className={`relative p-5 rounded-[18px] border-2 cursor-pointer transition-all ${
                             isSelected
-                              ? 'border-rekaz-blue bg-blue-50/30 shadow-[0_4px_18px_rgba(4,18,250,0.08)]'
+                              ? 'border-rekaz-blue shadow-[0_4px_18px_rgba(4,18,250,0.22)]'
                               : 'border-gray-200/80 hover:border-rekaz-cyan/60 bg-white hover:bg-gray-50/50'
                           }`}
+                          style={isSelected ? { background: 'linear-gradient(135deg, #00a5ff 0%, #0412fa 100%)' } : {}}
                         >
                           <div className="flex justify-between items-start mb-3">
                             <div className="text-3xl">{prog.icon}</div>
                             <span 
                               className={`text-[11px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full ${
                                 isSelected 
-                                  ? 'bg-rekaz-blue text-white' 
+                                  ? 'bg-white/20 text-white' 
                                   : 'bg-gray-100 text-rekaz-muted'
                               }`}
                             >
                               {prog.badge}
                             </span>
                           </div>
-                          <h3 className="font-satoshi font-bold text-lg text-rekaz-black mb-1">
+                          <h3 className={`font-satoshi font-bold text-lg mb-1 ${isSelected ? 'text-white' : 'text-rekaz-black'}`}>
                             {prog.title}
                           </h3>
-                          <p className="text-xs text-rekaz-grey font-dm">
+                          <p className={`text-xs font-dm ${isSelected ? 'text-white/80' : 'text-rekaz-grey'}`}>
                             {prog.subtitle}
                           </p>
 
                           {/* Selected Checkmark Indicator */}
                           {isSelected && (
                             <div 
-                              className="absolute top-3 right-3 w-5 h-5 rounded-full text-white flex items-center justify-center shadow-sm"
-                              style={{ background: 'linear-gradient(180deg, rgb(0, 165, 255) 0%, rgb(4, 18, 250) 100%)' }}
+                              className="absolute top-3 left-3 w-5 h-5 rounded-full bg-white/30 text-white flex items-center justify-center shadow-sm"
                             >
                               <svg width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="3">
                                 <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
@@ -376,7 +476,12 @@ const Inscription = () => {
                   </div>
                 </div>
 
-                {/* STEP 2: Academic Level & Subjects */}
+                </div>
+                )}
+
+                {currentStep === 2 && (
+                  <div className="animate-fadeIn">
+                    {/* STEP 2: Academic Level & Subjects */}
                 <div className="pt-8 border-t border-gray-100">
                   <div className="flex items-center gap-3 mb-6">
                     <span 
@@ -385,16 +490,14 @@ const Inscription = () => {
                     >
                       2
                     </span>
-                    <h2 className="text-2xl font-satoshi font-bold text-rekaz-black">
-                      Academic Level & Subjects
-                    </h2>
+                    <h2 className="text-2xl font-satoshi font-bold text-rekaz-black">{t('inscription.step2Title')}</h2>
                   </div>
 
                   <div className="grid md:grid-cols-2 gap-5 mb-6">
                     {/* Level Selector */}
                     <div>
                       <label className={labelClass}>
-                        {formData.programType === 'formation' ? 'Field / Formation Specialization' : 'Grade / Academic Level'}
+                        {formData.programType === 'formation' ? t('inscription.fieldLabel') : t('inscription.gradeLabel')}
                       </label>
                       <select
                         name="level"
@@ -413,7 +516,7 @@ const Inscription = () => {
                     {/* Secondary Field: Filière (for Lycée/BAC) */}
                     {formData.programType === 'lycee' && (
                       <div>
-                        <label className={labelClass}>Academic Branch / Stream</label>
+                        <label className={labelClass}>{t('inscription.branchLabel')}</label>
                         <select
                           name="filiere"
                           value={formData.filiere}
@@ -421,26 +524,26 @@ const Inscription = () => {
                           className={inputClass('filiere')}
                         >
                           {filiereOptions.map((fil, i) => (
-                            <option key={i} value={fil}>
-                              {fil}
-                            </option>
-                          ))}
+                              <option key={i} value={fil.value}>
+                                {t(`inscription.branches.${fil.key}`)}
+                              </option>
+                            ))}
                         </select>
                       </div>
                     )}
 
                     {/* Learning Mode */}
                     <div>
-                      <label className={labelClass}>Learning Mode</label>
+                      <label className={labelClass}>{t('inscription.learningModeLabel')}</label>
                       <select
                         name="learningMode"
                         value={formData.learningMode}
                         onChange={handleChange}
                         className={inputClass('learningMode')}
                       >
-                        <option value="presentiel">In-Person (At Rekaz Learning Center, Béchar)</option>
-                        <option value="online">Online (Interactive Virtual Classroom)</option>
-                        <option value="hybrid">Hybrid (In-Person + Online Recordings)</option>
+                        <option value="presentiel">{t('inscription.inPerson')}</option>
+                          <option value="online">{t('inscription.online')}</option>
+                          <option value="hybrid">{t('inscription.hybrid')}</option>
                       </select>
                     </div>
                   </div>
@@ -448,7 +551,7 @@ const Inscription = () => {
                   {/* Subject Multi-Select Pills */}
                   <div>
                     <label className={labelClass}>
-                      Select Subjects or Modules: <span className="text-red-500">*</span>
+                      {t('inscription.selectSubjects')} <span className="text-red-500">*</span>
                     </label>
                     <div className="flex flex-wrap gap-2.5 mt-2">
                       {availableSubjectsByProgram[formData.programType]?.map((subject) => {
@@ -465,7 +568,7 @@ const Inscription = () => {
                             }`}
                           >
                             {isChecked ? '✓ ' : '+ '}
-                            {subject}
+                            {t(`inscription.subjects.${subjectKeyMap[subject]}`, subject)}
                           </button>
                         );
                       })}
@@ -473,24 +576,127 @@ const Inscription = () => {
                     {errors.subjects && <p className="text-red-500 text-xs mt-2">{errors.subjects}</p>}
                   </div>
 
-                  {/* Special Pack BAC Banner Notice */}
+                  {/* Teacher Selection — CEM & Lycée only */}
+                  {(formData.programType === 'cem' || formData.programType === 'lycee') && teachersByProgram[formData.programType] && (
+                    <div className="mt-6">
+                      <label className={labelClass}>
+                        {t('inscription.teacherLabel', 'Select Your Teacher')} <span className="text-rekaz-grey font-normal text-xs">{t('inscription.optional', '(Optional)')}</span>
+                      </label>
+                      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 mt-2">
+                        {teachersByProgram[formData.programType].map((teacher) => {
+                          const isSelected = formData.teacher === teacher.nameEn;
+                          return (
+                            <button
+                              type="button"
+                              key={teacher.nameEn}
+                              onClick={() =>
+                                setFormData(prev => ({
+                                  ...prev,
+                                  teacher: isSelected ? '' : teacher.nameEn
+                                }))
+                              }
+                              className={`relative p-3 rounded-[14px] border-2 cursor-pointer transition-all text-left flex items-center gap-3 ${
+                                isSelected
+                                  ? 'border-rekaz-blue bg-blue-50/40 shadow-[0_2px_12px_rgba(4,18,250,0.10)]'
+                                  : 'border-gray-200/80 hover:border-rekaz-cyan/60 bg-white hover:bg-gray-50'
+                              }`}
+                            >
+                              <div className={`w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0 text-sm font-satoshi font-bold transition-all ${
+                                isSelected
+                                  ? 'bg-gradient-to-br from-rekaz-cyan to-rekaz-blue text-white'
+                                  : 'bg-gray-100 text-rekaz-dark'
+                              }`}>
+                                {teacher.nameEn.charAt(0)}
+                              </div>
+                              <div className="min-w-0">
+                                <p className="font-satoshi font-bold text-sm text-rekaz-black truncate">{i18n.language === 'ar' ? teacher.name : teacher.nameEn}</p>
+                                {teacher.subject && (
+                                  <p className={`text-xs font-dm font-medium truncate ${isSelected ? 'text-rekaz-blue' : 'text-rekaz-grey'}`}>
+                                    {i18n.language === 'ar' ? teacher.subject : teacher.subjectEn}
+                                  </p>
+                                )}
+                              </div>
+                              {isSelected && (
+                                <div
+                                  className="absolute top-2 right-2 w-4 h-4 rounded-full text-white flex items-center justify-center"
+                                  style={{ background: 'linear-gradient(180deg, rgb(0, 165, 255) 0%, rgb(4, 18, 250) 100%)' }}
+                                >
+                                  <svg width="9" height="9" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="3.5">
+                                    <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                                  </svg>
+                                </div>
+                              )}
+                            </button>
+                          );
+                        })}
+                      </div>
+                    </div>
+                  )}
+
+                  {/* Special Pack BAC Banner Notice (Full Card Design) */}
                   {formData.programType === 'lycee' && formData.level === '3AS-BAC' && (
-                    <div className="mt-6 p-4 rounded-2xl bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-100 flex items-center justify-between">
-                      <div className="flex items-center gap-3">
-                        <span className="text-2xl"></span>
-                        <div>
-                          <h4 className="font-satoshi font-bold text-sm text-rekaz-blue">Special Pack-BAC Offer</h4>
-                          <p className="text-xs text-rekaz-grey">Get comprehensive tutoring across 3 major subjects for only 4,000 DZD/month.</p>
+                    <div 
+                      onClick={() => setFormData(prev => ({ ...prev, isPackBac: !prev.isPackBac }))}
+                      className={`mt-8 p-6 md:p-8 rounded-[24px] border-2 cursor-pointer transition-all flex flex-col items-start text-start relative group ${
+                        formData.isPackBac
+                          ? 'border-rekaz-blue bg-blue-50/20 shadow-[0_8px_30px_rgba(4,18,250,0.12)]'
+                          : 'border-gray-200/80 bg-white hover:border-rekaz-blue/50 hover:shadow-md'
+                      }`}
+                    >
+                      {/* Selection Checkmark */}
+                      <div className={`absolute top-6 right-6 w-6 h-6 rounded-full border-2 flex items-center justify-center transition-colors ${
+                        formData.isPackBac ? 'border-rekaz-blue bg-rekaz-blue text-white' : 'border-gray-300'
+                      }`}>
+                        {formData.isPackBac && (
+                          <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="3">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                          </svg>
+                        )}
+                      </div>
+
+                      <div className="text-[10px] font-bold uppercase tracking-wider text-rekaz-blue bg-rekaz-blue/5 px-3 py-1.5 rounded-full mb-4 group-hover:bg-rekaz-blue/10 transition-colors">
+                        {t('whyRekaz.specialPacks', 'Special Packs')}
+                      </div>
+                      
+                      <h3 className={`text-[22px] font-satoshi font-bold mb-3 tracking-[-0.02em] transition-colors ${
+                        formData.isPackBac ? 'text-rekaz-blue' : 'text-rekaz-black group-hover:text-rekaz-blue'
+                      }`}>
+                        {t('whyRekaz.packBacTitle', 'Pack-BAC: more learning, better value')}
+                      </h3>
+                      
+                      <p className="text-rekaz-grey mb-6 font-dm leading-relaxed text-[14px] max-w-lg">
+                        {t('whyRekaz.packBacDesc', 'Make quality education more accessible with offers such as Pack-BAC: 3 subjects for the price of only 2.')}
+                      </p>
+                      
+                      <div
+                        className="w-full rounded-[18px] p-6 flex flex-col gap-2 relative overflow-hidden"
+                        style={{ background: 'linear-gradient(160deg, #00a5ff 0%, #0412fa 100%)' }}
+                      >
+                        <div className="absolute inset-0 bg-gradient-to-br from-white/15 to-transparent pointer-events-none rounded-[18px]" />
+                        <div className="relative z-10 flex flex-col md:flex-row md:items-center justify-between gap-4">
+                          <div>
+                            <div className="text-[11px] text-white/80 font-bold uppercase tracking-wider mb-1">
+                              {t('whyRekaz.premiumPackBac', 'Premium Pack-BAC')}
+                            </div>
+                            <p className="text-[12px] text-white/80 leading-relaxed max-w-sm">
+                              {t('whyRekaz.packBacPriceDesc', 'Affordable learning with Pack-BAC: 3 subjects for 4000 DA — the price of only 2 subjects.')}
+                            </p>
+                          </div>
+                          <div className="text-4xl md:text-5xl font-satoshi font-black text-white tracking-tight">
+                            {t('whyRekaz.packBacPrice', '4000 DA')}
+                          </div>
                         </div>
                       </div>
-                      <span className="font-satoshi font-black text-sm text-rekaz-blue bg-white px-3 py-1.5 rounded-xl shadow-xs">
-                        4000 DZD
-                      </span>
                     </div>
                   )}
                 </div>
 
-                {/* STEP 3: Student Details */}
+                </div>
+                )}
+
+                {currentStep === 3 && (
+                  <div className="animate-fadeIn">
+                    {/* STEP 3: Student Details */}
                 <div className="pt-8 border-t border-gray-100">
                   <div className="flex items-center gap-3 mb-6">
                     <span 
@@ -499,20 +705,18 @@ const Inscription = () => {
                     >
                       3
                     </span>
-                    <h2 className="text-2xl font-satoshi font-bold text-rekaz-black">
-                      Student / Applicant Information
-                    </h2>
+                    <h2 className="text-2xl font-satoshi font-bold text-rekaz-black">{t('inscription.step3Title')}</h2>
                   </div>
 
                   <div className="grid md:grid-cols-2 gap-5">
                     <div>
-                      <label className={labelClass}>Full Name <span className="text-red-500">*</span></label>
+                      <label className={labelClass}>{t('inscription.fullName')} <span className="text-red-500">*</span></label>
                       <input
                         type="text"
                         name="fullName"
                         value={formData.fullName}
                         onChange={handleChange}
-                        placeholder="e.g. Mohamed Amine Benali"
+                        placeholder={t('inscription.placeholders.fullName')}
                         className={inputClass('fullName')}
                         required
                       />
@@ -520,13 +724,13 @@ const Inscription = () => {
                     </div>
 
                     <div>
-                      <label className={labelClass}>Phone Number (WhatsApp) <span className="text-red-500">*</span></label>
+                      <label className={labelClass}>{t('inscription.phoneWhatsapp')} <span className="text-red-500">*</span></label>
                       <input
                         type="tel"
                         name="phone"
                         value={formData.phone}
                         onChange={handleChange}
-                        placeholder="05 / 06 / 07 XX XX XX XX"
+                        placeholder={t('inscription.placeholders.phone')}
                         className={inputClass('phone')}
                         required
                       />
@@ -534,53 +738,53 @@ const Inscription = () => {
                     </div>
 
                     <div>
-                      <label className={labelClass}>Email Address (Optional)</label>
+                      <label className={labelClass}>{t('inscription.emailOptional')}</label>
                       <input
                         type="email"
                         name="email"
                         value={formData.email}
                         onChange={handleChange}
-                        placeholder="name@example.com"
+                        placeholder={t('inscription.placeholders.email')}
                         className={inputClass('email')}
                       />
                       {errors.email && <p className="text-red-500 text-xs mt-1">{errors.email}</p>}
                     </div>
 
                     <div>
-                      <label className={labelClass}>City / Wilaya</label>
+                      <label className={labelClass}>{t('inscription.cityWilaya')}</label>
                       <input
                         type="text"
                         name="city"
                         value={formData.city}
                         onChange={handleChange}
-                        placeholder="Béchar / Other"
+                        placeholder={t('inscription.placeholders.city')}
                         className={inputClass('city')}
                       />
                     </div>
 
                     <div>
-                      <label className={labelClass}>Current School / High School / College</label>
+                      <label className={labelClass}>{t('inscription.currentSchool')}</label>
                       <input
                         type="text"
                         name="currentSchool"
                         value={formData.currentSchool}
                         onChange={handleChange}
-                        placeholder="e.g. Ibn Khaldoun High School"
+                        placeholder={t('inscription.placeholders.school')}
                         className={inputClass('currentSchool')}
                       />
                     </div>
 
                     <div>
-                      <label className={labelClass}>Preferred Session Timing</label>
+                      <label className={labelClass}>{t('inscription.sessionTiming')}</label>
                       <select
                         name="schedulePreference"
                         value={formData.schedulePreference}
                         onChange={handleChange}
                         className={inputClass('schedulePreference')}
                       >
-                        <option value="weekend">Weekend Intensive Sessions (Friday / Saturday)</option>
-                        <option value="evening">Weekday Evening Sessions</option>
-                        <option value="flexible">Flexible Group Timing</option>
+                        <option value="weekend">{t('inscription.weekend')}</option>
+                        <option value="evening">{t('inscription.evening')}</option>
+                        <option value="flexible">{t('inscription.flexible')}</option>
                       </select>
                     </div>
                   </div>
@@ -589,42 +793,42 @@ const Inscription = () => {
                   {(formData.programType === 'cem' || formData.programType === 'lycee') && (
                     <div className="mt-6 p-5 rounded-2xl bg-gray-50 border border-gray-100">
                       <h4 className="font-satoshi font-bold text-sm text-rekaz-black mb-4 flex items-center gap-2">
-                        <span>‍‍</span> Parent / Guardian Contact (For Middle & High School Students)
+                        <span>‍‍</span>{t('inscription.parentSectionTitle', 'Parent / Guardian Contact (For Middle & High School Students)')}
                       </h4>
                       <div className="grid md:grid-cols-3 gap-4">
                         <div>
-                          <label className="block text-xs font-semibold text-rekaz-dark mb-1">Parent's Full Name</label>
+                          <label className="block text-xs font-semibold text-rekaz-dark mb-1">{t('inscription.parentName')}</label>
                           <input
                             type="text"
                             name="parentName"
                             value={formData.parentName}
                             onChange={handleChange}
-                            placeholder="Guardian full name"
+                            placeholder={t('inscription.placeholders.parentName')}
                             className="w-full h-11 px-3 bg-white border border-gray-200 rounded-xl text-sm"
                           />
                         </div>
                         <div>
-                          <label className="block text-xs font-semibold text-rekaz-dark mb-1">Parent's Phone Number</label>
+                          <label className="block text-xs font-semibold text-rekaz-dark mb-1">{t('inscription.parentPhone')}</label>
                           <input
                             type="tel"
                             name="parentPhone"
                             value={formData.parentPhone}
                             onChange={handleChange}
-                            placeholder="05 / 06 / 07 XX XX XX XX"
+                            placeholder={t('inscription.placeholders.parentPhone')}
                             className="w-full h-11 px-3 bg-white border border-gray-200 rounded-xl text-sm"
                           />
                         </div>
                         <div>
-                          <label className="block text-xs font-semibold text-rekaz-dark mb-1">Relationship</label>
+                          <label className="block text-xs font-semibold text-rekaz-dark mb-1">{t('inscription.relationship')}</label>
                           <select
                             name="parentRelation"
                             value={formData.parentRelation}
                             onChange={handleChange}
                             className="w-full h-11 px-3 bg-white border border-gray-200 rounded-xl text-sm"
                           >
-                            <option value="Father">Father</option>
-                            <option value="Mother">Mother</option>
-                            <option value="Guardian">Guardian / Legal Representative</option>
+                            <option value="Father">{t('inscription.father')}</option>
+                            <option value="Mother">{t('inscription.mother')}</option>
+                            <option value="Guardian">{t('inscription.guardian')}</option>
                           </select>
                         </div>
                       </div>
@@ -633,41 +837,67 @@ const Inscription = () => {
 
                   {/* Notes / Special Requests */}
                   <div className="mt-6">
-                    <label className={labelClass}>Additional Notes or Specific Goals (Optional)</label>
+                    <label className={labelClass}>{t('inscription.notesLabel')}</label>
                     <textarea
                       name="notes"
                       value={formData.notes}
                       onChange={handleChange}
-                      placeholder="Specify any target subjects, exam goals, or special requirements here..."
+                      placeholder={t('inscription.notesPlaceholder')}
                       className="w-full h-24 p-4 bg-rekaz-card border border-[rgba(136,136,136,0.15)] rounded-2xl font-satoshi text-sm text-rekaz-dark placeholder:text-rekaz-grey focus:outline-none focus:border-rekaz-cyan transition-all resize-y"
                     />
                   </div>
                 </div>
 
-                {/* Submit Section with Signature Blue Gradient Button */}
+                </div>
+                )}
+
+                {/* Navigation and Submit Section */}
                 <div className="pt-8 border-t border-gray-100 flex flex-col sm:flex-row items-center justify-between gap-6">
-                  <div className="text-left text-xs text-rekaz-grey max-w-sm">
-                     Your personal data is kept strictly confidential and used solely for academic enrollment and communication.
+                  <div className="text-left text-xs text-rekaz-grey max-w-sm hidden sm:block">
+                     {t('inscription.privacyNote')}
                   </div>
 
-                  <button
-                    type="submit"
-                    disabled={status === 'loading'}
-                    className="w-full sm:w-auto min-w-[280px] h-[58px] px-8 text-white rounded-[16px] font-satoshi font-semibold text-base tracking-[-0.01em] shadow-[0_6px_22px_rgba(0,165,255,0.38)] hover:shadow-[0_10px_30px_rgba(4,18,250,0.48)] hover:brightness-105 hover:-translate-y-0.5 transition-all cursor-pointer disabled:opacity-50"
-                    style={{ background: 'linear-gradient(180deg, rgb(0, 165, 255) 0%, rgb(4, 18, 250) 100%)' }}
-                  >
-                    {status === 'loading' ? (
-                      <span className="flex items-center justify-center gap-2">
-                        <svg className="animate-spin h-5 w-5 text-white" viewBox="0 0 24 24" fill="none">
-                          <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
-                          <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
-                        </svg>
-                        Submitting Application...
-                      </span>
-                    ) : (
-                      'Confirm Registration →'
+                  <div className="flex flex-col-reverse sm:flex-row w-full sm:w-auto gap-4">
+                    {currentStep > 1 && (
+                      <button
+                        type="button"
+                        onClick={handlePrevStep}
+                        className="w-full sm:w-auto px-6 h-[58px] text-rekaz-dark bg-gray-100 hover:bg-gray-200 rounded-[16px] font-satoshi font-semibold text-base transition-all cursor-pointer"
+                      >
+                        {t('inscription.prev', 'Previous Step')}
+                      </button>
                     )}
-                  </button>
+                    
+                    {currentStep < 3 ? (
+                      <button
+                        type="button"
+                        onClick={handleNextStep}
+                        className="w-full sm:w-auto min-w-[200px] h-[58px] px-8 text-white rounded-[16px] font-satoshi font-semibold text-base shadow-md hover:brightness-105 hover:-translate-y-0.5 transition-all cursor-pointer"
+                        style={{ background: 'linear-gradient(180deg, rgb(0, 165, 255) 0%, rgb(4, 18, 250) 100%)' }}
+                      >
+                        {t('inscription.next', 'Next Step')}
+                      </button>
+                    ) : (
+                      <button
+                        type="submit"
+                        disabled={status === 'loading'}
+                        className="w-full sm:w-auto min-w-[280px] h-[58px] px-8 text-white rounded-[16px] font-satoshi font-semibold text-base tracking-[-0.01em] shadow-[0_6px_22px_rgba(0,165,255,0.38)] hover:shadow-[0_10px_30px_rgba(4,18,250,0.48)] hover:brightness-105 hover:-translate-y-0.5 transition-all cursor-pointer disabled:opacity-50"
+                        style={{ background: 'linear-gradient(180deg, rgb(0, 165, 255) 0%, rgb(4, 18, 250) 100%)' }}
+                      >
+                        {status === 'loading' ? (
+                          <span className="flex items-center justify-center gap-2">
+                            <svg className="animate-spin h-5 w-5 text-white" viewBox="0 0 24 24" fill="none">
+                              <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
+                              <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
+                            </svg>
+                            {t('inscription.submitting', 'Submitting Application...')}
+                          </span>
+                        ) : (
+                          t('inscription.confirmReg')
+                        )}
+                      </button>
+                    )}
+                  </div>
                 </div>
               </form>
             </div>
@@ -677,23 +907,17 @@ const Inscription = () => {
           <div className="max-w-4xl mx-auto mt-12 bg-gradient-to-r from-rekaz-black to-[#1a1c38] text-white rounded-3xl p-8 flex flex-col md:flex-row items-center justify-between gap-6">
             <div>
               <div className="text-rekaz-cyan font-satoshi font-bold text-xs uppercase tracking-wider mb-2">
-                Need Guidance or Advice?
+                {t('inscription.helpTag')}
               </div>
-              <h3 className="text-2xl font-satoshi font-bold text-white mb-1">
-                Our admissions team is here to assist you
-              </h3>
-              <p className="text-white/70 text-sm font-dm">
-                Contact us directly by phone or visit us at our center in Béchar.
-              </p>
+              <h3 className="text-2xl font-satoshi font-bold text-white mb-1">{t('inscription.helpTitle')}</h3>
+              <p className="text-white/70 text-sm font-dm">{t('inscription.helpDesc')}</p>
             </div>
 
             <div className="flex flex-wrap items-center gap-3">
               <Link
                 to="/contact"
                 className="px-6 py-3 bg-white/10 hover:bg-white/20 text-white rounded-xl text-sm font-satoshi font-semibold transition-colors"
-              >
-                Contact Us
-              </Link>
+              >{t('inscription.contactUs')}</Link>
               <a
                 href="tel:+213555123456"
                 className="px-6 py-3 text-white rounded-xl text-sm font-satoshi font-semibold shadow-md hover:brightness-105 transition-all"

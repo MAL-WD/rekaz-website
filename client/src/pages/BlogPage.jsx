@@ -1,6 +1,7 @@
 import { useState, useEffect, createContext, useContext } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import axios from 'axios';
+import { useTranslation } from 'react-i18next';
 
 const API = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
 
@@ -151,6 +152,7 @@ const Skeleton = () => (
 
 // ─── Page ────────────────────────────────────────────────────────────────────
 const BlogPage = () => {
+  const { t } = useTranslation();
   const { blog_id } = useParams();
   const [blog, setBlog] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -164,7 +166,7 @@ const BlogPage = () => {
         const { data } = await axios.get(`${API}/blogs/${blog_id}`);
         setBlog(data.data);
       } catch {
-        setError('Blog post not found.');
+        setError(t('blogPage.notFound'));
       } finally {
         setLoading(false);
       }
@@ -179,7 +181,7 @@ const BlogPage = () => {
       <div className="min-h-screen flex flex-col items-center justify-center gap-4 text-center px-5">
         <p className="text-rekaz-grey font-dm text-lg">{error}</p>
         <Link to="/blogs" className="text-rekaz-blue font-satoshi text-sm underline">
-          Back to Blog
+          {t('blogPage.back')}
         </Link>
       </div>
     );
@@ -239,7 +241,7 @@ const BlogPage = () => {
                 </div>
               )}
               <div className="flex flex-col">
-                <span className="text-xs text-rekaz-grey font-dm">Written by</span>
+                <span className="text-xs text-rekaz-grey font-dm">{t('blogPage.writtenBy')}</span>
                 <span className="text-rekaz-dark font-satoshi font-medium text-sm">{blog.author}</span>
               </div>
             </div>
@@ -265,21 +267,21 @@ const BlogPage = () => {
 
             {/* Share sidebar – sticks on desktop */}
             <aside className="hidden lg:flex flex-col items-center gap-4 pt-1 sticky top-28 self-start">
-              <p className="text-rekaz-grey font-dm text-xs uppercase tracking-widest rotate-0">Share</p>
+              <p className="text-rekaz-grey font-dm text-xs uppercase tracking-widest rotate-0">{t('blogPage.share')}</p>
               <ShareButton
                 href={twitterShare}
                 icon="https://framerusercontent.com/images/xXvUOxE3tcZSpXA7Z4Bumlnh4.svg"
-                label="Share on Twitter"
+                label={t('blogPage.shareTwitter')}
               />
               <ShareButton
                 href={linkedinShare}
                 icon="https://framerusercontent.com/images/fKFY9H0kRtdZHfBMWopMbnMjio.svg"
-                label="Share on LinkedIn"
+                label={t('blogPage.shareLinkedin')}
               />
               <ShareButton
                 href={`https://www.instagram.com/`}
                 icon="https://framerusercontent.com/images/Fx5rcAXqD8IvmHQwKM5sBUNihs.svg"
-                label="Instagram"
+                label={t('blogPage.instagram')}
               />
             </aside>
 
@@ -310,7 +312,7 @@ const BlogPage = () => {
 
                 {/* Mobile share */}
                 <div className="flex items-center gap-2 lg:hidden">
-                  <span className="text-rekaz-grey font-dm text-sm">Share:</span>
+                  <span className="text-rekaz-grey font-dm text-sm">{t('blogPage.share')}:</span>
                   <ShareButton href={twitterShare} icon="https://framerusercontent.com/images/xXvUOxE3tcZSpXA7Z4Bumlnh4.svg" label="Twitter" />
                   <ShareButton href={linkedinShare} icon="https://framerusercontent.com/images/fKFY9H0kRtdZHfBMWopMbnMjio.svg" label="LinkedIn" />
                 </div>
@@ -319,7 +321,7 @@ const BlogPage = () => {
                   to="/blogs"
                   className="ml-auto text-rekaz-grey font-satoshi text-sm hover:text-rekaz-blue transition-colors"
                 >
-                  ← All articles
+                  {t('blogPage.allArticles')}
                 </Link>
               </div>
             </article>
@@ -338,17 +340,16 @@ const BlogPage = () => {
               />
               <div className="relative flex flex-col gap-4 text-center md:text-left">
                 <h2 className="text-white font-satoshi font-semibold text-3xl md:text-4xl leading-tight max-w-lg">
-                  Your Future Starts With One Decision
+                  {t('blogPage.ctaTitle')}
                 </h2>
                 <p className="text-white/70 font-dm text-base">
-                  For students, learners &amp; families.
+                  {t('blogPage.ctaDesc')}
                 </p>
               </div>
               <Link
                 to="/consultation"
                 className="relative shrink-0 bg-white text-rekaz-dark font-satoshi font-semibold text-sm px-7 py-4 rounded-btn hover:bg-white/90 transition-colors"
-              >
-                Start Your Journey
+              >{t('blogPage.ctaButton')}
               </Link>
             </div>
           </div>

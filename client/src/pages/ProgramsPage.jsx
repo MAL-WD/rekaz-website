@@ -4,35 +4,37 @@ import Container from '../components/ui/Container';
 import SectionTag from '../components/ui/SectionTag';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
-import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 const ProgramsPage = () => {
+  const { t } = useTranslation();
+  
   const programs = [
     {
-      tag: 'CEM • BEM',
-      title: 'CEM — Middle School',
-      desc: 'Comprehensive support across all subjects from 1CEM to 4CEM, building strong foundations and preparing students for the BEM.',
+      tag: t('programsPage.cemTag'),
+      title: t('programsPage.cemTitle'),
+      desc: t('programsPage.cemDesc'),
       img: 'https://framerusercontent.com/images/qS6LMA7iQKHtZNdhS9Wl1T4iY.jpg',
       link: '/programs/cem'
     },
     {
-      tag: 'Lycée • BAC',
-      title: 'LYCÉE — High School',
-      desc: 'All-subject support from 1AS to 3AS, helping students excel academically and prepare strategically for the BAC.',
+      tag: t('programsPage.lyceeTag'),
+      title: t('programsPage.lyceeTitle'),
+      desc: t('programsPage.lyceeDesc'),
       img: 'https://framerusercontent.com/images/iiyPd24vPOjrEoCH6MOzoM7FAg.jpg',
       link: '/programs/lycee'
     },
     {
-      tag: 'Certificates',
-      title: 'Professional Formations',
-      desc: 'Practical formations designed to develop real-world skills and provide valid certificates upon completion.',
+      tag: t('programsPage.formationsTag'),
+      title: t('programsPage.formationsTitle'),
+      desc: t('programsPage.formationsDesc'),
       img: 'https://framerusercontent.com/images/UHS92vQMSs8EyuPs1M9I0EICPmE.jpg',
       link: '/programs/formations'
     },
     {
-      tag: 'Guidance & Growth',
-      title: 'Consultation',
-      desc: 'Expert educational, career, and business consultation to help you make better decisions and build a clear path toward success.',
+      tag: t('programsPage.consultTag'),
+      title: t('programsPage.consultTitle'),
+      desc: t('programsPage.consultDesc'),
       img: 'https://framerusercontent.com/images/xvvnxiHVjBneP7l9of0BNL5Gc.png',
       link: '/consultation'
     }
@@ -41,20 +43,20 @@ const ProgramsPage = () => {
   return (
     <>
       <Helmet>
-        <title>Our Programs | Rekaz Institute</title>
-        <meta name="description" content="Explore our educational programs including CEM, Lycée, Professional Formations, and Consultation services." />
+        <title>{t('programsPage.metaTitle')}</title>
+        <meta name="description" content={t('programsPage.metaDesc')} />
       </Helmet>
       
       <main className="w-full pt-32 pb-24">
         <Container>
           {/* Hero */}
           <div className="flex flex-col items-center text-center mb-20">
-            <SectionTag text="Explore" />
+            <SectionTag text={t('programsPage.sectionTag')} />
             <h1 className="text-4xl md:text-6xl font-satoshi font-bold text-rekaz-black mt-6 mb-6">
-              Our Programs
+              {t('programsPage.heroTitle')}
             </h1>
             <p className="text-xl text-rekaz-grey font-dm max-w-2xl">
-              Discover a wide range of academic support and professional training tailored to your needs.
+              {t('programsPage.heroDesc')}
             </p>
           </div>
 
@@ -80,7 +82,7 @@ const ProgramsPage = () => {
                     {prog.desc}
                   </p>
                   <Button to={prog.link} variant="outline" className="w-full">
-                    Learn More
+                    {t('programsPage.btnLearn')}
                   </Button>
                 </div>
               </Card>
@@ -89,11 +91,11 @@ const ProgramsPage = () => {
 
           {/* CTA */}
           <div className="bg-rekaz-black rounded-3xl p-12 text-center text-white">
-            <h2 className="text-3xl font-satoshi font-bold mb-6">Not sure which program is right for you?</h2>
+            <h2 className="text-3xl font-satoshi font-bold mb-6">{t('programsPage.ctaTitle')}</h2>
             <p className="text-lg font-dm mb-8 text-white/70">
-              Our consultants are here to guide you to the best path for your future.
+              {t('programsPage.ctaDesc')}
             </p>
-            <Button variant="primary" to="/contact">Get in Touch</Button>
+            <Button variant="primary" to="/contact">{t('programsPage.ctaButton')}</Button>
           </div>
         </Container>
       </main>
@@ -102,4 +104,3 @@ const ProgramsPage = () => {
 };
 
 export default ProgramsPage;
-

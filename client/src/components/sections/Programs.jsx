@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import Container from '../ui/Container';
@@ -90,7 +90,7 @@ const Programs = () => {
               <div className="text-[11px] font-bold uppercase tracking-[0.1em] text-rekaz-violet mb-4">{t('programs.growthTag', 'Growth')}</div>
               <h3 className="text-[22px] font-satoshi font-bold mb-3 tracking-[-0.02em]">{t('programs.growthTitle', 'Business Growth & Monitoring')}</h3>
               <p className="text-white/60 font-dm leading-relaxed text-[14px] mb-8">
-                {t('programs.growthDesc', 'From marketing and digital marketing to cybersecurity and advanced management, we provide strategies and continuous follow-up to help businesses grow and stay ahead.')}
+                {t('programs.growthDesc', 'From marketing and digital marketing to advanced management, we provide strategies and continuous follow-up to help businesses grow and stay ahead.')}
               </p>
             </div>
             <div className="mt-auto w-full rounded-[14px] overflow-hidden opacity-90">

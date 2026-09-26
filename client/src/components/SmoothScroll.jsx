@@ -2,10 +2,6 @@ import React, { useEffect, useRef } from 'react';
 import Lenis from 'lenis';
 import 'lenis/dist/lenis.css';
 import { useLocation, useNavigationType } from 'react-router-dom';
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-
-gsap.registerPlugin(ScrollTrigger);
 
 const SmoothScroll = ({ children }) => {
   const lenisRef = useRef(null);
@@ -36,24 +32,17 @@ const SmoothScroll = ({ children }) => {
     });
     lenisRef.current = lenis;
 
-    // ─── Lenis + GSAP ScrollTrigger integration ───────────────────────
-    // Tell ScrollTrigger to update whenever Lenis scrolls
-    lenis.on('scroll', ScrollTrigger.update);
-
-    // Drive Lenis from GSAP's ticker instead of a raw RAF loop
-    // so both share the same frame loop and scroll positions stay in sync
-    gsap.ticker.add((time) => {
-      lenis.raf(time * 1000);
-    });
-
-    // Prevent GSAP from adding extra lag frames that desync scroll position
-    gsap.ticker.lagSmoothing(0);
-    // ─────────────────────────────────────────────────────────────────
+    let rafId;
+    function raf(time) {
+      lenis.raf(time);
+      rafId = requestAnimationFrame(raf);
+    }
+    rafId = requestAnimationFrame(raf);
 
     return () => {
       lenis.destroy();
       lenisRef.current = null;
-      gsap.ticker.remove((time) => lenis.raf(time * 1000));
+      cancelAnimationFrame(rafId);
     };
   }, [isAdminPath, isMobile]);
 

@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
+import { useTranslation } from 'react-i18next';
 
 const API = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
 
@@ -104,6 +105,7 @@ const Skeleton = () => (
 
 // ─── Page ────────────────────────────────────────────────────────────────────
 const BlogsPage = () => {
+  const { t } = useTranslation();
   const [blogs, setBlogs] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
@@ -121,7 +123,7 @@ const BlogsPage = () => {
       setBlogs(data.data);
       setPagination(data.pagination);
     } catch {
-      setError('Failed to load blogs. Please try again.');
+      setError(t('blogsPage.error'));
     } finally {
       setLoading(false);
     }
@@ -144,15 +146,15 @@ const BlogsPage = () => {
           {/* Label */}
           <span className="inline-flex items-center gap-2 border border-rekaz-border rounded-pill px-4 py-1.5 text-sm font-satoshi text-rekaz-grey">
             <span className="w-1.5 h-1.5 rounded-full bg-rekaz-blue inline-block" />
-            Rekaz Blog
+            {t('blogsPage.label')}
           </span>
 
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-satoshi font-semibold text-rekaz-dark leading-tight tracking-tight max-w-3xl">
-            Insights for Students &amp; Families
+            {t('blogsPage.title')}
           </h1>
 
           <p className="text-rekaz-grey font-dm text-lg max-w-xl leading-relaxed">
-            Tips, guides, and updates to help you navigate your educational journey with confidence.
+            {t('blogsPage.desc')}
           </p>
 
           {/* Search */}
@@ -162,7 +164,7 @@ const BlogsPage = () => {
           >
             <input
               type="text"
-              placeholder="Search articles…"
+              placeholder={t('blogsPage.searchPlaceholder')}
               value={search}
               onChange={(e) => setSearch(e.target.value)}
               className="flex-1 bg-transparent px-5 py-3.5 font-dm text-rekaz-dark placeholder:text-rekaz-muted outline-none text-sm"
@@ -170,9 +172,7 @@ const BlogsPage = () => {
             <button
               type="submit"
               className="bg-rekaz-blue text-white font-satoshi font-medium text-sm px-5 py-3.5 hover:bg-rekaz-blue/90 transition-colors"
-            >
-              Search
-            </button>
+            >{t('blogsPage.searchButton')}</button>
           </form>
         </div>
       </section>
@@ -192,8 +192,8 @@ const BlogsPage = () => {
               {/* result count */}
               {!loading && (
                 <p className="text-rekaz-grey font-dm text-sm mb-8">
-                  {pagination.total} article{pagination.total !== 1 ? 's' : ''} found
-                  {query ? ` for "${query}"` : ''}
+                  {pagination.total} {t('blogsPage.articlesFound')}
+                  {query ? ` ${t('blogsPage.forQuery')} "${query}"` : ''}
                 </p>
               )}
 
@@ -209,13 +209,13 @@ const BlogsPage = () => {
                   <svg className="w-16 h-16 text-rekaz-border" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                   </svg>
-                  <p className="text-rekaz-grey font-dm text-lg">No articles found.</p>
+                  <p className="text-rekaz-grey font-dm text-lg">{t('blogsPage.noArticles')}</p>
                   {query && (
                     <button
                       onClick={() => { setSearch(''); setQuery(''); }}
                       className="text-rekaz-blue font-satoshi text-sm underline"
                     >
-                      Clear search
+                      {t('blogsPage.clearSearch')}
                     </button>
                   )}
                 </div>
@@ -257,17 +257,17 @@ const BlogsPage = () => {
             />
             <div className="relative flex flex-col gap-4 text-center md:text-left">
               <h2 className="text-white font-satoshi font-semibold text-3xl md:text-4xl leading-tight max-w-lg">
-                Your Future Starts With One Decision
+                {t('blogsPage.ctaTitle')}
               </h2>
               <p className="text-white/70 font-dm text-base">
-                Join thousands of students already on their journey with Rekaz.
+                {t('blogsPage.ctaDesc')}
               </p>
             </div>
             <Link
               to="/consultation"
               className="relative shrink-0 bg-white text-rekaz-dark font-satoshi font-semibold text-sm px-7 py-4 rounded-btn hover:bg-white/90 transition-colors"
             >
-              Start Your Journey
+              {t('blogsPage.ctaButton')}
             </Link>
           </div>
         </div>
