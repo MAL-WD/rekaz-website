@@ -257,7 +257,7 @@
   },
   "inscription": {
     "pageTitle": "Online Inscription & Registration | Rekaz Establishment",
-    "pageDesc": "Register online for Rekaz Establishment programs in Béchar: Middle School (CEM & BEM), High School (Lycée & BAC), Professional Training & Certifications, and Consulting.",
+    "pageDesc": "Register online for Rekaz Establishment programs in Béchar: Middle School (CEM), High School (Lycée), Professional Training & Certifications, and Consulting.",
     "tag": "Online Registration • Inscription",
     "heading": "Join Rekaz Establishment",
     "headerSubtitle": "Take the first step toward academic excellence and career success. Complete the form below and our admissions team will contact you within 24 hours.",
@@ -315,14 +315,14 @@
     "contactUs": "Contact Us",
     "programs": {
       "cem": {
-        "title": "Middle School (CEM • BEM)",
-        "subtitle": "Comprehensive tutoring from 1CEM to BEM success",
+        "title": "Middle School (CEM)",
+        "subtitle": "Comprehensive tutoring from 1CEM to 4CEM",
         "badge": "1AM to 4AM"
       },
       "lycee": {
-        "title": "High School (Lycée • BAC)",
-        "subtitle": "Targeted preparation and strategic BAC revision",
-        "badge": "1AS to 3AS / BAC"
+        "title": "High School (Lycée)",
+        "subtitle": "Targeted preparation and structured revision",
+        "badge": "1AS to 3AS"
       },
       "formation": {
         "title": "Professional Training & Skills",
@@ -339,17 +339,17 @@
       "1am": "1st Year Middle School (1AM)",
       "2am": "2nd Year Middle School (2AM)",
       "3am": "3rd Year Middle School (3AM)",
-      "4am": "4th Year Middle School (4AM - BEM Exam)",
+      "4am": "4th Year Middle School (4AM)",
       "1as": "1st Year High School (1AS - Common Core)",
       "2as": "2nd Year High School (2AS)",
-      "3as": "3rd Year High School (3AS - BAC Preparation)",
+      "3as": "3rd Year High School (3AS)",
       "devWeb": "Full-Stack Web & Mobile Development",
       "designUiux": "Graphic Design & UI/UX",
       "langues": "Foreign Languages (English / French / German)",
       "marketingDigital": "Digital Marketing & E-Commerce",
       "bureautique": "Office Automation & Advanced Secretarial",
       "entrepreneuriat": "Entrepreneurship & Project Management",
-      "orientationBac": "Post-BAC Orientation & University Choice",
+      "orientationBac": "University Orientation & Academic Choice",
       "coachingScolaire": "Academic Coaching & Study Methodologies",
       "reconversion": "Career Transition & Skills Assessment"
     },

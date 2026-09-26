@@ -11,7 +11,7 @@ const Inscription = () => {
   const { t, i18n } = useTranslation();
   const [formData, setFormData] = useState({
     programType: 'lycee', // 'cem' | 'lycee' | 'formation' | 'consultation'
-    level: '3AS-BAC',
+    level: '3AS',
     filiere: 'Experimental Sciences',
     formationCategory: 'dev-web',
     subjects: ['Mathematics', 'Physics & Chemistry'],
@@ -40,17 +40,17 @@ const Inscription = () => {
   const programOptions = [
     {
       id: 'cem',
-      title: t('inscription.programs.cem.title', 'Middle School (CEM • BEM)'),
-      subtitle: t('inscription.programs.cem.subtitle', 'Comprehensive tutoring from 1CEM to BEM success'),
+      title: t('inscription.programs.cem.title', 'Middle School (CEM)'),
+      subtitle: t('inscription.programs.cem.subtitle', 'Comprehensive tutoring from 1CEM to 4CEM'),
       icon: '',
       badge: t('inscription.programs.cem.badge', '1AM to 4AM')
     },
     {
       id: 'lycee',
-      title: t('inscription.programs.lycee.title', 'High School (Lycée • BAC)'),
-      subtitle: t('inscription.programs.lycee.subtitle', 'Targeted preparation and strategic BAC revision'),
+      title: t('inscription.programs.lycee.title', 'High School (Lycée)'),
+      subtitle: t('inscription.programs.lycee.subtitle', 'Targeted preparation and structured revision'),
       icon: '',
-      badge: t('inscription.programs.lycee.badge', '1AS to 3AS / BAC')
+      badge: t('inscription.programs.lycee.badge', '1AS to 3AS')
     },
     {
       id: 'formation',
@@ -73,12 +73,12 @@ const Inscription = () => {
       { value: '1AM', label: t('inscription.levels.1am', '1st Year Middle School (1AM)') },
       { value: '2AM', label: t('inscription.levels.2am', '2nd Year Middle School (2AM)') },
       { value: '3AM', label: t('inscription.levels.3am', '3rd Year Middle School (3AM)') },
-      { value: '4AM-BEM', label: t('inscription.levels.4am', '4th Year Middle School (4AM - BEM Exam)') }
+      { value: '4AM', label: t('inscription.levels.4am', '4th Year Middle School (4AM)') }
     ],
     lycee: [
       { value: '1AS', label: t('inscription.levels.1as', '1st Year High School (1AS - Common Core)') },
       { value: '2AS', label: t('inscription.levels.2as', '2nd Year High School (2AS)') },
-      { value: '3AS-BAC', label: t('inscription.levels.3as', '3rd Year High School (3AS - BAC Preparation)') }
+      { value: '3AS', label: t('inscription.levels.3as', '3rd Year High School (3AS)') }
     ],
     formation: [
       { value: 'dev-web', label: t('inscription.levels.devWeb', 'Full-Stack Web & Mobile Development') },
@@ -267,7 +267,7 @@ const Inscription = () => {
         <title>Online Inscription & Registration | Rekaz Establishment</title>
         <meta
           name="description"
-          content="Register online for Rekaz Establishment programs in Béchar: Middle School (CEM & BEM), High School (Lycée & BAC), Professional Training & Certifications, and Consulting."
+          content="Register online for Rekaz Establishment programs in Béchar: Middle School (CEM), High School (Lycée), Professional Training & Certifications, and Consulting."
         />
       </Helmet>
 
@@ -338,7 +338,7 @@ const Inscription = () => {
                     <span className="text-rekaz-muted block text-xs">{t('inscription.subjectsLabel')}</span>
                     <span className="font-semibold text-rekaz-black">
                       {formData.subjects.join(', ')}
-                      {formData.isPackBac && formData.programType === 'lycee' && formData.level === '3AS-BAC' && ' + (Pack-BAC)'}
+                      {formData.isPackBac && formData.programType === 'lycee' && formData.level === '3AS' && ' + (Pack-BAC)'}
                     </span>
                   </div>
                   <div>
@@ -634,7 +634,7 @@ const Inscription = () => {
                   )}
 
                   {/* Special Pack BAC Banner Notice (Full Card Design) */}
-                  {formData.programType === 'lycee' && formData.level === '3AS-BAC' && (
+                  {formData.programType === 'lycee' && formData.level === '3AS' && (
                     <div 
                       onClick={() => setFormData(prev => ({ ...prev, isPackBac: !prev.isPackBac }))}
                       className={`mt-8 p-6 md:p-8 rounded-[24px] border-2 cursor-pointer transition-all flex flex-col items-start text-start relative group ${
