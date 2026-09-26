@@ -13,6 +13,15 @@ const transporter = nodemailer.createTransport({
   }
 });
 
+// Escape special HTML characters so Telegram's HTML parse mode doesn't reject the message
+const escapeHTML = (str) => {
+  if (!str) return '';
+  return String(str)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;');
+};
+
 const sendTelegramMessage = async (message) => {
   const token = process.env.TELEGRAM_BOT_TOKEN;
   const chatId = process.env.TELEGRAM_CHAT_ID;
@@ -28,7 +37,8 @@ const sendTelegramMessage = async (message) => {
       parse_mode: 'HTML'
     });
   } catch (error) {
-    console.error('Failed to send Telegram message:', error.message);
+    const detail = error.response?.data || error.message;
+    console.error('Failed to send Telegram message:', JSON.stringify(detail));
   }
 };
 
@@ -70,14 +80,14 @@ exports.submitContact = async (req, res, next) => {
     // 2. Prepare Notification Message
     const notificationMessage = `
 <b>New Contact Form Submission</b>
-<b>Name:</b> ${contact.name}
-<b>Email:</b> ${contact.email}
-<b>Phone:</b> ${contact.phone || 'N/A'}
-<b>Subject:</b> ${contact.subject}
-<b>Source:</b> ${contact.source || 'N/A'}
+<b>Name:</b> ${escapeHTML(contact.name)}
+<b>Email:</b> ${escapeHTML(contact.email)}
+<b>Phone:</b> ${escapeHTML(contact.phone) || 'N/A'}
+<b>Subject:</b> ${escapeHTML(contact.subject)}
+<b>Source:</b> ${escapeHTML(contact.source) || 'N/A'}
 
 <b>Message:</b>
-${contact.message}
+${escapeHTML(contact.message)}
     `;
 
     // 3. Send Notifications (asynchronous, fire-and-forget so it doesn't block response)

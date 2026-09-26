@@ -13,6 +13,15 @@ const transporter = nodemailer.createTransport({
   }
 });
 
+// Escape special HTML characters so Telegram's HTML parse mode doesn't reject the message
+const escapeHTML = (str) => {
+  if (!str) return '';
+  return String(str)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;');
+};
+
 const sendTelegramNotification = async (message) => {
   const token = process.env.TELEGRAM_BOT_TOKEN;
   const chatId = process.env.TELEGRAM_CHAT_ID;
@@ -26,7 +35,8 @@ const sendTelegramNotification = async (message) => {
       parse_mode: 'HTML'
     });
   } catch (err) {
-    console.error('Telegram notification error:', err.message);
+    const detail = err.response?.data || err.message;
+    console.error('Telegram notification error:', JSON.stringify(detail));
   }
 };
 
@@ -35,7 +45,7 @@ const sendEmailNotification = async (data) => {
 
   const emailHTML = getEmailHTML({
     tag: 'Inscription Form',
-    title: 'Nouvelle Inscription Rekaz',
+    title: 'Nouvelle Inscription Rēkāz',
     fields: [
       { label: 'N° Dossier', value: data.referenceNumber },
       { label: 'Nom & Prénom', value: data.fullName },
@@ -77,28 +87,28 @@ exports.createInscription = async (req, res, next) => {
 📝 <b>تسجيل جديد في منصة ركاز</b>
 ━━━━━━━━━━━━━━━━━━
 🆔 <b>رقم التتبع:</b> <code>${inscription._id}</code>
-📁 <b>رقم الملف:</b> ${inscription.referenceNumber}
+📁 <b>رقم الملف:</b> ${escapeHTML(inscription.referenceNumber)}
 
 👤 <b>معلومات الطالب</b>
-├ <b>الاسم:</b> ${inscription.fullName}
-├ <b>الهاتف:</b> ${inscription.phone}
-├ <b>البريد:</b> ${inscription.email || '—'}
-└ <b>تاريخ الميلاد:</b> ${inscription.birthDate || '—'}
+├ <b>الاسم:</b> ${escapeHTML(inscription.fullName)}
+├ <b>الهاتف:</b> ${escapeHTML(inscription.phone)}
+├ <b>البريد:</b> ${escapeHTML(inscription.email) || '—'}
+└ <b>تاريخ الميلاد:</b> ${escapeHTML(inscription.birthDate) || '—'}
 
 🎓 <b>معلومات الدراسة</b>
-├ <b>البرنامج:</b> ${programLabels[inscription.programType] || inscription.programType}
-├ <b>المستوى:</b> ${inscription.level}${inscription.filiere ? `\n├ <b>الشعبة:</b> ${inscription.filiere}` : ''}
-├ <b>المواد:</b> ${(inscription.subjects || []).join('، ') || '—'}
-├ <b>طريقة التعلم:</b> ${modeLabels[inscription.learningMode] || inscription.learningMode}
-└ <b>التوقيت:</b> ${scheduleLabels[inscription.schedulePreference] || inscription.schedulePreference || '—'}
+├ <b>البرنامج:</b> ${escapeHTML(programLabels[inscription.programType] || inscription.programType)}
+├ <b>المستوى:</b> ${escapeHTML(inscription.level)}${inscription.filiere ? `\n├ <b>الشعبة:</b> ${escapeHTML(inscription.filiere)}` : ''}
+├ <b>المواد:</b> ${escapeHTML((inscription.subjects || []).join('، ')) || '—'}
+├ <b>طريقة التعلم:</b> ${escapeHTML(modeLabels[inscription.learningMode] || inscription.learningMode)}
+└ <b>التوقيت:</b> ${escapeHTML(scheduleLabels[inscription.schedulePreference] || inscription.schedulePreference) || '—'}
 
-📍 <b>العنوان:</b> ${inscription.city} (${inscription.wilaya})
-🏫 <b>المدرسة الحالية:</b> ${inscription.currentSchool || '—'}
+📍 <b>العنوان:</b> ${escapeHTML(inscription.city)} (${escapeHTML(inscription.wilaya)})
+🏫 <b>المدرسة الحالية:</b> ${escapeHTML(inscription.currentSchool) || '—'}
 
 👨‍👩‍👦 <b>ولي الأمر</b>
-├ <b>الاسم:</b> ${inscription.parentName || '—'}
-├ <b>الهاتف:</b> ${inscription.parentPhone || '—'}
-└ <b>الصلة:</b> ${inscription.parentRelation || '—'}${inscription.notes ? `\n\n📝 <b>ملاحظات:</b> ${inscription.notes}` : ''}
+├ <b>الاسم:</b> ${escapeHTML(inscription.parentName) || '—'}
+├ <b>الهاتف:</b> ${escapeHTML(inscription.parentPhone) || '—'}
+└ <b>الصلة:</b> ${escapeHTML(inscription.parentRelation) || '—'}${inscription.notes ? `\n\n📝 <b>ملاحظات:</b> ${escapeHTML(inscription.notes)}` : ''}
 ━━━━━━━━━━━━━━━━━━
 ⏰ ${new Date(inscription.createdAt).toLocaleString('ar-DZ', { timeZone: 'Africa/Algiers' })}
     `;
