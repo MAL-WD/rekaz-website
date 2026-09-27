@@ -258,7 +258,7 @@ const Inscription = () => {
       };
 
       try {
-        await fetch(`${import.meta.env.VITE_API_URL || 'https://rekaz-website.onrender.com/api'}/inscriptions`, {
+        await fetch('https://rekaz-website.onrender.com/api/inscriptions', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(payload)
@@ -570,6 +570,63 @@ const Inscription = () => {
                     </div>
                   </div>
 
+                  {/* Special Pack BAC Banner Notice (Full Card Design) */}
+                  {formData.programType === 'lycee' && formData.level === '3AS' && (
+                    <div 
+                      onClick={() => setFormData(prev => ({ ...prev, isPackBac: !prev.isPackBac }))}
+                      className={`mt-4 mb-8 p-6 md:p-8 rounded-[24px] border-2 cursor-pointer transition-all flex flex-col items-start text-start relative group ${
+                        formData.isPackBac
+                          ? 'border-rekaz-blue bg-blue-50/20 shadow-[0_8px_30px_rgba(4,18,250,0.12)]'
+                          : 'border-gray-200/80 bg-white hover:border-rekaz-blue/50 hover:shadow-md'
+                      }`}
+                    >
+                      {/* Selection Checkmark */}
+                      <div className={`absolute top-6 left-6 w-6 h-6 rounded-full border-2 flex items-center justify-center transition-colors ${
+                        formData.isPackBac ? 'border-rekaz-blue bg-rekaz-blue text-white' : 'border-gray-300'
+                      }`}>
+                        {formData.isPackBac && (
+                          <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="3">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                          </svg>
+                        )}
+                      </div>
+
+                      <div className="text-[10px] font-bold uppercase tracking-wider text-rekaz-blue bg-rekaz-blue/5 px-3 py-1.5 rounded-full mb-4 group-hover:bg-rekaz-blue/10 transition-colors">
+                        {t('whyRekaz.specialPacks', 'Special Packs')}
+                      </div>
+                      
+                      <h3 className={`text-[22px] font-satoshi font-bold mb-3 tracking-[-0.02em] transition-colors ${
+                        formData.isPackBac ? 'text-rekaz-blue' : 'text-rekaz-black group-hover:text-rekaz-blue'
+                      }`}>
+                        {t('whyRekaz.packBacTitle', 'Pack-BAC: more learning, better value')}
+                      </h3>
+                      
+                      <p className="text-rekaz-grey mb-6 font-dm leading-relaxed text-[14px] max-w-lg">
+                        {t('whyRekaz.packBacDesc', 'Make quality education more accessible with offers such as Pack-BAC: 3 subjects for the price of only 2.')}
+                      </p>
+                      
+                      <div
+                        className="w-full rounded-[18px] p-6 flex flex-col gap-2 relative overflow-hidden"
+                        style={{ background: 'linear-gradient(160deg, #00a5ff 0%, #0412fa 100%)' }}
+                      >
+                        <div className="absolute inset-0 bg-gradient-to-br from-white/15 to-transparent pointer-events-none rounded-[18px]" />
+                        <div className="relative z-10 flex flex-col md:flex-row md:items-center justify-between gap-4">
+                          <div>
+                            <div className="text-[11px] text-white/80 font-bold uppercase tracking-wider mb-1">
+                              {t('whyRekaz.premiumPackBac', 'Premium Pack-BAC')}
+                            </div>
+                            <p className="text-[12px] text-white/80 leading-relaxed max-w-sm">
+                              {t('whyRekaz.packBacPriceDesc', 'Affordable learning with Pack-BAC: 3 subjects for 4000 DA — the price of only 2 subjects.')}
+                            </p>
+                          </div>
+                          <div className="text-4xl md:text-5xl font-satoshi font-black text-white tracking-tight">
+                            {t('whyRekaz.packBacPrice', '4000 DA')}
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  )}
+
                   {/* Subject Multi-Select Pills */}
                   <div>
                     <label className={labelClass}>
@@ -651,63 +708,6 @@ const Inscription = () => {
                             </button>
                           );
                         })}
-                      </div>
-                    </div>
-                  )}
-
-                  {/* Special Pack BAC Banner Notice (Full Card Design) */}
-                  {formData.programType === 'lycee' && formData.level === '3AS' && (
-                    <div 
-                      onClick={() => setFormData(prev => ({ ...prev, isPackBac: !prev.isPackBac }))}
-                      className={`mt-8 p-6 md:p-8 rounded-[24px] border-2 cursor-pointer transition-all flex flex-col items-start text-start relative group ${
-                        formData.isPackBac
-                          ? 'border-rekaz-blue bg-blue-50/20 shadow-[0_8px_30px_rgba(4,18,250,0.12)]'
-                          : 'border-gray-200/80 bg-white hover:border-rekaz-blue/50 hover:shadow-md'
-                      }`}
-                    >
-                      {/* Selection Checkmark */}
-                      <div className={`absolute top-6 right-6 w-6 h-6 rounded-full border-2 flex items-center justify-center transition-colors ${
-                        formData.isPackBac ? 'border-rekaz-blue bg-rekaz-blue text-white' : 'border-gray-300'
-                      }`}>
-                        {formData.isPackBac && (
-                          <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="3">
-                            <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-                          </svg>
-                        )}
-                      </div>
-
-                      <div className="text-[10px] font-bold uppercase tracking-wider text-rekaz-blue bg-rekaz-blue/5 px-3 py-1.5 rounded-full mb-4 group-hover:bg-rekaz-blue/10 transition-colors">
-                        {t('whyRekaz.specialPacks', 'Special Packs')}
-                      </div>
-                      
-                      <h3 className={`text-[22px] font-satoshi font-bold mb-3 tracking-[-0.02em] transition-colors ${
-                        formData.isPackBac ? 'text-rekaz-blue' : 'text-rekaz-black group-hover:text-rekaz-blue'
-                      }`}>
-                        {t('whyRekaz.packBacTitle', 'Pack-BAC: more learning, better value')}
-                      </h3>
-                      
-                      <p className="text-rekaz-grey mb-6 font-dm leading-relaxed text-[14px] max-w-lg">
-                        {t('whyRekaz.packBacDesc', 'Make quality education more accessible with offers such as Pack-BAC: 3 subjects for the price of only 2.')}
-                      </p>
-                      
-                      <div
-                        className="w-full rounded-[18px] p-6 flex flex-col gap-2 relative overflow-hidden"
-                        style={{ background: 'linear-gradient(160deg, #00a5ff 0%, #0412fa 100%)' }}
-                      >
-                        <div className="absolute inset-0 bg-gradient-to-br from-white/15 to-transparent pointer-events-none rounded-[18px]" />
-                        <div className="relative z-10 flex flex-col md:flex-row md:items-center justify-between gap-4">
-                          <div>
-                            <div className="text-[11px] text-white/80 font-bold uppercase tracking-wider mb-1">
-                              {t('whyRekaz.premiumPackBac', 'Premium Pack-BAC')}
-                            </div>
-                            <p className="text-[12px] text-white/80 leading-relaxed max-w-sm">
-                              {t('whyRekaz.packBacPriceDesc', 'Affordable learning with Pack-BAC: 3 subjects for 4000 DA — the price of only 2 subjects.')}
-                            </p>
-                          </div>
-                          <div className="text-4xl md:text-5xl font-satoshi font-black text-white tracking-tight">
-                            {t('whyRekaz.packBacPrice', '4000 DA')}
-                          </div>
-                        </div>
                       </div>
                     </div>
                   )}
