@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
@@ -19,8 +19,8 @@ const Inscription = () => {
     birthDate: '',
     phone: '',
     email: '',
-    wilaya: 'Béchar',
-    city: 'Béchar',
+    wilaya: 'Bأ©char',
+    city: 'Bأ©char',
     currentSchool: '',
     parentName: '',
     parentPhone: '',
@@ -47,7 +47,7 @@ const Inscription = () => {
     },
     {
       id: 'lycee',
-      title: t('inscription.programs.lycee.title', 'High School (Lycée)'),
+      title: t('inscription.programs.lycee.title', 'High School (Lycأ©e)'),
       subtitle: t('inscription.programs.lycee.subtitle', 'Targeted preparation and structured revision'),
       icon: '',
       badge: t('inscription.programs.lycee.badge', '1AS to 3AS')
@@ -126,37 +126,37 @@ const Inscription = () => {
   };
 
   const availableSubjectsByProgram = {
-    cem: ['Mathematics', 'Physics & Chemistry', 'Natural Sciences (Biology)', 'French', 'English', 'Arabic Language'],
-    lycee: ['Mathematics', 'Physics & Chemistry', 'Natural Sciences (SVT)', 'Philosophy', 'French', 'English', 'Economics & Management', 'Law', 'Accounting'],
-    formation: ['Core Curriculum', 'Hands-on Projects', '1-on-1 Mentorship', 'Final Certificate'],
-    consultation: ['1-on-1 Discovery Session', 'Skills & Interest Assessment', 'Personalized Action Plan']
+    cem: ['arabicLit', 'english', 'french', 'naturalSciences', 'physics', 'historyGeography', 'tamazight', 'islamicSciences', 'math'],
+    lycee: ['arabicLit', 'english', 'french', 'naturalSciences', 'physics', 'accounting', 'economics', 'law', 'philosophy', 'historyGeography', 'spanish', 'tamazight', 'islamicSciences', 'metouns', 'englishAdults', 'englishJoyschool', 'spanishLevels', 'frenchLevels', 'electricalEng', 'processEng'],
+    formation: ['coreCurriculum', 'handsOn', 'mentorship', 'certificate'],
+    consultation: ['discovery', 'skillsAssessment', 'actionPlan']
   };
 
   const teachersByProgram = {
     lycee: [
-      { name: 'عادل عبد القدير', subject: 'فلسفة', nameEn: 'Adel Abd El Kader', subjectEn: 'Philosophy' },
-      { name: 'محمد الطيب قرارة', subject: 'فيزياء', nameEn: 'Mohamed El Tayeb Grara', subjectEn: 'Physics' },
-      { name: 'وليد فراج', subject: 'رياضيات', nameEn: 'Walid Faraj', subjectEn: 'Mathematics' },
-      { name: 'رقية منصوري', subject: 'علوم طبيعية', nameEn: 'Rokia Mansouri', subjectEn: 'Natural Sciences' },
-      { name: 'زقيدة عزالي', subject: 'علوم طبيعية', nameEn: 'Zguida Azali', subjectEn: 'Natural Sciences' },
-      { name: 'عادل عبد العزيز', subject: 'لغة عربية', nameEn: 'Adel Abd El Aziz', subjectEn: 'Arabic Language' },
-      { name: 'أميرة بسو', subject: 'إنجليزية', nameEn: 'Amira Bassou', subjectEn: 'English' },
-      { name: 'أسماء بن يحي', subject: 'فرنسية', nameEn: 'Asma Ben Yahia', subjectEn: 'French' },
-      { name: 'عبد العزيز قدير', subject: 'تاريخ وجغرافيا', nameEn: 'Abd El Aziz Kadir', subjectEn: 'History & Geography' },
-      { name: 'عماد سليماني', subject: 'رياضيات', nameEn: 'Imad Slimani', subjectEn: 'Mathematics' },
-      { name: 'سميرة طالبي', subject: 'محاسبة', nameEn: 'Samira Talbi', subjectEn: 'Accounting' },
+      { name: 'ط¹ط§ط¯ظ„ ط¹ط¨ط¯ ط§ظ„ظ‚ط¯ظٹط±', subject: 'ظپظ„ط³ظپط©', nameEn: 'Adel Abd El Kader', subjectEn: 'Philosophy' },
+      { name: 'ظ…ط­ظ…ط¯ ط§ظ„ط·ظٹط¨ ظ‚ط±ط§ط±ط©', subject: 'ظپظٹط²ظٹط§ط،', nameEn: 'Mohamed El Tayeb Grara', subjectEn: 'Physics' },
+      { name: 'ظˆظ„ظٹط¯ ظپط±ط§ط¬', subject: 'ط±ظٹط§ط¶ظٹط§طھ', nameEn: 'Walid Faraj', subjectEn: 'Mathematics' },
+      { name: 'ط±ظ‚ظٹط© ظ…ظ†طµظˆط±ظٹ', subject: 'ط¹ظ„ظˆظ… ط·ط¨ظٹط¹ظٹط©', nameEn: 'Rokia Mansouri', subjectEn: 'Natural Sciences' },
+      { name: 'ط²ظ‚ظٹط¯ط© ط¹ط²ط§ظ„ظٹ', subject: 'ط¹ظ„ظˆظ… ط·ط¨ظٹط¹ظٹط©', nameEn: 'Zguida Azali', subjectEn: 'Natural Sciences' },
+      { name: 'ط¹ط§ط¯ظ„ ط¹ط¨ط¯ ط§ظ„ط¹ط²ظٹط²', subject: 'ظ„ط؛ط© ط¹ط±ط¨ظٹط©', nameEn: 'Adel Abd El Aziz', subjectEn: 'Arabic Language' },
+      { name: 'ط£ظ…ظٹط±ط© ط¨ط³ظˆ', subject: 'ط¥ظ†ط¬ظ„ظٹط²ظٹط©', nameEn: 'Amira Bassou', subjectEn: 'English' },
+      { name: 'ط£ط³ظ…ط§ط، ط¨ظ† ظٹط­ظٹ', subject: 'ظپط±ظ†ط³ظٹط©', nameEn: 'Asma Ben Yahia', subjectEn: 'French' },
+      { name: 'ط¹ط¨ط¯ ط§ظ„ط¹ط²ظٹط² ظ‚ط¯ظٹط±', subject: 'طھط§ط±ظٹط® ظˆط¬ط؛ط±ط§ظپظٹط§', nameEn: 'Abd El Aziz Kadir', subjectEn: 'History & Geography' },
+      { name: 'ط¹ظ…ط§ط¯ ط³ظ„ظٹظ…ط§ظ†ظٹ', subject: 'ط±ظٹط§ط¶ظٹط§طھ', nameEn: 'Imad Slimani', subjectEn: 'Mathematics' },
+      { name: 'ط³ظ…ظٹط±ط© ط·ط§ظ„ط¨ظٹ', subject: 'ظ…ط­ط§ط³ط¨ط©', nameEn: 'Samira Talbi', subjectEn: 'Accounting' },
     ],
     cem: [
-      { name: 'هديل مرسو', subject: 'رياضيات', nameEn: 'Hadil Mersou', subjectEn: 'Mathematics' },
-      { name: 'وليد فراج', subject: 'رياضيات', nameEn: 'Walid Faraj', subjectEn: 'Mathematics' },
-      { name: 'نور الهدى منوني', subject: 'فيزياء', nameEn: 'Nour El Hoda Manouni', subjectEn: 'Physics' },
-      { name: 'حمزة بالي', subject: 'فرنسية', nameEn: 'Hamza Bali', subjectEn: 'French' },
-      { name: 'خالد بن جيلالي', subject: 'إنجليزية', nameEn: 'Khaled Ben Jilali', subjectEn: 'English' },
-      { name: 'رياض براهمي', subject: 'إنجليزية', nameEn: 'Riad Brahmi', subjectEn: 'English' },
-      { name: 'عزالي', subject: 'علوم', nameEn: 'Azali', subjectEn: 'Sciences' },
-      { name: 'عادل عبد القدير عبد العزيز', subject: 'لغة عربية', nameEn: 'Adel Abd El Kader Abd El Aziz', subjectEn: 'Arabic Language' },
-      { name: 'عالي روقية', subject: '', nameEn: 'Ali Rokia', subjectEn: '' },
-      { name: 'بخضرة رزيقي', subject: 'فرنسية', nameEn: 'Bakhda Reziki', subjectEn: 'French' },
+      { name: 'ظ‡ط¯ظٹظ„ ظ…ط±ط³ظˆ', subject: 'ط±ظٹط§ط¶ظٹط§طھ', nameEn: 'Hadil Mersou', subjectEn: 'Mathematics' },
+      { name: 'ظˆظ„ظٹط¯ ظپط±ط§ط¬', subject: 'ط±ظٹط§ط¶ظٹط§طھ', nameEn: 'Walid Faraj', subjectEn: 'Mathematics' },
+      { name: 'ظ†ظˆط± ط§ظ„ظ‡ط¯ظ‰ ظ…ظ†ظˆظ†ظٹ', subject: 'ظپظٹط²ظٹط§ط،', nameEn: 'Nour El Hoda Manouni', subjectEn: 'Physics' },
+      { name: 'ط­ظ…ط²ط© ط¨ط§ظ„ظٹ', subject: 'ظپط±ظ†ط³ظٹط©', nameEn: 'Hamza Bali', subjectEn: 'French' },
+      { name: 'ط®ط§ظ„ط¯ ط¨ظ† ط¬ظٹظ„ط§ظ„ظٹ', subject: 'ط¥ظ†ط¬ظ„ظٹط²ظٹط©', nameEn: 'Khaled Ben Jilali', subjectEn: 'English' },
+      { name: 'ط±ظٹط§ط¶ ط¨ط±ط§ظ‡ظ…ظٹ', subject: 'ط¥ظ†ط¬ظ„ظٹط²ظٹط©', nameEn: 'Riad Brahmi', subjectEn: 'English' },
+      { name: 'ط¹ط²ط§ظ„ظٹ', subject: 'ط¹ظ„ظˆظ…', nameEn: 'Azali', subjectEn: 'Sciences' },
+      { name: 'ط¹ط§ط¯ظ„ ط¹ط¨ط¯ ط§ظ„ظ‚ط¯ظٹط± ط¹ط¨ط¯ ط§ظ„ط¹ط²ظٹط²', subject: 'ظ„ط؛ط© ط¹ط±ط¨ظٹط©', nameEn: 'Adel Abd El Kader Abd El Aziz', subjectEn: 'Arabic Language' },
+      { name: 'ط¹ط§ظ„ظٹ ط±ظˆظ‚ظٹط©', subject: '', nameEn: 'Ali Rokia', subjectEn: '' },
+      { name: 'ط¨ط®ط¶ط±ط© ط±ط²ظٹظ‚ظٹ', subject: 'ظپط±ظ†ط³ظٹط©', nameEn: 'Bakhda Reziki', subjectEn: 'French' },
     ]
   };
 
@@ -179,16 +179,16 @@ const Inscription = () => {
       const tsEn = (teacher.subjectEn || '').toLowerCase();
       const tsAr = (teacher.subject || '').toLowerCase();
 
-      if (s.includes('math') && (tsEn.includes('math') || tsAr.includes('رياضيات'))) return true;
-      if ((s.includes('physics') || s.includes('physique')) && (tsEn.includes('physics') || tsAr.includes('فيزياء'))) return true;
-      if ((s.includes('natural') || s.includes('svt') || s.includes('biology')) && (tsEn.includes('natural') || tsEn.includes('science') || tsAr.includes('علوم'))) return true;
-      if (s.includes('philosoph') && (tsEn.includes('philosoph') || tsAr.includes('فلسفة'))) return true;
-      if (s.includes('french') && (tsEn.includes('french') || tsAr.includes('فرنسية'))) return true;
-      if (s.includes('english') && (tsEn.includes('english') || tsAr.includes('إنجليزية'))) return true;
-      if (s.includes('arabic') && (tsEn.includes('arabic') || tsAr.includes('عربية'))) return true;
-      if (s.includes('account') && (tsEn.includes('account') || tsAr.includes('محاسبة'))) return true;
-      if ((s.includes('history') || s.includes('geography')) && (tsEn.includes('history') || tsEn.includes('geography') || tsAr.includes('تاريخ'))) return true;
-      if ((s.includes('economics') || s.includes('management') || s.includes('law')) && (tsEn.includes('eco') || tsEn.includes('law') || tsAr.includes('اقتصاد') || tsAr.includes('قانون'))) return true;
+      if (s.includes('math') && (tsEn.includes('math') || tsAr.includes('ط±ظٹط§ط¶ظٹط§طھ'))) return true;
+      if ((s.includes('physics') || s.includes('physique')) && (tsEn.includes('physics') || tsAr.includes('ظپظٹط²ظٹط§ط،'))) return true;
+      if ((s.includes('natural') || s.includes('svt') || s.includes('biology')) && (tsEn.includes('natural') || tsEn.includes('science') || tsAr.includes('ط¹ظ„ظˆظ…'))) return true;
+      if (s.includes('philosoph') && (tsEn.includes('philosoph') || tsAr.includes('ظپظ„ط³ظپط©'))) return true;
+      if (s.includes('french') && (tsEn.includes('french') || tsAr.includes('ظپط±ظ†ط³ظٹط©'))) return true;
+      if (s.includes('english') && (tsEn.includes('english') || tsAr.includes('ط¥ظ†ط¬ظ„ظٹط²ظٹط©'))) return true;
+      if (s.includes('arabic') && (tsEn.includes('arabic') || tsAr.includes('ط¹ط±ط¨ظٹط©'))) return true;
+      if (s.includes('account') && (tsEn.includes('account') || tsAr.includes('ظ…ط­ط§ط³ط¨ط©'))) return true;
+      if ((s.includes('history') || s.includes('geography')) && (tsEn.includes('history') || tsEn.includes('geography') || tsAr.includes('طھط§ط±ظٹط®'))) return true;
+      if ((s.includes('economics') || s.includes('management') || s.includes('law')) && (tsEn.includes('eco') || tsEn.includes('law') || tsAr.includes('ط§ظ‚طھطµط§ط¯') || tsAr.includes('ظ‚ط§ظ†ظˆظ†'))) return true;
 
       return tsEn && s.includes(tsEn);
     });
@@ -286,10 +286,10 @@ const Inscription = () => {
   return (
     <>
       <Helmet>
-        <title>Online Inscription & Registration | Rēkāz Establishment</title>
+        <title>Online Inscription & Registration | Rؤ“kؤپz Establishment</title>
         <meta
           name="description"
-          content="Register online for Rēkāz Establishment programs in Béchar: Middle School (CEM), High School (Lycée), Professional Training & Certifications, and Consulting."
+          content="Register online for Rؤ“kؤپz Establishment programs in Bأ©char: Middle School (CEM), High School (Lycأ©e), Professional Training & Certifications, and Consulting."
         />
       </Helmet>
 
@@ -359,7 +359,7 @@ const Inscription = () => {
                   <div>
                     <span className="text-rekaz-muted block text-xs">{t('inscription.subjectsLabel')}</span>
                     <span className="font-semibold text-rekaz-black">
-                      {formData.subjects.join(', ')}
+                      {formData.subjects.map(sub => t('inscription.subjects.' + sub, sub)).join(', ')}
                       {formData.isPackBac && formData.programType === 'lycee' && formData.level === '3AS' && ' + (Pack-BAC)'}
                     </span>
                   </div>
@@ -391,14 +391,14 @@ const Inscription = () => {
                 </a>
 
                 <button
-                  onClick={() => generateInscriptionPDF({ ...formData, referenceNumber: registrationRef })}
+                  onClick={() => generateInscriptionPDF({ ...formData, subjects: formData.subjects.map(sub => t('inscription.subjects.' + sub, sub)), referenceNumber: registrationRef })}
                   className="w-full sm:w-auto px-6 py-3.5 rounded-[14px] text-white font-satoshi font-semibold text-sm hover:brightness-105 transition-all flex items-center justify-center gap-2 shadow-sm cursor-pointer"
                   style={{ background: 'linear-gradient(180deg, rgb(0, 165, 255) 0%, rgb(4, 18, 250) 100%)' }}
                 >
                   <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                   </svg>
-                  📄 تحميل وصل التسجيل PDF
+                  ًں“„ طھط­ظ…ظٹظ„ ظˆطµظ„ ط§ظ„طھط³ط¬ظٹظ„ PDF
                 </button>
 
                 <Button 
@@ -535,7 +535,7 @@ const Inscription = () => {
                       </select>
                     </div>
 
-                    {/* Secondary Field: Filière (for Lycée/BAC) */}
+                    {/* Secondary Field: Filiأ¨re (for Lycأ©e/BAC) */}
                     {formData.programType === 'lycee' && (
                       <div>
                         <label className={labelClass}>{t('inscription.branchLabel')}</label>
@@ -573,7 +573,14 @@ const Inscription = () => {
                   {/* Special Pack BAC Banner Notice (Full Card Design) */}
                   {formData.programType === 'lycee' && formData.level === '3AS' && (
                     <div 
-                      onClick={() => setFormData(prev => ({ ...prev, isPackBac: !prev.isPackBac }))}
+                      onClick={() => setFormData(prev => {
+                      const nextPackBac = !prev.isPackBac;
+                      return {
+                        ...prev,
+                        isPackBac: nextPackBac,
+                        subjects: nextPackBac ? ['arabicLit', 'philosophy', 'historyGeography'] : prev.subjects
+                      };
+                    })}
                       className={`mt-4 mb-8 p-6 md:p-8 rounded-[24px] border-2 cursor-pointer transition-all flex flex-col items-start text-start relative group ${
                         formData.isPackBac
                           ? 'border-rekaz-blue bg-blue-50/20 shadow-[0_8px_30px_rgba(4,18,250,0.12)]'
@@ -616,7 +623,7 @@ const Inscription = () => {
                               {t('whyRekaz.premiumPackBac', 'Premium Pack-BAC')}
                             </div>
                             <p className="text-[12px] text-white/80 leading-relaxed max-w-sm">
-                              {t('whyRekaz.packBacPriceDesc', 'Affordable learning with Pack-BAC: 3 subjects for 4000 DA — the price of only 2 subjects.')}
+                              {t('whyRekaz.packBacPriceDesc', 'Affordable learning with Pack-BAC: 3 subjects for 4000 DA â€” the price of only 2 subjects.')}
                             </p>
                           </div>
                           <div className="text-4xl md:text-5xl font-satoshi font-black text-white tracking-tight">
@@ -646,8 +653,8 @@ const Inscription = () => {
                                 : 'bg-gray-100 text-rekaz-dark hover:bg-gray-200/80'
                             }`}
                           >
-                            {isChecked ? '✓ ' : '+ '}
-                            {t(`inscription.subjects.${subjectKeyMap[subject]}`, subject)}
+                            {isChecked ? 'âœ“ ' : '+ '}
+                            {t(`inscription.subjects.${subject}`, subject)}
                           </button>
                         );
                       })}
@@ -655,7 +662,7 @@ const Inscription = () => {
                     {errors.subjects && <p className="text-red-500 text-xs mt-2">{errors.subjects}</p>}
                   </div>
 
-                  {/* Teacher Selection — CEM & Lycée only (appears after selecting subject/module) */}
+                  {/* Teacher Selection â€” CEM & Lycأ©e only (appears after selecting subject/module) */}
                   {(formData.programType === 'cem' || formData.programType === 'lycee') && filteredTeachers.length > 0 && (
                     <div className="mt-6">
                       <label className={labelClass}>
@@ -815,7 +822,7 @@ const Inscription = () => {
                   {(formData.programType === 'cem' || formData.programType === 'lycee') && (
                     <div className="mt-6 p-5 rounded-2xl bg-gray-50 border border-gray-100">
                       <h4 className="font-satoshi font-bold text-sm text-rekaz-black mb-4 flex items-center gap-2">
-                        <span>‍‍</span>{t('inscription.parentSectionTitle', 'Parent / Guardian Contact (For Middle & High School Students)')}
+                        <span>â€چâ€چ</span>{t('inscription.parentSectionTitle', 'Parent / Guardian Contact (For Middle & High School Students)')}
                       </h4>
                       <div className="grid md:grid-cols-3 gap-4">
                         <div>
@@ -956,4 +963,10 @@ const Inscription = () => {
 };
 
 export default Inscription;
+
+
+
+
+
+
 

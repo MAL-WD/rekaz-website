@@ -1,4 +1,4 @@
-﻿{
+{
   "navbar": {
     "home": "Home",
     "about": "About Us",
@@ -35,11 +35,11 @@
     "title": "Discover What Makes Rēkāz Different ",
     "subtitle": "More than lessons. A foundation for your future.",
     "specialPacks": "Special Packs",
-    "packBacTitle": "Pack-BAC: more learning, better value",
-    "packBacDesc": "Make quality education more accessible with offers such as Pack-BAC: 3 subjects for the price of only 2.",
+    "packBacTitle": "Rekaz Package",
+    "packBacDesc": "Rekaz Package: exclusively contains three subjects (Arabic Language + Philosophy + History & Geography)",
     "premiumPackBac": "Premium Pack-BAC",
     "packBacPrice": "4000 DA",
-    "packBacPriceDesc": "Affordable learning with Pack-BAC: 3 subjects for 4000 DA — the price of only 2 subjects.",
+    "packBacPriceDesc": "Rekaz Package: exclusively contains three subjects (Arabic Language + Philosophy + History & Geography)",
     "validCertificates": "Valid Certificates",
     "validCertificatesDesc": "Practical professional formations in entrepreneurship, marketing, digital skills, and more — with valid certificates upon completion.",
     "entrepreneurship": "Entrepreneurship",
@@ -285,8 +285,8 @@
     "online": "Online (Interactive Virtual Classroom)",
     "hybrid": "Hybrid (In-Person + Online Recordings)",
     "selectSubjects": "Select Subjects or Modules:",
-    "packBacTitle": "Special Pack-BAC Offer",
-    "packBacDesc": "Get comprehensive tutoring across 3 major subjects for only 4,000 DZD/month.",
+    "packBacTitle": "Rekaz Package",
+    "packBacDesc": "Rekaz Package: exclusively contains three subjects (Arabic Language + Philosophy + History & Geography)",
     "packBacPrice": "4000 DZD",
     "fullName": "Full Name",
     "phoneWhatsapp": "Phone Number (WhatsApp)",
@@ -363,7 +363,7 @@
     },
     "subjects": {
       "math": "Mathematics",
-      "physics": "Physics & Chemistry",
+      "physics": "Physical Sciences",
       "biology": "Natural Sciences (Biology)",
       "french": "French",
       "english": "English",
@@ -372,14 +372,27 @@
       "philosophy": "Philosophy",
       "economics": "Economics & Management",
       "law": "Law",
-      "accounting": "Accounting",
+      "accounting": "Financial Management & Accounting",
       "coreCurriculum": "Core Curriculum",
       "handsOn": "Hands-on Projects",
       "mentorship": "1-on-1 Mentorship",
       "certificate": "Final Certificate",
       "discovery": "1-on-1 Discovery Session",
       "skillsAssessment": "Skills & Interest Assessment",
-      "actionPlan": "Personalized Action Plan"
+      "actionPlan": "Personalized Action Plan",
+      "arabicLit": "Arabic Language & Literature",
+      "naturalSciences": "Natural Sciences",
+      "historyGeography": "History & Geography",
+      "spanish": "Spanish Language",
+      "tamazight": "Tamazight Language",
+      "islamicSciences": "Islamic Sciences",
+      "metouns": "Scientific Texts (Metouns)",
+      "englishAdults": "English Levels / Adults",
+      "englishJoyschool": "English Levels / joyschool",
+      "spanishLevels": "Spanish Levels",
+      "frenchLevels": "French Levels",
+      "electricalEng": "Electrical Engineering",
+      "processEng": "Process Engineering"
     },
     "errors": {
       "fullName": "Full name is required",
@@ -662,8 +675,3 @@
     "error": "Failed to load blogs. Please try again."
   }
 }
-
-
-
-
-
