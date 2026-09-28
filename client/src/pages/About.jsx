@@ -101,8 +101,56 @@ const About = () => {
             </p>
           </div>
 
-          {/* CTA */}
-          <div 
+          {/* Join Our Team CTA */}
+          <div className="mb-10 rounded-3xl overflow-hidden border border-gray-100 shadow-md">
+            <div className="grid md:grid-cols-2">
+              <div className="p-10 md:p-14 bg-[#fbfaff] flex flex-col justify-center">
+                <span className="inline-block text-xs font-bold uppercase tracking-widest text-rekaz-blue bg-blue-50 border border-blue-100 px-3 py-1.5 rounded-full mb-5 w-fit">
+                  {t('aboutPage.joinTeamTag', 'نحن نوظّف')}
+                </span>
+                <h2 className="text-3xl font-satoshi font-bold text-rekaz-black mb-4 leading-tight">
+                  {t('aboutPage.joinTeamTitle', 'انضم إلى فريق ركاز كأستاذ')}
+                </h2>
+                <p className="text-rekaz-grey font-dm leading-relaxed mb-8">
+                  {t('aboutPage.joinTeamDesc', 'نبحث دائماً عن أساتذة متميزين وشغوفين بالتعليم. إذا كنت تريد أن تكون جزءاً من مشروع تعليمي استثنائي، قدّم طلبك الآن.')}
+                </p>
+                <div className="flex flex-wrap gap-3">
+                  <a
+                    href="/teacher-application"
+                    className="inline-flex items-center gap-2 px-6 py-3 rounded-[14px] text-white font-satoshi font-semibold text-sm shadow-md hover:brightness-105 hover:-translate-y-0.5 transition-all"
+                    style={{ background: 'linear-gradient(180deg, rgb(0, 165, 255) 0%, rgb(4, 18, 250) 100%)' }}
+                  >
+                    <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M12 4v16m8-8H4" />
+                    </svg>
+                    {t('aboutPage.joinTeamBtn', 'تقديم طلب توظيف')}
+                  </a>
+                  <a
+                    href="/contact"
+                    className="inline-flex items-center gap-2 px-6 py-3 rounded-[14px] bg-white border border-gray-200 text-rekaz-dark font-satoshi font-semibold text-sm hover:border-rekaz-blue hover:text-rekaz-blue transition-all"
+                  >
+                    {t('aboutPage.joinTeamContact', 'تواصل معنا أولاً')}
+                  </a>
+                </div>
+              </div>
+              <div
+                className="min-h-[260px] md:min-h-0 flex items-center justify-center relative"
+                style={{ background: 'linear-gradient(135deg, #0412fa 0%, #00a5ff 100%)' }}
+              >
+                <div className="absolute inset-0 opacity-10"
+                  style={{ backgroundImage: 'radial-gradient(circle at 70% 30%, white 1px, transparent 1px)', backgroundSize: '28px 28px' }}
+                />
+                <div className="relative z-10 text-center px-10 py-12">
+                  <div className="text-7xl font-satoshi font-black text-white/20 leading-none mb-2">👩‍🏫</div>
+                  <p className="text-white font-satoshi font-bold text-2xl mb-1">{t('aboutPage.joinTeamStat', 'فريق متميز')}</p>
+                  <p className="text-white/70 font-dm text-sm">{t('aboutPage.joinTeamStatDesc', 'أساتذة متخصصون في جميع المواد')}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Student CTA */}
+          <div
             className="rounded-3xl p-12 text-center text-white shadow-xl"
             style={{ background: 'linear-gradient(180deg, rgb(0, 165, 255) 0%, rgb(4, 18, 250) 100%)' }}
           >

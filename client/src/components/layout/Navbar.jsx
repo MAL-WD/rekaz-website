@@ -27,6 +27,7 @@ const Navbar = () => {
     { name: t('navbar.training', 'Training'), path: '/programs/formations' },
     { name: t('navbar.consulting', 'Consulting'), path: '/consultation' },
     { name: t('navbar.blog', 'Blogs'), path: '/blogs' },
+    { name: t('navbar.teacherApply', 'انضم كأستاذ'), path: '/teacher-application', highlight: true },
   ];
 
   return (
@@ -67,7 +68,11 @@ const Navbar = () => {
               <Link
                 key={link.name}
                 to={link.path}
-                className="px-3.5 py-1.5 text-[#0a0a0a]/70 hover:text-[#0412fa] hover:bg-[rgba(4,18,250,0.05)] rounded-full transition-all duration-200 text-[14px] font-medium tracking-[-0.01em] font-satoshi"
+                className={`px-3.5 py-1.5 rounded-full transition-all duration-200 text-[14px] font-medium tracking-[-0.01em] font-satoshi ${
+                  link.highlight
+                    ? 'text-rekaz-blue hover:bg-rekaz-blue/10 font-semibold'
+                    : 'text-[#0a0a0a]/70 hover:text-[#0412fa] hover:bg-[rgba(4,18,250,0.05)]'
+                }`}
               >
                 {link.name}
               </Link>
@@ -118,7 +123,11 @@ const Navbar = () => {
                 <Link
                   key={link.name}
                   to={link.path}
-                  className="text-[15px] font-medium font-satoshi text-[#0a0a0a]/75 hover:text-[#0412fa] hover:bg-[rgba(4,18,250,0.04)] rounded-xl px-3 py-2.5 transition-colors"
+                  className={`text-[15px] font-medium font-satoshi rounded-xl px-3 py-2.5 transition-colors ${
+                    link.highlight
+                      ? 'text-rekaz-blue hover:bg-rekaz-blue/08 font-semibold'
+                      : 'text-[#0a0a0a]/75 hover:text-[#0412fa] hover:bg-[rgba(4,18,250,0.04)]'
+                  }`}
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   {link.name}

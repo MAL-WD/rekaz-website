@@ -1,4 +1,4 @@
-﻿import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import logo from '../../assets/logo.png';
 
@@ -64,9 +64,14 @@ const Footer = () => {
             <h4 className="font-semibold text-[15px] tracking-wider uppercase text-white/55 mb-5">{t('footer.rekazLinks', 'Rēkāz')}</h4>
             <ul className="space-y-3 text-[14px] text-gray-400">
               <li><Link to="/about" className="hover:text-white transition-colors">{t('footer.aboutUs', 'About Us')}</Link></li>
-              <li><Link to="/team" className="hover:text-white transition-colors">{t('footer.ourTeam', 'Our Team')}</Link></li>
-              <li><Link to="/careers" className="hover:text-white transition-colors">{t('footer.careers', 'Careers')}</Link></li>
-              <li><Link to="/news" className="hover:text-white transition-colors">{t('footer.newsEvents', 'News & Events')}</Link></li>
+              <li><Link to="/blogs" className="hover:text-white transition-colors">{t('footer.blog', 'Blog')}</Link></li>
+              <li><Link to="/contact" className="hover:text-white transition-colors">{t('footer.contactLink', 'Contact Us')}</Link></li>
+              <li>
+                <Link to="/teacher-application" className="hover:text-rekaz-cyan transition-colors flex items-center gap-1.5">
+                  <span className="w-1.5 h-1.5 rounded-full bg-rekaz-cyan inline-block"></span>
+                  {t('footer.teacherApplication', 'طلب توظيف أستاذ')}
+                </Link>
+              </li>
             </ul>
           </div>
 
