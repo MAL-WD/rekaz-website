@@ -6,6 +6,7 @@ const errorHandler = require('./middleware/errorHandler');
 const contactRoutes = require('./routes/contactRoutes');
 const blogRoutes = require('./routes/blogRoutes');
 const inscriptionRoutes = require('./routes/inscriptionRoutes');
+const teacherApplicationRoutes = require('./routes/teacherApplicationRoutes');
 
 const app = express();
 
@@ -44,6 +45,7 @@ app.get('/api/health', (req, res) => {
 // Routes
 app.use('/api/contact', contactRoutes);
 app.use('/api/inscriptions', inscriptionRoutes);
+app.use('/api/teacher-applications', teacherApplicationRoutes);
 app.use('/api/blogs', blogRoutes);
 
 // 404 handler

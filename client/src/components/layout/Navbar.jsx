@@ -56,9 +56,9 @@ const Navbar = () => {
       >
         <Link to="/" className="flex items-center gap-2.5 flex-shrink-0">
           <div className="w-[33px] h-[33px] relative overflow-hidden rounded-full flex-shrink-0">
-            <img src={logo} alt="Rēkāz Logo" className="absolute inset-0 w-full h-full object-cover" />
+            <img src={logo} alt="Rekaz Logo" className="absolute inset-0 w-full h-full object-cover" />
           </div>
-          <span className="font-satoshi font-semibold text-[21px] tracking-[-0.03em] text-[#0a0a0a]">Rēkāz</span>
+          <span className="font-satoshi font-semibold text-[21px] tracking-[-0.03em] text-[#0a0a0a]">Rekaz</span>
         </Link>
 
         <div className="hidden md:flex items-center gap-4">
@@ -78,7 +78,7 @@ const Navbar = () => {
             onClick={toggleLanguage}
             className="text-[13px] font-medium text-rekaz-dark/60 hover:text-rekaz-blue transition-colors px-2.5 py-1.5 rounded-full hover:bg-[rgba(4,18,250,0.05)] flex items-center gap-1"
           >
-            {i18n.language === 'ar' ? '🇬🇧 EN' : 'عربي'}
+            {i18n.language === 'ar' ? '🇬🇧 EN' : '🇸🇦 AR'}
           </button>
 
           <Link
@@ -86,7 +86,7 @@ const Navbar = () => {
             className="flex items-center justify-center px-5 py-2.5 text-white rounded-full font-satoshi font-semibold text-[14px] tracking-[-0.01em] hover:-translate-y-px hover:scale-[1.02] transition-all duration-200"
             style={{ background: 'linear-gradient(150deg,#00a5ff 0%,#0412fa 100%)', boxShadow: '0 4px 16px rgba(0,165,255,0.28), inset 0 1px 0 rgba(255,255,255,0.18)' }}
           >
-            {t('navbar.enroll', 'Join Rēkāz')}
+            {t('navbar.enroll', 'Join Rekaz')}
           </Link>
         </div>
 
@@ -128,7 +128,7 @@ const Navbar = () => {
                 onClick={() => { toggleLanguage(); setMobileMenuOpen(false); }}
                 className="text-start text-[15px] font-medium font-satoshi text-rekaz-blue px-3 py-2.5 rounded-xl hover:bg-[rgba(4,18,250,0.04)] transition-colors flex items-center gap-2"
               >
-                {i18n.language === 'ar' ? '🇬🇧 English' : 'العربية'}
+                {i18n.language === 'ar' ? '🇬🇧 English' : '🇸🇦 العربية'}
               </button>
             </nav>
             <Link
@@ -137,7 +137,7 @@ const Navbar = () => {
               style={{ background: 'linear-gradient(150deg,#00a5ff 0%,#0412fa 100%)', boxShadow: '0 4px 16px rgba(0,165,255,0.28)' }}
               onClick={() => setMobileMenuOpen(false)}
             >
-              {t('navbar.enroll', 'Join Rēkāz')}
+              {t('navbar.enroll', 'Join Rekaz')}
             </Link>
           </motion.div>
         )}

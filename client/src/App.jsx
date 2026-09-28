@@ -13,6 +13,7 @@ import ProgramFormations from './pages/ProgramFormations';
 import Consultation from './pages/Consultation';
 import Contact from './pages/Contact';
 import Inscription from './pages/Inscription';
+import TeacherApplication from './pages/TeacherApplication';
 import BlogsPage from './pages/BlogsPage';
 import BlogPage from './pages/BlogPage';
 import EditorPage from './pages/EditorPage';
@@ -44,6 +45,9 @@ function App() {
               <Route path="/inscription" element={<Inscription />} />
               <Route path="/join" element={<Inscription />} />
               <Route path="/enroll" element={<Inscription />} />
+              <Route path="/teacher-application" element={<TeacherApplication />} />
+              <Route path="/rejoindre-equipe" element={<TeacherApplication />} />
+              <Route path="/join-team" element={<TeacherApplication />} />
               {/* Blog pages */}
               <Route path="/blogs" element={<BlogsPage />} />
               <Route path="/blogs/:blog_id" element={<BlogPage />} />
