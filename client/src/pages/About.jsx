@@ -51,7 +51,7 @@ const About = () => {
                 <SectionTag text={t('aboutPage.founderTag')} />
                 <h2 className="text-4xl font-satoshi font-bold mt-6 mb-6">{t('aboutPage.founderTitle')}</h2>
                 <h3 className="text-xl font-dm text-rekaz-cyan mb-8">{t('aboutPage.founderRole')}</h3>
-                <blockquote className="text-2xl font-instrument-serif italic leading-relaxed text-white/90 mb-8 border-l-4 border-rekaz-cyan pl-6">
+                <blockquote className="text-lg md:text-xl font-dm leading-relaxed text-white/95 mb-8 border-r-4 md:border-r-4 border-rekaz-cyan pr-6 whitespace-pre-line">
                   {t('aboutPage.founderQuote')}
                 </blockquote>
                 <p className="font-dm text-white/70 leading-relaxed">

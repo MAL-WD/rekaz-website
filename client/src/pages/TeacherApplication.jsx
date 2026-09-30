@@ -673,7 +673,8 @@ const TeacherApplication = () => {
               </Link>
               <a
                 href="tel:+213783121299"
-                className="px-6 py-3 text-white rounded-xl text-sm font-satoshi font-semibold shadow-md hover:brightness-105 transition-all"
+                dir="ltr"
+                className="px-6 py-3 text-white rounded-xl text-sm font-satoshi font-semibold shadow-md hover:brightness-105 transition-all inline-block"
                 style={{ background: 'linear-gradient(180deg, rgb(0, 165, 255) 0%, rgb(4, 18, 250) 100%)' }}
               >
                 +213 783 12 12 99
