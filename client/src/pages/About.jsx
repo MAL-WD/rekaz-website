@@ -64,6 +64,7 @@ const About = () => {
                   src={ceoImage} 
                   alt="Adel, CEO" 
                   className="w-full h-full object-cover absolute inset-0"
+                  style={{ objectPosition: 'center 20%' }}
                 />
               </div>
             </div>

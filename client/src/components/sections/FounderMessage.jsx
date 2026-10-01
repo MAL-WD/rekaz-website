@@ -23,9 +23,10 @@ const FounderMessage = () => {
         <div className="flex-shrink-0 relative w-[160px] h-[160px] md:w-[180px] md:h-[180px] rounded-full p-1.5 bg-gradient-to-tr from-rekaz-cyan to-rekaz-blue shadow-md">
           <div className="w-full h-full rounded-full overflow-hidden bg-white">
             <img
-            src={ceoImage}
+              src={ceoImage}
               alt={t('founder.title', "Hello, I'm Adel, CEO & Teacher at Rēkāz")}
-              className="w-full h-full object-cover scale-105"
+              className="w-full h-full object-cover"
+              style={{ objectPosition: 'center 20%' }}
               loading="lazy"
             />
           </div>
