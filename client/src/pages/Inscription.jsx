@@ -126,10 +126,10 @@ const Inscription = () => {
   };
 
   const availableSubjectsByProgram = {
-    cem: ['arabicLit', 'english', 'french', 'naturalSciences', 'physics', 'historyGeography', 'tamazight', 'islamicSciences', 'math'],
+    cem: ['arabicLit', 'english', 'french', 'naturalSciences', 'physics', 'historyGeography', 'tamazight', 'islamicSciences', 'math', 'metouns', 'englishAdults', 'englishJoyschool', 'spanishLevels', 'frenchLevels'],
     lycee: ['arabicLit', 'english', 'french', 'naturalSciences', 'physics', 'accounting', 'economics', 'law', 'philosophy', 'historyGeography', 'spanish', 'tamazight', 'islamicSciences', 'metouns', 'englishAdults', 'englishJoyschool', 'spanishLevels', 'frenchLevels', 'electricalEng', 'processEng'],
-    formation: ['coreCurriculum', 'handsOn', 'mentorship', 'certificate'],
-    consultation: ['discovery', 'skillsAssessment', 'actionPlan']
+    formation: ['coreCurriculum', 'handsOn', 'mentorship', 'certificate', 'metouns', 'englishAdults', 'englishJoyschool', 'spanishLevels', 'frenchLevels'],
+    consultation: ['discovery', 'skillsAssessment', 'actionPlan', 'metouns', 'englishAdults', 'englishJoyschool', 'spanishLevels', 'frenchLevels']
   };
 
   const teachersByProgram = {
@@ -573,7 +573,7 @@ const Inscription = () => {
                   {/* Special Pack BAC Banner Notice (Full Card Design) */}
                   {formData.programType === 'lycee' && formData.level === '3AS' && (
                     <div 
-                      onClick={() => setFormData(prev => { const nextPackBac = !prev.isPackBac; return { ...prev, isPackBac: nextPackBac, subjects: nextPackBac ? ['arabicLit', 'philosophy', 'historyGeography'] : prev.subjects }; })}
+                      onClick={() => setFormData(prev => ({ ...prev, isPackBac: !prev.isPackBac }))}
                       className={`mt-4 mb-8 p-6 md:p-8 rounded-[24px] border-2 cursor-pointer transition-all flex flex-col items-start text-start relative group ${
                         formData.isPackBac
                           ? 'border-rekaz-blue bg-blue-50/20 shadow-[0_8px_30px_rgba(4,18,250,0.12)]'
@@ -688,10 +688,10 @@ const Inscription = () => {
                                 {teacher.nameEn.charAt(0)}
                               </div>
                               <div className="min-w-0">
-                                <p className="font-satoshi font-bold text-sm text-rekaz-black truncate">{i18n.language === 'ar' ? teacher.name : teacher.nameEn}</p>
+                                <p className="font-satoshi font-bold text-sm text-rekaz-black truncate">{i18n.language.startsWith('ar') ? teacher.name : teacher.nameEn}</p>
                                 {teacher.subject && (
                                   <p className={`text-xs font-dm font-medium truncate ${isSelected ? 'text-rekaz-blue' : 'text-rekaz-grey'}`}>
-                                    {i18n.language === 'ar' ? teacher.subject : teacher.subjectEn}
+                                    {i18n.language.startsWith('ar') ? teacher.subject : teacher.subjectEn}
                                   </p>
                                 )}
                               </div>

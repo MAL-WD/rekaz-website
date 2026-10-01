@@ -7,6 +7,7 @@ const contactRoutes = require('./routes/contactRoutes');
 const blogRoutes = require('./routes/blogRoutes');
 const inscriptionRoutes = require('./routes/inscriptionRoutes');
 const teacherApplicationRoutes = require('./routes/teacherApplicationRoutes');
+const adminRoutes = require('./routes/adminRoutes');
 
 const app = express();
 
@@ -47,6 +48,7 @@ app.use('/api/contact', contactRoutes);
 app.use('/api/inscriptions', inscriptionRoutes);
 app.use('/api/teacher-applications', teacherApplicationRoutes);
 app.use('/api/blogs', blogRoutes);
+app.use('/api/admin', adminRoutes);
 
 // 404 handler
 app.use((req, res, next) => {

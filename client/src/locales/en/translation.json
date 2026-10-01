@@ -355,7 +355,13 @@
             "entrepreneuriat": "Entrepreneurship & Project Management",
             "orientationBac": "University Orientation & Academic Choice",
             "coachingScolaire": "Academic Coaching & Study Methodologies",
-            "reconversion": "Career Transition & Skills Assessment"
+            "reconversion": "Career Transition & Skills Assessment",
+            "hse": "Health, Safety and Environment HSE",
+            "importExport": "Import and Export",
+            "ecommerce": "E-commerce",
+            "selfEntrepreneur": "Self-Entrepreneur",
+            "jobSearch": "Job Search",
+            "moukawlatia": "Entrepreneurship"
         },
         "branches": {
             "sciences": "Experimental Sciences",
@@ -652,8 +658,32 @@
                 "desc": "Protect data, networks, and systems from digital attacks."
             },
             {
-                "title": "Business Strategy",
+                "title": "Strategic Management",
                 "desc": "Strategic planning, operations, and long-term vision."
+            },
+            {
+                "title": "Entrepreneurship",
+                "desc": "Fundamentals of entrepreneurship and startup management."
+            },
+            {
+                "title": "Health, Safety and Environment HSE",
+                "desc": "Occupational health and safety rules in the workplace."
+            },
+            {
+                "title": "Import and Export",
+                "desc": "Managing import and export operations and international trade."
+            },
+            {
+                "title": "E-commerce",
+                "desc": "Launching and managing successful online stores."
+            },
+            {
+                "title": "Self-Entrepreneur",
+                "desc": "Steps to work as a self-entrepreneur and manage your activity."
+            },
+            {
+                "title": "Job Search",
+                "desc": "Job search techniques, CV writing and interviews."
             }
         ]
     },
