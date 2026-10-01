@@ -1,5 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 import Container from '../components/ui/Container';
 import SectionTag from '../components/ui/SectionTag';
 import Card from '../components/ui/Card';
@@ -62,11 +63,13 @@ const ProgramFormations = () => {
             
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {formations.map((item, idx) => (
-                <Card key={idx} className="p-8 border border-transparent hover:border-rekaz-cyan transition-all group">
-                  <div className="text-4xl mb-6 group-hover:scale-110 transition-transform origin-left"></div>
-                  <h3 className="text-2xl font-satoshi font-bold mb-3">{item.title}</h3>
-                  <p className="text-rekaz-grey font-dm">{item.desc}</p>
-                </Card>
+                <Link to="/inscription" key={idx} className="block h-full">
+                  <Card className="p-8 border border-transparent hover:border-rekaz-cyan transition-all group h-full cursor-pointer">
+                    <div className="text-4xl mb-6 group-hover:scale-110 transition-transform origin-left"></div>
+                    <h3 className="text-2xl font-satoshi font-bold mb-3">{item.title}</h3>
+                    <p className="text-rekaz-grey font-dm">{item.desc}</p>
+                  </Card>
+                </Link>
               ))}
             </div>
           </div>
