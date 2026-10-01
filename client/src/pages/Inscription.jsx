@@ -86,7 +86,13 @@ const Inscription = () => {
       { value: 'langues', label: t('inscription.levels.langues', 'Foreign Languages (English / French / German)') },
       { value: 'marketing-digital', label: t('inscription.levels.marketingDigital', 'Digital Marketing & E-Commerce') },
       { value: 'bureautique', label: t('inscription.levels.bureautique', 'Office Automation & Advanced Secretarial') },
-      { value: 'entrepreneuriat', label: t('inscription.levels.entrepreneuriat', 'Entrepreneurship & Project Management') }
+      { value: 'entrepreneuriat', label: t('inscription.levels.entrepreneuriat', 'Entrepreneurship & Project Management') },
+      { value: 'hse', label: t('inscription.levels.hse', 'Health, Safety and Environment HSE') },
+      { value: 'import-export', label: t('inscription.levels.importExport', 'Import and Export') },
+      { value: 'ecommerce', label: t('inscription.levels.ecommerce', 'E-commerce') },
+      { value: 'self-entrepreneur', label: t('inscription.levels.selfEntrepreneur', 'Self-Entrepreneur') },
+      { value: 'job-search', label: t('inscription.levels.jobSearch', 'Job Search') },
+      { value: 'moukawlatia', label: t('inscription.levels.moukawlatia', 'Entrepreneurship') }
     ],
     consultation: [
       { value: 'orientation-bac', label: t('inscription.levels.orientationBac', 'Post-BAC Orientation & University Choice') },
@@ -571,9 +577,9 @@ const Inscription = () => {
                   </div>
 
                   {/* Special Pack BAC Banner Notice (Full Card Design) */}
-                  {formData.programType === 'lycee' && formData.level === '3AS' && (
+                  {formData.programType === 'lycee' && (
                     <div 
-                      onClick={() => setFormData(prev => ({ ...prev, isPackBac: !prev.isPackBac }))}
+                      onClick={() => setFormData(prev => { const nextPackBac = !prev.isPackBac; return { ...prev, isPackBac: nextPackBac, level: nextPackBac ? '3AS' : prev.level, subjects: nextPackBac ? ['arabicLit', 'philosophy', 'historyGeography'] : prev.subjects }; })}
                       className={`mt-4 mb-8 p-6 md:p-8 rounded-[24px] border-2 cursor-pointer transition-all flex flex-col items-start text-start relative group ${
                         formData.isPackBac
                           ? 'border-rekaz-blue bg-blue-50/20 shadow-[0_8px_30px_rgba(4,18,250,0.12)]'
@@ -663,7 +669,8 @@ const Inscription = () => {
                       </label>
                       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 mt-2">
                         {filteredTeachers.map((teacher) => {
-                          const isSelected = formData.teacher === teacher.nameEn;
+                          const teacherDisplayName = i18n.language.startsWith('ar') ? teacher.name : teacher.nameEn;
+                          const isSelected = formData.teacher === teacherDisplayName || formData.teacher === teacher.nameEn || formData.teacher === teacher.name;
                           return (
                             <button
                               type="button"
@@ -671,9 +678,10 @@ const Inscription = () => {
                               onClick={() =>
                                 setFormData(prev => ({
                                   ...prev,
-                                  teacher: isSelected ? '' : teacher.nameEn
+                                  teacher: isSelected ? '' : teacherDisplayName
                                 }))
                               }
+                              
                               className={`relative p-3 rounded-[14px] border-2 cursor-pointer transition-all text-left flex items-center gap-3 ${
                                 isSelected
                                   ? 'border-rekaz-blue bg-blue-50/40 shadow-[0_2px_12px_rgba(4,18,250,0.10)]'
@@ -685,7 +693,7 @@ const Inscription = () => {
                                   ? 'bg-gradient-to-br from-rekaz-cyan to-rekaz-blue text-white'
                                   : 'bg-gray-100 text-rekaz-dark'
                               }`}>
-                                {teacher.nameEn.charAt(0)}
+                                {(i18n.language.startsWith('ar') ? teacher.name : teacher.nameEn).charAt(0)}
                               </div>
                               <div className="min-w-0">
                                 <p className="font-satoshi font-bold text-sm text-rekaz-black truncate">{i18n.language.startsWith('ar') ? teacher.name : teacher.nameEn}</p>
