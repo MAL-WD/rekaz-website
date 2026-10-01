@@ -5,6 +5,7 @@ import SectionTag from '../components/ui/SectionTag';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 import { useTranslation } from 'react-i18next';
+import ceoImage from '../assets/ceo.jpg';
 
 const About = () => {
   const { t } = useTranslation();
@@ -60,8 +61,8 @@ const About = () => {
               </div>
               <div className="h-full min-h-[400px] relative">
                 <img 
-                  src="https://framerusercontent.com/images/lKaaStgbmdIe8TfrIkFlKzHazV0.png" 
-                  alt="Adel, CEO & Teacher" 
+                  src={ceoImage} 
+                  alt="Adel, CEO" 
                   className="w-full h-full object-cover absolute inset-0"
                 />
               </div>

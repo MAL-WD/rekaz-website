@@ -1,6 +1,7 @@
-﻿import React from 'react';
+import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
+import ceoImage from '../../assets/ceo.jpg';
 
 const FounderMessage = () => {
   const { t } = useTranslation();
@@ -22,7 +23,7 @@ const FounderMessage = () => {
         <div className="flex-shrink-0 relative w-[160px] h-[160px] md:w-[180px] md:h-[180px] rounded-full p-1.5 bg-gradient-to-tr from-rekaz-cyan to-rekaz-blue shadow-md">
           <div className="w-full h-full rounded-full overflow-hidden bg-white">
             <img
-              src="https://framerusercontent.com/images/lKaaStgbmdIe8TfrIkFlKzHazV0.png"
+            src={ceoImage}
               alt={t('founder.title', "Hello, I'm Adel, CEO & Teacher at Rēkāz")}
               className="w-full h-full object-cover scale-105"
               loading="lazy"
