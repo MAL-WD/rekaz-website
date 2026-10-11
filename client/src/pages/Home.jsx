@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Hero from '../components/sections/Hero';
-import PartnersTicker from '../components/sections/PartnersTicker';
+import Statistics from '../components/sections/Statistics';
 import FounderMessage from '../components/sections/FounderMessage';
 import AboutPreview from '../components/sections/AboutPreview';
 import WhyRekaz from '../components/sections/WhyRekaz';
@@ -25,7 +25,7 @@ const Home = () => {
       
       <main className='w-full'>
         <Hero />
-        <PartnersTicker />
+        <Statistics />
         <FounderMessage />
         <AboutPreview />
         <WhyRekaz />

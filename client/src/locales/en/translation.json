@@ -21,6 +21,30 @@
     "partners": {
         "text": "Supporting students for BEM and BAC with learning, guidance, and ambition."
     },
+    "stats": {
+        "tag": "Rekaz In Numbers",
+        "title": "Numbers That Reflect Our Educational Excellence",
+        "students": {
+            "value": "+2,500",
+            "label": "Students & Learners",
+            "desc": "Supported in CEM, Lycée and professional formations"
+        },
+        "successRate": {
+            "value": "98.4%",
+            "label": "Success & Pass Rate",
+            "desc": "In official BEM & BAC examinations"
+        },
+        "teachers": {
+            "value": "+35",
+            "label": "Expert Teachers & Mentors",
+            "desc": "Selected elite educators across all subjects"
+        },
+        "programs": {
+            "value": "+40",
+            "label": "Programs & Courses",
+            "desc": "Academic support, skill workshops & consultations"
+        }
+    },
     "founder": {
         "title": "Hello, I'm Adel, CEO",
         "badge": "CEO & Teacher",
