@@ -18,6 +18,7 @@ import BlogsPage from './pages/BlogsPage';
 import BlogPage from './pages/BlogPage';
 import EditorPage from './pages/EditorPage';
 import NotFound from './pages/NotFound';
+import AdminRoutes from './admin/AdminRoutes';
 
 function App() {
   const { i18n } = useTranslation();
@@ -58,6 +59,9 @@ function App() {
             {/* Editor – full-page, no shared layout */}
             <Route path="/editor" element={<EditorPage />} />
             <Route path="/editor/:blog_id" element={<EditorPage />} />
+
+            {/* Admin – dedicated admin panel layout & auth */}
+            <Route path="/admin/*" element={<AdminRoutes />} />
           </Routes>
         </SmoothScroll>
       </Router>

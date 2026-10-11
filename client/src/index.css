@@ -31,12 +31,29 @@
 
   --max-width-container: 1150px;
 
+  --color-primary: #0412fa;
+  --color-primary-light: #3d47fb;
+  --color-primary-dark: #030ecc;
+  --color-secondary: #00a5ff;
+  --color-dark: #010212;
+  --color-surface: #ffffff;
+  --color-background: #fbfaff;
+  --color-border: #e5e7eb;
+  --color-muted: #6b7280;
+  --color-success: #10b981;
+  --color-warning: #f59e0b;
+  --color-error: #ef4444;
+
   --animate-marquee: marquee 20s linear infinite;
 
   @keyframes marquee {
     0% { transform: translateX(0%); }
     100% { transform: translateX(-50%); }
   }
+}
+
+.gradient-brand {
+  background: linear-gradient(135deg, #00a5ff, #0412fa);
 }
 
 /* Satoshi local fonts */
