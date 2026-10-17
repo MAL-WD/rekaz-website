@@ -133,7 +133,7 @@ const Inscription = () => {
 
   const availableSubjectsByProgram = {
     cem: ['arabicLit', 'english', 'french', 'naturalSciences', 'physics', 'historyGeography', 'tamazight', 'islamicSciences', 'math', 'metouns', 'englishAdults', 'englishJoyschool', 'spanishLevels', 'frenchLevels'],
-    lycee: ['arabicLit', 'english', 'french', 'naturalSciences', 'physics', 'accounting', 'economics', 'law', 'philosophy', 'historyGeography', 'spanish', 'tamazight', 'islamicSciences', 'metouns', 'englishAdults', 'englishJoyschool', 'spanishLevels', 'frenchLevels', 'electricalEng', 'processEng'],
+    lycee: ['arabicLit', 'english', 'french', 'naturalSciences', 'physics', 'math', 'accounting', 'economics', 'law', 'philosophy', 'historyGeography', 'spanish', 'tamazight', 'islamicSciences', 'metouns', 'englishAdults', 'englishJoyschool', 'spanishLevels', 'frenchLevels', 'electricalEng', 'processEng'],
     formation: ['coreCurriculum', 'handsOn', 'mentorship', 'certificate', 'metouns', 'englishAdults', 'englishJoyschool', 'spanishLevels', 'frenchLevels'],
     consultation: ['discovery', 'skillsAssessment', 'actionPlan', 'metouns', 'englishAdults', 'englishJoyschool', 'spanishLevels', 'frenchLevels']
   };
