@@ -79,7 +79,7 @@ const Hero = () => {
 
           {/* Heading */}
           <h1 className="font-satoshi font-bold text-[48px] md:text-[68px] lg:text-[76px] leading-[1.08em] tracking-[-0.05em] animated-gradient-text">
-            {t('hero.title', 'Rēkāz Establishment for Education, Training & Consulting')}
+            {t('hero.title', 'Rēkāz School for Education, Training & Consulting')}
           </h1>
 
           {/* Subtitle */}

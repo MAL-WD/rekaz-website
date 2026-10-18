@@ -112,7 +112,7 @@ const Footer = () => {
 
         {/* Copyright */}
         <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4 text-[13px] text-gray-500">
-          <p>© {new Date().getFullYear()} {t('footer.copyright', 'Rēkāz Educational Establishment. All rights reserved.')}</p>
+          <p>© {new Date().getFullYear()} {t('footer.copyright', 'Rēkāz School. All rights reserved.')}</p>
           <div className="flex gap-5">
             <Link to="/privacy" className="hover:text-white transition-colors">{t('footer.privacy', 'Privacy Policy')}</Link>
             <Link to="/terms" className="hover:text-white transition-colors">{t('footer.terms', 'Terms of Service')}</Link>

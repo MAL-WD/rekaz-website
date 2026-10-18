@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import logo from '../../assets/logo.png';
+import flagEn from '../../assets/flag-en.svg';
+import flagAr from '../../assets/flag-ar.svg';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -81,9 +83,21 @@ const Navbar = () => {
 
           <button
             onClick={toggleLanguage}
-            className="text-[13px] font-medium text-rekaz-dark/60 hover:text-rekaz-blue transition-colors px-2.5 py-1.5 rounded-full hover:bg-[rgba(4,18,250,0.05)] flex items-center gap-1"
+            className="text-[13px] font-medium text-rekaz-dark/70 hover:text-rekaz-blue transition-colors px-2.5 py-1.5 rounded-full hover:bg-[rgba(4,18,250,0.05)] flex items-center gap-1.5"
+            aria-label="Toggle language"
+            title={i18n.language === 'ar' ? 'English' : 'العربية'}
           >
-            {i18n.language === 'ar' ? '🇬🇧 EN' : '🇸🇦 AR'}
+            {i18n.language === 'ar' ? (
+              <>
+                <img src={flagEn} alt="UK Flag" className="w-[18px] h-[13px] rounded-[2px] object-cover shadow-[0_1px_3px_rgba(0,0,0,0.15)] flex-shrink-0" />
+                <span>EN</span>
+              </>
+            ) : (
+              <>
+                <img src={flagAr} alt="Arabic Flag" className="w-[18px] h-[13px] rounded-[2px] object-cover shadow-[0_1px_3px_rgba(0,0,0,0.15)] flex-shrink-0" />
+                <span>AR</span>
+              </>
+            )}
           </button>
 
           <Link
@@ -135,9 +149,19 @@ const Navbar = () => {
               ))}
               <button
                 onClick={() => { toggleLanguage(); setMobileMenuOpen(false); }}
-                className="text-start text-[15px] font-medium font-satoshi text-rekaz-blue px-3 py-2.5 rounded-xl hover:bg-[rgba(4,18,250,0.04)] transition-colors flex items-center gap-2"
+                className="text-start text-[15px] font-medium font-satoshi text-rekaz-blue px-3 py-2.5 rounded-xl hover:bg-[rgba(4,18,250,0.04)] transition-colors flex items-center gap-2.5"
               >
-                {i18n.language === 'ar' ? '🇬🇧 English' : '🇸🇦 العربية'}
+                {i18n.language === 'ar' ? (
+                  <>
+                    <img src={flagEn} alt="UK Flag" className="w-[20px] h-[15px] rounded-[2px] object-cover shadow-[0_1px_3px_rgba(0,0,0,0.15)] flex-shrink-0" />
+                    <span>English</span>
+                  </>
+                ) : (
+                  <>
+                    <img src={flagAr} alt="Arabic Flag" className="w-[20px] h-[15px] rounded-[2px] object-cover shadow-[0_1px_3px_rgba(0,0,0,0.15)] flex-shrink-0" />
+                    <span>العربية</span>
+                  </>
+                )}
               </button>
             </nav>
             <Link

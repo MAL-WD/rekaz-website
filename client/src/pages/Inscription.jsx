@@ -292,10 +292,10 @@ const Inscription = () => {
   return (
     <>
       <Helmet>
-        <title>Online Inscription & Registration | Rēkāz Establishment</title>
+        <title>Online Inscription & Registration | Rēkāz School</title>
         <meta
           name="description"
-          content="Register online for Rēkāz Establishment programs in Béchar: Middle School (CEM), High School (Lycée), Professional Training & Certifications, and Consulting."
+          content="Register online for Rēkāz School programs in Béchar: Middle School (CEM), High School (Lycée), Professional Training & Certifications, and Consulting."
         />
       </Helmet>
 
@@ -385,7 +385,7 @@ const Inscription = () => {
               {/* Direct Next Action Buttons */}
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                 <a
-                  href={`https://wa.me/213783121299?text=Hello%20Rekaz%20Establishment,%20I%20have%20completed%20my%20online%20registration%20(Ref:%20${registrationRef})`}
+                  href={`https://wa.me/213783121299?text=Hello%20Rekaz%20School,%20I%20have%20completed%20my%20online%20registration%20(Ref:%20${registrationRef})`}
                   target="_blank"
                   rel="noreferrer"
                   className="w-full sm:w-auto px-6 py-3.5 rounded-[14px] bg-[#25D366] text-white font-satoshi font-semibold text-sm hover:bg-[#1EBE5D] transition-colors flex items-center justify-center gap-2 shadow-sm"

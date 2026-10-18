@@ -12,7 +12,7 @@
         "teacherApply": "Join as Teacher"
     },
     "hero": {
-        "title": "Rēkāz Establishment for Education, Training & Consulting",
+        "title": "Rēkāz School for Education, Training & Consulting",
         "subtitle": "Empowering students and learners with knowledge, skills, and guidance for a brighter future.",
         "cta": "Join Rēkāz",
         "secondary": "Explore Our Programs",
@@ -276,7 +276,7 @@
         "address": "Hay El Karma, Opposite Tariq Ibn Ziyad Mosque",
         "phone": "+213 783 12 12 99",
         "email": "schoolrekaz@gmail.com",
-        "copyright": "Rēkāz Educational Establishment. All rights reserved.",
+        "copyright": "Rēkāz School. All rights reserved.",
         "privacy": "Privacy Policy",
         "terms": "Terms of Service",
         "teacherApplication": "Teacher Application",
@@ -284,17 +284,17 @@
         "contactLink": "Contact Us"
     },
     "inscription": {
-        "pageTitle": "Online Inscription & Registration | Rēkāz Establishment",
-        "pageDesc": "Register online for Rēkāz Establishment programs in Béchar: Middle School (CEM), High School (Lycée), Professional Training & Certifications, and Consulting.",
+        "pageTitle": "Online Inscription & Registration | Rēkāz School",
+        "pageDesc": "Register online for Rēkāz School programs in Béchar: Middle School (CEM), High School (Lycée), Professional Training & Certifications, and Consulting.",
         "tag": "Online Registration • Inscription",
-        "heading": "Join Rēkāz Establishment",
+        "heading": "Join Rēkāz School",
         "headerSubtitle": "Take the first step toward academic excellence and career success. Complete the form below and our admissions team will contact you within 24 hours.",
         "guarantee1": "Personalized Academic Mentoring",
         "guarantee2": "Expert & Certified Instructors",
         "guarantee3": "In-Person Béchar Center + Online Access",
         "successBadge": "Application Successfully Received",
         "successTitle": "Congratulations, {{name}}!",
-        "successMessage": "Your pre-registration with Rēkāz Establishment has been submitted. Our admissions team will reach out via phone or WhatsApp within 24 hours to confirm your group schedule.",
+        "successMessage": "Your pre-registration with Rēkāz School has been submitted. Our admissions team will reach out via phone or WhatsApp within 24 hours to confirm your group schedule.",
         "appReference": "Application Reference",
         "programLabel": "Program:",
         "phoneLabel": "Phone Number:",
@@ -453,8 +453,8 @@
         "parentSectionTitle": "Parent / Guardian Contact (For Middle & High School Students)"
     },
     "aboutPage": {
-        "metaTitle": "About Us | Rēkāz Establishment",
-        "metaDesc": "Learn about Rēkāz Establishment, our mission, vision, and our founder Adel.",
+        "metaTitle": "About Us | Rēkāz School",
+        "metaDesc": "Learn about Rēkāz School, our mission, vision, and our founder Adel.",
         "sectionTag": "About Us",
         "heroTitle1": "Empowering Minds,",
         "heroTitle2": "Shaping Futures",
@@ -467,7 +467,7 @@
         "founderTitle": "Meet Adel",
         "founderRole": "CEO & Teacher",
         "founderQuote": "\"I want you to know that our mission is bigger than teaching subjects — it's about helping you believe in yourself, discover your potential, and achieve your dreams.\"",
-        "founderDesc": "As an educator and leader, Adel brings his passion for teaching and his vision for a better educational framework to every student that walks through the doors of Rēkāz Establishment.",
+        "founderDesc": "As an educator and leader, Adel brings his passion for teaching and his vision for a better educational framework to every student that walks through the doors of Rēkāz School.",
         "pillarsTitle": "Our Pillars",
         "pillar1Title": "Academic Excellence",
         "pillar1Desc": "Providing top-tier educational support for all levels to ensure outstanding academic results.",
@@ -478,7 +478,7 @@
         "pillar4Title": "Future E-Learning",
         "pillar4Desc": "Pioneering digital education platforms to make learning accessible anywhere, anytime.",
         "teamTitle": "Our Exceptional Team",
-        "teamDesc": "Our establishment is built by a dedicated team of professional educators and staff who are passionate about shaping the next generation. (Profiles coming soon).",
+        "teamDesc": "Our school is built by a dedicated team of professional educators and staff who are passionate about shaping the next generation. (Profiles coming soon).",
         "ctaTitle": "Ready to Join Us?",
         "ctaDesc": "Start your journey toward academic excellence and professional success today.",
         "ctaButton": "Join Us Now — Register",
@@ -491,8 +491,8 @@
         "joinTeamStatDesc": "Specialized teachers across all subjects"
     },
     "contactPage": {
-        "metaTitle": "Contact Us | Rēkāz Establishment",
-        "metaDesc": "Get in touch with Rēkāz Establishment. We are here to answer your questions and help you with your educational journey.",
+        "metaTitle": "Contact Us | Rēkāz School",
+        "metaDesc": "Get in touch with Rēkāz School. We are here to answer your questions and help you with your educational journey.",
         "sectionTag": "Contact Us",
         "heroTitle": "Get in Touch with Rēkāz",
         "heroDesc": "Have questions about our programs, registrations, or consultation services? Our team is ready to help you.",
@@ -539,8 +539,8 @@
         "ctaSubtitle": "For students, learners & families"
     },
     "consultationPage": {
-        "metaTitle": "Consultation Services | Rēkāz Establishment",
-        "metaDesc": "Educational, Career, and Business Consultation services provided by Rēkāz Establishment.",
+        "metaTitle": "Consultation Services | Rēkāz School",
+        "metaDesc": "Educational, Career, and Business Consultation services provided by Rēkāz School.",
         "sectionTag": "Guidance",
         "heroTitle": "Expert Consultation",
         "heroDesc": "Whether you're a student deciding your academic future or a business owner looking for growth strategies, our expert consultants are here to guide you every step of the way.",
@@ -563,7 +563,7 @@
         "ctaButton": "Schedule Now"
     },
     "programsPage": {
-        "metaTitle": "Our Programs | Rēkāz Establishment",
+        "metaTitle": "Our Programs | Rēkāz School",
         "metaDesc": "Explore our educational programs including CEM, Lycée, Professional Formations, and Consultation services.",
         "sectionTag": "Explore",
         "heroTitle": "Our Programs",
@@ -586,7 +586,7 @@
         "ctaButton": "Get in Touch"
     },
     "programCEM": {
-        "metaTitle": "CEM — Middle School | Rēkāz Establishment",
+        "metaTitle": "CEM — Middle School | Rēkāz School",
         "metaDesc": "Middle school support for 1CEM, 2CEM, 3CEM, and 4CEM/BEM. Strong foundations and progressive preparation.",
         "sectionTag": "Middle School",
         "heroTitle1": "CEM — Middle School",
@@ -616,7 +616,7 @@
         "teachersDesc": "A dedicated team of specialized educators accompanying CEM students every step of the way."
     },
     "programLycee": {
-        "metaTitle": "Lycée — High School | Rēkāz Establishment",
+        "metaTitle": "Lycée — High School | Rēkāz School",
         "metaDesc": "High school support for 1AS, 2AS, 3AS/BAC. Expert preparation strategies and special BAC packs.",
         "sectionTag": "High School",
         "heroTitle1": "Lycée — High School",
@@ -646,7 +646,7 @@
         "teachersDesc": "A dedicated team of specialized educators guiding Lycée students toward BAC success."
     },
     "programFormations": {
-        "metaTitle": "Professional Formations | Rēkāz Establishment",
+        "metaTitle": "Professional Formations | Rēkāz School",
         "metaDesc": "Gain practical skills in Entrepreneurship, Marketing, Cybersecurity, and more. Valid certificates upon completion.",
         "sectionTag": "Certificates",
         "heroTitle": "Professional Formations",

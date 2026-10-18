@@ -19,7 +19,7 @@ const Home = () => {
   return (
     <>
       <Helmet>
-        <title>Rēkāz Establishment | Education, Training & Consulting</title>
+        <title>Rēkāz School | Education, Training & Consulting</title>
         <meta name='description' content='Rēkāz in Béchar empowers students, learners, and businesses through education, training, and guidance.' />
       </Helmet>
       
