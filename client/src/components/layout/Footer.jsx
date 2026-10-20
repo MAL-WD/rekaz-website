@@ -89,7 +89,7 @@ const Footer = () => {
             <h4 className="font-semibold text-[15px] tracking-wider uppercase text-white/55 mb-5">{t('footer.contactTitle', 'Contact')}</h4>
             <ul className="space-y-3.5 text-[14px] text-gray-400">
               <li>
-                <a href="https://maps.app.goo.gl/Nj4Sa4XLkj2bcpKv7" target="_blank" rel="noopener noreferrer" className="flex gap-2.5 items-start hover:text-rekaz-cyan transition-colors">
+                <a href="https://maps.app.goo.spKv7" target="_blank" rel="noopener noreferrer" className="flex gap-2.5 items-start hover:text-rekaz-cyan transition-colors">
                   <svg className="w-4 h-4 text-rekaz-cyan mt-1 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
                   <span>{t('footer.address', 'Hay El Karma, Opposite Tariq Ibn Ziyad Mosque')}</span>
                 </a>

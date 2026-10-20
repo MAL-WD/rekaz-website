@@ -1,4 +1,5 @@
 const Blog = require('../models/Blog');
+const Comment = require('../models/Comment');
 const { nanoid } = require('nanoid');
 
 // ─── Helper ─────────────────────────────────────────────────────────────────
@@ -163,3 +164,88 @@ exports.likeBlog = async (req, res) => {
     res.status(500).json({ success: false, error: err.message });
   }
 };
+
+// ─── GET /api/blogs/:blog_id/comments ─────────────────────────────────────────
+exports.getComments = async (req, res) => {
+  try {
+    const { blog_id } = req.params;
+    const comments = await Comment.find({ blog_id }).sort({ createdAt: -1 });
+    res.json({ success: true, data: comments });
+  } catch (err) {
+    res.status(500).json({ success: false, error: err.message });
+  }
+};
+
+// ─── POST /api/blogs/:blog_id/comments ────────────────────────────────────────
+exports.addComment = async (req, res) => {
+  try {
+    const { blog_id } = req.params;
+    const { name, comment, avatar } = req.body;
+
+    if (!name || !name.trim()) {
+      return res.status(400).json({ success: false, error: 'Name is required' });
+    }
+    if (!comment || !comment.trim()) {
+      return res.status(400).json({ success: false, error: 'Comment text is required' });
+    }
+
+    const blog = await Blog.findOne({ blog_id });
+    if (!blog) {
+      return res.status(404).json({ success: false, error: 'Blog not found' });
+    }
+
+    const newComment = await Comment.create({
+      blog_id,
+      name: name.trim(),
+      comment: comment.trim(),
+      avatar: avatar || '',
+    });
+
+    // Increment blog total comments
+    blog.activity.total_comments = (blog.activity.total_comments || 0) + 1;
+    await blog.save();
+
+    res.status(201).json({
+      success: true,
+      data: newComment,
+      total_comments: blog.activity.total_comments,
+    });
+  } catch (err) {
+    res.status(500).json({ success: false, error: err.message });
+  }
+};
+
+// ─── POST /api/blogs/:blog_id/comments/:comment_id/like ───────────────────────
+exports.likeComment = async (req, res) => {
+  try {
+    const { comment_id } = req.params;
+    const commentDoc = await Comment.findById(comment_id);
+    if (!commentDoc) {
+      return res.status(404).json({ success: false, error: 'Comment not found' });
+    }
+    commentDoc.likes = (commentDoc.likes || 0) + 1;
+    await commentDoc.save();
+    res.json({ success: true, likes: commentDoc.likes });
+  } catch (err) {
+    res.status(500).json({ success: false, error: err.message });
+  }
+};
+
+// ─── DELETE /api/blogs/:blog_id/comments/:comment_id ──────────────────────────
+exports.deleteComment = async (req, res) => {
+  try {
+    const { blog_id, comment_id } = req.params;
+    const commentDoc = await Comment.findByIdAndDelete(comment_id);
+    if (commentDoc) {
+      const blog = await Blog.findOne({ blog_id });
+      if (blog) {
+        blog.activity.total_comments = Math.max(0, (blog.activity.total_comments || 1) - 1);
+        await blog.save();
+      }
+    }
+    res.json({ success: true, message: 'Comment deleted' });
+  } catch (err) {
+    res.status(500).json({ success: false, error: err.message });
+  }
+};
+

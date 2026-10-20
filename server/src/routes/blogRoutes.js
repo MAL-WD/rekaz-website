@@ -8,6 +8,10 @@ const {
   updateBlog,
   deleteBlog,
   likeBlog,
+  getComments,
+  addComment,
+  likeComment,
+  deleteComment,
 } = require('../controllers/blogController');
 
 // Public routes
@@ -21,4 +25,11 @@ router.put('/:blog_id', updateBlog);    // PUT  /api/blogs/:blog_id
 router.delete('/:blog_id', deleteBlog); // DELETE /api/blogs/:blog_id
 router.post('/:blog_id/like', likeBlog);// POST /api/blogs/:blog_id/like
 
+// Comments routes
+router.get('/:blog_id/comments', getComments);
+router.post('/:blog_id/comments', addComment);
+router.post('/:blog_id/comments/:comment_id/like', likeComment);
+router.delete('/:blog_id/comments/:comment_id', deleteComment);
+
 module.exports = router;
+

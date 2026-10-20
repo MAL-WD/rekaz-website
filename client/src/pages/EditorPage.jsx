@@ -1,24 +1,10 @@
-import { createContext, useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import BlogEditor from '../components/BlogEditor';
-import PublishForm from '../components/PublishForm';
+import BlogEditorStudio from '../components/BlogEditorStudio';
 import { useStateContext } from '../contexts/ContextProvider';
 
-// Context shared between BlogEditor and PublishForm
-export const EditorContext = createContext({});
-
-const blogStructure = {
-  title: '',
-  banner: '',
-  des: '',
-  content: {},
-  tags: [],
-  author: 'Rēkāz Team',
-  authorImage: '',
-};
-
-// ─── Login Gate ──────────────────────────────────────────────────────────────
-const LoginGate = () => {
+// ─── Login Gate for Unauthenticated Users ────────────────────────────────────
+const LoginGate = ({ onAuthSuccess }) => {
   const { login } = useStateContext();
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
@@ -29,42 +15,39 @@ const LoginGate = () => {
     setLoading(true);
     setError('');
 
-    // Small delay for UX
     setTimeout(() => {
       const success = login(password);
-      if (!success) {
+      if (success) {
+        onAuthSuccess();
+      } else {
         setError('Incorrect password. Access denied.');
       }
       setLoading(false);
-    }, 400);
+    }, 300);
   };
 
   return (
-    <div className="min-h-screen bg-[#fafafa] flex items-center justify-center px-5">
+    <div className="min-h-screen bg-[#fafafc] flex items-center justify-center px-5">
       <div className="w-full max-w-md">
-        {/* Logo */}
-        <div className="text-center mb-10">
+        {/* Logo & Header */}
+        <div className="text-center mb-8">
           <Link to="/" className="inline-flex items-center gap-2">
-            <span className="font-satoshi font-semibold text-2xl text-rekaz-dark">Rēkāz</span>
+            <span className="font-satoshi font-bold text-3xl gradient-text">Rēkāz</span>
           </Link>
-          <p className="text-rekaz-grey font-dm text-sm mt-2">
-            Editor access requires authentication
+          <h2 className="text-xl font-satoshi font-bold text-rekaz-dark mt-3">
+            Blog Editor Studio
+          </h2>
+          <p className="text-rekaz-grey font-dm text-sm mt-1">
+            Sign in with admin credentials to write or edit articles.
           </p>
         </div>
 
         {/* Card */}
-        <div className="bg-white rounded-card border border-rekaz-border p-8 shadow-sm">
-          <h2 className="font-satoshi font-semibold text-xl text-rekaz-dark mb-1">
-            Editor Login
-          </h2>
-          <p className="text-rekaz-muted font-dm text-sm mb-6">
-            Enter the editor password to create or edit articles.
-          </p>
-
+        <div className="bg-white rounded-3xl border border-rekaz-border p-8 shadow-xl shadow-rekaz-blue/5">
           <form onSubmit={handleSubmit} className="flex flex-col gap-4">
             <div>
-              <label className="text-rekaz-dark font-satoshi text-sm font-medium mb-1.5 block">
-                Password
+              <label className="text-rekaz-dark font-satoshi text-xs font-bold uppercase tracking-wider mb-2 block">
+                Editor Password
               </label>
               <input
                 type="password"
@@ -72,12 +55,12 @@ const LoginGate = () => {
                 onChange={(e) => setPassword(e.target.value)}
                 placeholder="Enter editor password"
                 autoFocus
-                className="w-full px-4 py-3 rounded-btn border border-rekaz-border font-dm text-sm text-rekaz-dark placeholder:text-rekaz-muted/50 outline-none focus:border-rekaz-blue focus:ring-2 focus:ring-rekaz-blue/10 transition-all"
+                className="w-full px-4 py-3 rounded-xl border border-rekaz-border font-dm text-sm text-rekaz-dark placeholder:text-rekaz-muted/50 outline-none focus:border-rekaz-blue focus:ring-4 focus:ring-rekaz-blue/10 transition-all"
               />
             </div>
 
             {error && (
-              <div className="flex items-center gap-2 text-red-500 text-sm font-dm bg-red-50 px-3 py-2 rounded-btn">
+              <div className="flex items-center gap-2 text-red-500 text-xs font-dm bg-red-50 px-3.5 py-2.5 rounded-xl border border-red-200">
                 <svg className="w-4 h-4 shrink-0" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M12 9v3.75m9-.75a9 9 0 11-18 0 9 9 0 0118 0zm-9 3.75h.008v.008H12v-.008z" />
                 </svg>
@@ -88,25 +71,21 @@ const LoginGate = () => {
             <button
               type="submit"
               disabled={loading || !password}
-              className="w-full py-3 rounded-btn font-satoshi font-medium text-sm text-white bg-rekaz-blue hover:bg-rekaz-blue/90 disabled:opacity-50 disabled:cursor-not-allowed transition-all shadow-[0_2px_8px_rgba(4,18,250,0.25)]"
+              className="w-full py-3.5 rounded-xl font-satoshi font-bold text-sm text-white bg-rekaz-blue hover:bg-rekaz-blue/90 disabled:opacity-50 disabled:cursor-not-allowed transition-all shadow-md shadow-rekaz-blue/20"
             >
-              {loading ? (
-                <span className="flex items-center justify-center gap-2">
-                  <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin" />
-                  Verifying...
-                </span>
-              ) : (
-                'Access Editor'
-              )}
+              {loading ? 'Verifying...' : 'Access Studio'}
             </button>
           </form>
-        </div>
 
-        <p className="text-center mt-6 text-rekaz-muted font-dm text-xs">
-          <Link to="/blogs" className="text-rekaz-blue hover:underline">
-            ← Back to Blog
-          </Link>
-        </p>
+          <div className="mt-6 pt-6 border-t border-rekaz-border flex items-center justify-between text-xs font-satoshi">
+            <Link to="/admin/login" className="text-rekaz-blue hover:underline">
+              Log in to Admin Panel →
+            </Link>
+            <Link to="/blogs" className="text-rekaz-muted hover:text-rekaz-dark">
+              Return to Website
+            </Link>
+          </div>
+        </div>
       </div>
     </div>
   );
@@ -114,23 +93,20 @@ const LoginGate = () => {
 
 // ─── Editor Page ─────────────────────────────────────────────────────────────
 const EditorPage = () => {
-  const { userAuth } = useStateContext();
-  const [blog, setBlog] = useState(blogStructure);
-  const [editorState, setEditorState] = useState('editor'); // 'editor' | 'publish'
-  const [textEditor, setTextEditor] = useState({ isReady: false });
+  const { userAuth, setUserAuth } = useStateContext();
+  const [isAdminTokenValid, setIsAdminTokenValid] = useState(() => {
+    // Check if user is logged into the admin panel
+    const token = localStorage.getItem('rekaz_admin_token');
+    return Boolean(token);
+  });
 
-  // Auth gate
-  if (!userAuth?.access_token) {
-    return <LoginGate />;
+  const isAuthenticated = Boolean(userAuth?.access_token || isAdminTokenValid);
+
+  if (!isAuthenticated) {
+    return <LoginGate onAuthSuccess={() => setIsAdminTokenValid(true)} />;
   }
 
-  return (
-    <EditorContext.Provider
-      value={{ blog, setBlog, editorState, setEditorState, textEditor, setTextEditor }}
-    >
-      {editorState === 'editor' ? <BlogEditor /> : <PublishForm />}
-    </EditorContext.Provider>
-  );
+  return <BlogEditorStudio />;
 };
 
 export default EditorPage;

@@ -1,12 +1,14 @@
-// Dummy AWS upload function since no backend is connected yet
+import { compressImage } from '../utils/imageHelper';
+
 export const UploadFile = async (img) => {
-    return new Promise((resolve) => {
-        // Mock image URL or create local object URL
-        const url = URL.createObjectURL(img);
-        setTimeout(() => {
-            resolve(url);
-        }, 1500);
-    });
+  try {
+    const compressedUrl = await compressImage(img);
+    return compressedUrl;
+  } catch (error) {
+    console.error('Image processing failed:', error);
+    // Fallback to basic object URL
+    return URL.createObjectURL(img);
+  }
 };
 
 export const UploadImage = UploadFile;
