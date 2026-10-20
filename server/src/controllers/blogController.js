@@ -2,13 +2,18 @@ const Blog = require('../models/Blog');
 const { nanoid } = require('nanoid');
 
 // ─── Helper ─────────────────────────────────────────────────────────────────
-const slugify = (title) =>
-  title
+const slugify = (title) => {
+  const slug = (title || '')
     .toLowerCase()
     .trim()
-    .replace(/[^a-z0-9\s-]/g, '')
+    .replace(/[^\p{L}\p{N}\s-]/gu, '')
     .replace(/\s+/g, '-')
+    .replace(/-+/g, '-')
+    .replace(/^-|-$/g, '')
     .substring(0, 80);
+  return slug || `post-${nanoid(6)}`;
+};
+
 
 // ─── GET /api/blogs ─────────────────────────────────────────────────────────
 // Returns published blogs (draft: false), paginated
@@ -77,12 +82,13 @@ exports.createBlog = async (req, res) => {
     }
 
     // Build a unique blog_id
-    const baseSlug = slugify(title);
-    let blog_id = baseSlug;
+    const baseSlug = req.body.blog_id ? slugify(req.body.blog_id) : slugify(title);
+    let blog_id = baseSlug || `post-${nanoid(6)}`;
     const existing = await Blog.findOne({ blog_id });
     if (existing) {
-      blog_id = `${baseSlug}-${nanoid(5)}`;
+      blog_id = `${blog_id}-${nanoid(5)}`;
     }
+
 
     const blog = await Blog.create({
       blog_id,

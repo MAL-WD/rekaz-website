@@ -13,7 +13,8 @@ const protect = async (req, res, next) => {
   }
 
   try {
-    const decoded = jwt.verify(token, process.env.JWT_SECRET);
+    const secret = process.env.JWT_SECRET || 'rekaz-super-secret-admin-jwt-key-2026';
+    const decoded = jwt.verify(token, secret);
     req.admin = await Admin.findById(decoded.id);
     if (!req.admin) {
       return res.status(401).json({ success: false, error: 'Admin not found' });
